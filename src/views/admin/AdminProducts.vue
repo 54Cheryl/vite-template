@@ -37,19 +37,28 @@
             </tr>
           </tbody>
         </table>
-        <p class="text-end">本頁有 <span>{{ products.length }}</span> 項產品</p>
+        <div class="row">
+          <div class="col">
+            <Pagination :pages="pagination" @change-page="getData"></Pagination>
+          </div>
+          <div class="col">
+            <p class="text-end">本頁有 <span>{{ products.length }}</span> 項產品</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Pagination from '@/components/PaginationView.vue'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 export default {
   props: ['token'],
   data () {
     return {
-      products: []
+      products: [],
+      pagination: {}
     }
   },
   methods: {
@@ -59,6 +68,7 @@ export default {
         .then((res) => {
           // console.log(res.data);
           this.products = res.data.products
+          this.pagination = res.data.pagination
         })
         .catch((err) => {
           // console.dir(err);
@@ -66,7 +76,9 @@ export default {
         })
     }
   },
-  components: {},
+  components: {
+    Pagination
+  },
   mounted () {
     this.getData()
   }
