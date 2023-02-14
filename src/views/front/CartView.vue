@@ -65,7 +65,8 @@ export default {
       products: [],
       productId: '',
       cart: {},
-      user: {}
+      user: {},
+      loadingItem: ''
     }
   },
   methods: {
