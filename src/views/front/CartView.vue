@@ -118,11 +118,11 @@
 
       <div class="mb-3">
         <label for="message" class="form-label">留言</label>
-        <textarea 
-          id="message" 
-          class="form-control" 
-          cols="30" 
-          rows="10" 
+        <textarea
+          id="message"
+          class="form-control"
+          cols="30"
+          rows="10"
           v-model="user.message"
         ></textarea>
       </div>
@@ -202,20 +202,20 @@ export default {
           console.log(err)
         })
     },
-    isPhone(value) {
+    isPhone (value) {
       const phoneNumber = /^(09)[0-9]{8}$/
       return phoneNumber.test(value) ? true : '須為正確的手機號碼 (ex：0912345678)'
     },
-    onSubmit() {
-      console.log('送出表單');
+    onSubmit () {
+      console.log('送出表單')
       this.user = {
         name: '',
         email: '',
         tel: '',
         address: '',
         message: ''
-      };
-      this.getCarts();
+      }
+      this.getCarts()
     }
   },
   mounted () {
