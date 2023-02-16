@@ -66,6 +66,7 @@
           placeholder="請輸入 Email"
           :class="{ 'is-invalid': errors['email'] }"
           rules="email|required"
+          v-model="user.email"
         ></VField>
         <ErrorMessage name="email" class="invalid-feedback"></ErrorMessage>
       </div>
@@ -80,6 +81,7 @@
           :class="{ 'is-invalid': errors['姓名'] }"
           placeholder="請輸入姓名"
           rules="required"
+          v-model="user.name"
         ></VField>
         <ErrorMessage name="姓名" class="invalid-feedback"></ErrorMessage>
       </div>
@@ -94,6 +96,7 @@
           :class="{ 'is-invalid': errors['電話'] }"
           placeholder="請輸入手機號碼"
           :rules="isPhone"
+          v-model="user.tel"
         ></VField>
         <ErrorMessage name="電話" class="invalid-feedback"></ErrorMessage>
       </div>
@@ -108,13 +111,20 @@
           :class="{ 'is-invalid': errors['地址'] }"
           placeholder="請輸入地址"
           rules="required"
+          v-model="user.address"
         ></VField>
         <ErrorMessage name="地址" class="invalid-feedback"></ErrorMessage>
       </div>
 
       <div class="mb-3">
         <label for="message" class="form-label">留言</label>
-        <textarea id="message" class="form-control" cols="30" rows="10" ></textarea>
+        <textarea 
+          id="message" 
+          class="form-control" 
+          cols="30" 
+          rows="10" 
+          v-model="user.message"
+        ></textarea>
       </div>
       <div class="text-end">
         <button type="submit" class="btn btn-danger">送出訂單</button>
@@ -132,7 +142,13 @@ export default {
       products: [],
       productId: '',
       cart: {},
-      user: {},
+      user: {
+        name: '',
+        email: '',
+        tel: '',
+        address: '',
+        message: ''
+      },
       loadingItem: ''
     }
   },
@@ -186,12 +202,20 @@ export default {
           console.log(err)
         })
     },
-    isPhone (value) {
+    isPhone(value) {
       const phoneNumber = /^(09)[0-9]{8}$/
-      return phoneNumber.test(value) ? true : '需要正確的電話號碼'
+      return phoneNumber.test(value) ? true : '須為正確的手機號碼 (ex：0912345678)'
     },
-    onSubmit () {
-      console.log('送出表單')
+    onSubmit() {
+      console.log('送出表單');
+      this.user = {
+        name: '',
+        email: '',
+        tel: '',
+        address: '',
+        message: ''
+      };
+      this.getCarts();
     }
   },
   mounted () {
