@@ -12,6 +12,7 @@
           <th>品名</th>
           <th style="width: 150px">數量/單位</th>
           <th class="text-end">單價</th>
+          <th class="text-end">小計</th>
         </tr>
       </thead>
       <tbody>
@@ -37,6 +38,9 @@
             </td>
             <td class="text-end">
               <small class="text-success" v-if="item.product.price !== item.product.origin_price">折扣價：</small>
+              {{ item.product.price }}
+            </td>
+            <td class="text-end">
               {{ item.total }}
             </td>
           </tr>
@@ -44,18 +48,18 @@
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="3" class="text-end">總計</td>
+          <td colspan="4" class="text-end">總計</td>
           <td class="text-end">$ {{ cart.total }}</td>
         </tr>
         <tr>
-          <td colspan="3" class="text-end text-success">折扣價</td>
+          <td colspan="4" class="text-end text-success">折扣價</td>
           <td class="text-end text-success">$ {{ cart.final_total }}</td>
         </tr>
       </tfoot>
     </table>
   </div>
   <div class="my-5 row justify-content-center">
-    <VForm ref="form" class="col-md-6" v-slot="{ errors }" @submit="onSubmit">
+    <VForm ref="form" class="col-md-6" v-slot="{ errors }" @submit="createOrder">
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
         <VField
@@ -66,7 +70,7 @@
           placeholder="請輸入 Email"
           :class="{ 'is-invalid': errors['email'] }"
           rules="email|required"
-          v-model="user.email"
+          v-model="form.user.email"
         ></VField>
         <ErrorMessage name="email" class="invalid-feedback"></ErrorMessage>
       </div>
@@ -81,7 +85,7 @@
           :class="{ 'is-invalid': errors['姓名'] }"
           placeholder="請輸入姓名"
           rules="required"
-          v-model="user.name"
+          v-model="form.user.name"
         ></VField>
         <ErrorMessage name="姓名" class="invalid-feedback"></ErrorMessage>
       </div>
@@ -96,7 +100,7 @@
           :class="{ 'is-invalid': errors['電話'] }"
           placeholder="請輸入手機號碼"
           :rules="isPhone"
-          v-model="user.tel"
+          v-model="form.user.tel"
         ></VField>
         <ErrorMessage name="電話" class="invalid-feedback"></ErrorMessage>
       </div>
@@ -111,7 +115,7 @@
           :class="{ 'is-invalid': errors['地址'] }"
           placeholder="請輸入地址"
           rules="required"
-          v-model="user.address"
+          v-model="form.user.address"
         ></VField>
         <ErrorMessage name="地址" class="invalid-feedback"></ErrorMessage>
       </div>
@@ -123,7 +127,7 @@
           class="form-control"
           cols="30"
           rows="10"
-          v-model="user.message"
+          v-model="form.message"
         ></textarea>
       </div>
       <div class="text-end">
@@ -142,21 +146,23 @@ export default {
       products: [],
       productId: '',
       cart: {},
-      user: {
-        name: '',
-        email: '',
-        tel: '',
-        address: '',
+      form: {
+        user: {
+          name: '',
+          email: '',
+          tel: '',
+          address: ''
+        },
         message: ''
       },
+      coupon_code: '',
       loadingItem: ''
     }
   },
   methods: {
     getCarts () {
-      this.$http.get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`)
+      this.$http.get(`${VITE_APP_URL}api/${VITE_APP_PATH}/cart`)
         .then(res => {
-          // console.log(res.data)
           this.cart = res.data.data
         })
         .catch(err => {
@@ -168,11 +174,9 @@ export default {
         product_id: item.product.id,
         qty: item.qty
       }
-      // console.log(data, item.id);
       this.loadingItem = item.id
-      this.$http.put(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart/${item.id}`, { data })
+      this.$http.put(`${VITE_APP_URL}api/${VITE_APP_PATH}/cart/${item.id}`, { data })
         .then(res => {
-        // console.log(res.data);
           this.getCarts()
           this.loadingItem = ''
         })
@@ -182,9 +186,8 @@ export default {
     },
     deleteCartItem (item) {
       this.loadingItem = item.id
-      this.$http.delete(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart/${item.id}`)
+      this.$http.delete(`${VITE_APP_URL}api/${VITE_APP_PATH}/cart/${item.id}`)
         .then(res => {
-        // console.log(res.data);
           this.getCarts()
           this.loadingItem = ''
         })
@@ -193,29 +196,31 @@ export default {
         })
     },
     deleteCarts () {
-      this.$http.delete(`${VITE_APP_URL}/api/${VITE_APP_PATH}/carts`)
+      this.$http.delete(`${VITE_APP_URL}api/${VITE_APP_PATH}/carts`)
         .then(res => {
-        // console.log(res.data);
           this.getCarts()
         })
         .catch(err => {
-          console.log(err)
+          alert(err.response.data.message)
+          // console.log(err.response.data.message)
         })
     },
     isPhone (value) {
       const phoneNumber = /^(09)[0-9]{8}$/
       return phoneNumber.test(value) ? true : '須為正確的手機號碼 (ex：0912345678)'
     },
-    onSubmit () {
-      console.log('送出表單')
-      this.user = {
-        name: '',
-        email: '',
-        tel: '',
-        address: '',
-        message: ''
-      }
-      this.getCarts()
+    createOrder () {
+      const order = this.form
+      this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/order`, { data: order })
+        .then(res => {
+          alert(res.data.message)
+          this.$refs.form.resetForm()
+          this.form.message = ''
+          this.getCarts()
+        })
+        .catch(err => {
+          alert(err.response.data.message)
+        })
     }
   },
   mounted () {
