@@ -21,6 +21,9 @@
               <th width="150">
                 是否啟用
               </th>
+              <th width="120">
+                編輯
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -51,7 +54,20 @@
           <div class="col">
             <p class="text-end">本頁有 <span>{{ products.length }}</span> 項產品</p>
           </div>
-          <DelModal :temp-product="tempProduct" ref="deleteModal" @del-product="deleteData"></DelModal>
+          <ProdModal
+            :product="tempProduct"
+            :isNew="isNew"
+            ref="productModal"
+            @update-data ="updateData"
+            @cancel-modal ="cancelModal"
+            @create-images ="createImages"
+          ></ProdModal>
+          <DelModal
+            :temp-product="tempProduct"
+            ref="deleteModal"
+            @del-product="deleteData"
+            @cancel-modal ="cancelModal('del')"
+          ></DelModal>
         </div>
       </div>
     </div>
@@ -61,6 +77,7 @@
 <script>
 import Pagination from '@/components/PaginationView.vue'
 import DelModal from '@/components/DelModal.vue'
+import ProdModal from '@/components/ProdModal.vue'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 
 export default {
@@ -95,16 +112,51 @@ export default {
         // console.log(this.tempProduct);
         this.isNew = true
         this.tempProduct = { imagesUrl: [] }
-        // productModal.show();
+        this.$refs.productModal.showModal()
       } else if (event === 'edit') {
         this.isNew = false
         this.tempProduct = { ...item }
-        // productModal.show();
+        this.$refs.productModal.showModal()
       } else if (event === 'delete') {
         this.tempProduct = { ...item }
         // console.log(this.tempProduct)
         this.$refs.deleteModal.showModal()
       }
+    },
+    // 取消鈕，modal.hide()
+    cancelModal (ent) {
+      if (ent === 'del') {
+        this.tempProduct = { imagesUrl: [] }
+        this.$refs.deleteModal.hideModal()
+      } else {
+        this.tempProduct = { imagesUrl: [] }
+        this.$refs.productModal.hideModal()
+      }
+    },
+    // 建立新產品 編輯產品
+    updateData () {
+      let api = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/product`
+      let apiMethod = 'post'
+      if (!this.isNew) {
+        api = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/product/${this.tempProduct.id}`
+        apiMethod = 'put'
+      }
+      this.$http[apiMethod](api, { data: this.tempProduct })
+        .then((res) => {
+          alert(res.data.message)
+          this.tempProduct = {
+            imagesUrl: []
+          }
+          this.$refs.productModal.hideModal()
+          this.getData()
+        })
+        .catch((err) => {
+          alert(err.response.data.message)
+        })
+    },
+    // 新增上傳圖片
+    createImages () {
+      this.tempProduct.imagesUrl.push('')
     },
     // 刪除產品
     deleteData () {
@@ -124,7 +176,8 @@ export default {
   },
   components: {
     Pagination,
-    DelModal
+    DelModal,
+    ProdModal
   },
   mounted () {
     this.getData()
