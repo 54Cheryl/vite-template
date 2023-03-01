@@ -17,7 +17,7 @@
                 <input type="text" class="form-control mb-2" id="" placeholder="請輸入圖片連結" v-model="tempProduct.imageUrl">
                 <img :src="tempProduct.imageUrl" alt="" class="img-fluid">
               </div>
-              <p class="fs-2">多圖新增</p>
+              <p class="fs-4 mt-2">多圖新增</p>
               <template v-if="Array.isArray(tempProduct.imagesUrl)">
                 <div class="mb-1" v-for="(image, key) in tempProduct.imagesUrl" :key="key">
                   <div class="mb-3">
@@ -43,6 +43,24 @@
                 <button class="btn btn-outline-primary btn-sm d-block w-100" @click="$emit('create-images')">
                   新增圖片
                 </button>
+              </div>
+              <div class="col mt-5">
+                <label for="customFile" class="fs-4 form-label"
+                  >上傳圖片檔案
+                  <i
+                    class="fas fa-spinner fa-spin"
+                  ></i>
+                </label>
+                <input
+                type="file"
+                name="file-to-upload"
+                id="customFile"
+                class="form-control mb-2"
+                ref="fileInput"
+                @change="uploadFile"
+                />
+                <label for="fileLink" class="form-label mt-2">檔案生成網址</label>
+                <input type="text" class="form-control mb-2" id="fileLink" placeholder="請複製用於上方圖片連結" v-model="tempProduct.tempImage">
               </div>
             </div>
             <div class="col-8">
@@ -90,6 +108,7 @@
 
 <script>
 import modalMixin from '@/mixins/modalMixin'
+const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 export default {
   props: {
     product: {},
@@ -112,6 +131,33 @@ export default {
       if (!this.tempProduct.imageUrl) {
         this.tempProduct.imageUrl = ''
       }
+    }
+  },
+  methods: {
+    uploadFile () {
+      const file = this.$refs.fileInput.files[0]
+      const formData = new FormData()
+
+      formData.append('file-to-upload', file)
+      this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/admin/upload`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      })
+        .then((res) => {
+          if (res.data.success) {
+            this.tempProduct.tempImage = res.data.imageUrl
+            this.$refs.fileInput.value = ''
+            alert('上傳成功')
+          } else {
+            this.$refs.fileInput.value = ''
+            alert('上傳失敗')
+          }
+        })
+        .catch((err) => {
+          console.log(err.response)
+          alert(err.response)
+        })
     }
   }
 }

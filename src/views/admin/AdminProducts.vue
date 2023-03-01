@@ -88,7 +88,8 @@ export default {
       pagination: {},
       isNew: false,
       tempProduct: {
-        imagesUrl: []
+        imagesUrl: [],
+        tempImage: ''
       }
     }
   },
@@ -141,11 +142,13 @@ export default {
         api = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/product/${this.tempProduct.id}`
         apiMethod = 'put'
       }
+      this.tempProduct.tempImage = ''
       this.$http[apiMethod](api, { data: this.tempProduct })
         .then((res) => {
           alert(res.data.message)
           this.tempProduct = {
-            imagesUrl: []
+            imagesUrl: [],
+            tempImage: ''
           }
           this.$refs.productModal.hideModal()
           this.getData()
