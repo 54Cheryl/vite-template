@@ -143,13 +143,16 @@
       </div>
     </div>
   </div>
+  <FrontFooter></FrontFooter>
 </template>
 
 <script>
 import HomeNav from '@/components/HomeNav.vue'
+import FrontFooter from '@/components/FrontFooter.vue'
 export default {
   components: {
-    HomeNav
+    HomeNav,
+    FrontFooter
   }
 }
 </script>

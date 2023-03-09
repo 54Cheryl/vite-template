@@ -54,13 +54,16 @@
       </div>
     </div>
   </div>
+  <FrontFooter></FrontFooter>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue'
+import FrontFooter from '@/components/FrontFooter.vue'
 export default {
   components: {
-    NavBar
+    NavBar,
+    FrontFooter
   }
 }
 </script>

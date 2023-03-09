@@ -28,6 +28,7 @@
       </div>
     </div>
   </div>
+  <FrontFooter></FrontFooter>
 </template>
 
 <script>
@@ -36,6 +37,7 @@ import Loading from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/css/index.css'
 import { Toast, Swal } from '@/methods/swalToast'
 import NavBar from '@/components/NavBar.vue'
+import FrontFooter from '@/components/FrontFooter.vue'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 export default {
   data () {
@@ -48,7 +50,8 @@ export default {
   components: {
     RouterLink,
     Loading,
-    NavBar
+    NavBar,
+    FrontFooter
   },
   methods: {
     getProducts () {

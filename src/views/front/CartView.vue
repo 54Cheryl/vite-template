@@ -155,11 +155,13 @@
       </div>
     </VForm>
   </div>
+  <FrontFooter></FrontFooter>
 </template>
 
 <script>
 import { Toast, Swal } from '@/methods/swalToast'
 import NavBar from '@/components/NavBar.vue'
+import FrontFooter from '@/components/FrontFooter.vue'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 export default {
   data () {
@@ -297,7 +299,8 @@ export default {
     }
   },
   components: {
-    NavBar
+    NavBar,
+    FrontFooter
   },
   mounted () {
     this.getCarts()
