@@ -1,6 +1,6 @@
 <template>
-  <div class="container mt-5">
-    <form class="row justify-content-center" @submit.prevent="login">
+  <div class="container">
+    <form class="row justify-content-center align-content-center pb-5" @submit.prevent="login" style="height: 100vh;">
       <div class="col-md-6">
         <h1 class="h3 mb-3 font-weight-normal">請先登入</h1>
         <div class="mb-2">
@@ -27,7 +27,7 @@
           />
         </div>
         <div class="text-end mt-4">
-          <button class="btn btn-lg btn-primary btn-block w-100" type="submit">
+          <button class="btn btn-lg btn-primary btn-block text-white w-100" type="submit">
             登入
           </button>
         </div>
