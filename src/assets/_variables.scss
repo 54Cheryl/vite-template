@@ -34,6 +34,18 @@ $grays: (
 ) !default;
 // scss-docs-end gray-colors-map
 // fusv-enable
+$neutral-300: #A8A29E !default;
+$neutral-500: #57534E !default;
+$neutral-700: #44403C !default;
+$neutral-900: #292524 !default;
+$neutral-main: #AB7E52 !default;
+
+$neutral: (
+  "neutral-300": $neutral-300,
+  "neutral-500": $neutral-500,
+  "neutral-700": $neutral-700,
+  "neutral-900": $neutral-900,
+) !default;
 
 // scss-docs-start color-variables
 $blue:    #0d6efd !default;
@@ -298,7 +310,7 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+$primary:       $neutral-main !default; // $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -1101,9 +1113,9 @@ $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        $btn-focus-width !default;
 $navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
 
-$navbar-light-color:                rgba($black, .55) !default;
-$navbar-light-hover-color:          rgba($black, .7) !default;
-$navbar-light-active-color:         rgba($black, .9) !default;
+$navbar-light-color:                $neutral-900 !default;// rgba($black, .55) !default;
+$navbar-light-hover-color:          $primary !default;// rgba($black, .7) !default;
+$navbar-light-active-color:         $primary !default;// rgba($black, .9) !default;
 $navbar-light-disabled-color:       rgba($black, .3) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
@@ -1112,9 +1124,9 @@ $navbar-light-brand-hover-color:    $navbar-light-active-color !default;
 // scss-docs-end navbar-variables
 
 // scss-docs-start navbar-dark-variables
-$navbar-dark-color:                 rgba($white, .55) !default;
-$navbar-dark-hover-color:           rgba($white, .75) !default;
-$navbar-dark-active-color:          $white !default;
+$navbar-dark-color:                 $white !default;// rgba($white, .55) !default;
+$navbar-dark-hover-color:           $primary !default;// rgba($white, .75) !default;
+$navbar-dark-active-color:          $primary !default;// $white !default;
 $navbar-dark-disabled-color:        rgba($white, .25) !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
@@ -1271,8 +1283,8 @@ $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  $accordion-color !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-$accordion-button-active-bg:              tint-color($component-active-bg, 90%) !default;
-$accordion-button-active-color:           shade-color($primary, 10%) !default;
+$accordion-button-active-bg:              var(--#{$prefix}accordion-bg) !default;// tint-color($component-active-bg, 90%) !default;
+$accordion-button-active-color:           $accordion-color !default;// shade-color($primary, 10%) !default;
 
 $accordion-button-focus-border-color:     $input-focus-border-color !default;
 $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;

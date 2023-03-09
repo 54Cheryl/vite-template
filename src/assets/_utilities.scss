@@ -1,0 +1,68 @@
+//圖片
+.object-cover{
+  object-fit: cover;
+}
+//文字
+.Sans-TC{
+  font-family: 'Noto Sans Tc', sans-serif;
+}
+.Serif-TC{
+  font-family: 'Noto Serif Tc', Serif;
+}
+.writing-lr{
+  writing-mode: vertical-lr;
+}
+.writing-rl{
+  writing-mode: vertical-rl;
+}
+.letter-spacing{
+  letter-spacing: 0.5rem;
+}
+.fs-sm{
+  font-size: 0.5rem;
+}
+.multiline-ellipsis { 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+//定位
+.topNegative{
+  top: -16px;
+}
+//顏色
+.accent-color{
+  color: #BB0000;
+}
+.neutral-300{
+  color: #A8A29E
+}
+.neutral-500{
+  color: #57534E
+}
+.neutral-700{
+  color: #44403C
+}
+.neutral-900{
+  color: #292524
+}
+//background
+.bg-opacity-20{
+  background-color: rgb(255, 255, 255, 0.2);
+}
+.bg-opacity-80{
+  background-color: rgb(255, 255, 255, 0.8);
+}
+.bg-all{
+  background-color: #FCFAF7;
+}
+.bg-sec{
+  background-color: #EDEAE6;
+}
+.bg-n500{
+  background-color: #57534E;
+}
+.bg-footer{
+  background-color: #332B21;
+}

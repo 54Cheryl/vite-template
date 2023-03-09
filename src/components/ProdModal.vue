@@ -49,6 +49,7 @@
                   >上傳圖片檔案
                   <i
                     class="fas fa-spinner fa-spin"
+                    v-if="imgUploading"
                   ></i>
                 </label>
                 <input
@@ -98,8 +99,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" @click="$emit('cancel-modal')">取消</button>
-          <button type="button" class="btn btn-primary" @click="$emit('update-data')">確認</button>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" @click="$emit('cancel-product')">取消</button>
+          <button type="button" class="btn btn-primary" @click="$emit('update-product')">確認</button>
         </div>
       </div>
     </div>
@@ -108,6 +109,7 @@
 
 <script>
 import modalMixin from '@/mixins/modalMixin'
+import { Toast, Swal } from '@/methods/swalToast'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 export default {
   props: {
@@ -117,11 +119,12 @@ export default {
   data () {
     return {
       tempProduct: {},
-      modal: ''
+      modal: '',
+      imgUploading: false
     }
   },
   mixins: [modalMixin],
-  emits: ['update-data', 'cancel-modal', 'create-images'],
+  emits: ['update-product', 'cancel-product', 'create-images'],
   watch: {
     product () {
       this.tempProduct = this.product
@@ -135,9 +138,9 @@ export default {
   },
   methods: {
     uploadFile () {
+      this.imgUploading = true
       const file = this.$refs.fileInput.files[0]
       const formData = new FormData()
-
       formData.append('file-to-upload', file)
       this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/admin/upload`, formData, {
         headers: {
@@ -148,15 +151,28 @@ export default {
           if (res.data.success) {
             this.tempProduct.tempImage = res.data.imageUrl
             this.$refs.fileInput.value = ''
-            alert('上傳成功')
+            this.imgUploading = false
+            Toast.fire({
+              icon: 'success',
+              title: '上傳成功',
+              text: res.data.message
+            })
           } else {
             this.$refs.fileInput.value = ''
-            alert('上傳失敗')
+            this.imgUploading = false
+            Toast.fire({
+              icon: 'error',
+              title: '上傳失敗',
+              text: res.data.message
+            })
           }
         })
         .catch((err) => {
-          console.log(err.response)
-          alert(err.response)
+          this.imgUploading = false
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     }
   }

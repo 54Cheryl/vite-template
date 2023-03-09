@@ -1,8 +1,9 @@
 <template>
   --後台頁面--
   <br>
-  <router-link to="/admin/products">後台產品管理</router-link> |
-  <router-link to="/admin/orders">後台訂單管理</router-link> |
+  <router-link to="/admin/products">產品管理</router-link> |
+  <router-link to="/admin/orders">訂單管理</router-link> |
+  <router-link to="/admin/coupons">優惠券管理</router-link> |
   <router-link to="/">回到前台home</router-link> |
   <a href="#" @click.prevent="logout">登出</a>
   <hr>
@@ -11,6 +12,7 @@
 
 <script>
 import { RouterView } from 'vue-router'
+import { Toast, Swal } from '@/methods/swalToast'
 const { VITE_APP_URL } = import.meta.env
 export default {
   data () {
@@ -36,13 +38,23 @@ export default {
             if (!res.data.success) {
               this.$router.push('/login')
             }
+            Toast.fire({
+              icon: 'success',
+              title: '登入成功'
+            })
           })
           .catch((err) => {
-            alert(err.response.data.message)
+            Swal.fire({
+              icon: 'error',
+              title: err.response.data.message
+            })
             this.$router.push('/login')
           })
       } else {
-        alert('請先登入')
+        Toast.fire({
+          icon: 'warning',
+          title: '請先登入'
+        })
         this.$router.push('/login')
       }
     }

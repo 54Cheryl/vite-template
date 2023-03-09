@@ -7,11 +7,11 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          是否刪除<span class="text-danger fw-bold">{{ tempProduct.title }}</span> 商品(刪除後將無法恢復)。
+          是否刪除<span class="text-danger fw-bold">{{ tempData.title }}</span> (刪除後將無法恢復)。
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">取消</button>
-          <button type="button" class="btn btn-danger" @click="$emit('del-product')">確認刪除</button>
+          <button type="button" class="btn btn-danger" @click="$emit('del-data')">確認刪除</button>
         </div>
       </div>
     </div>
@@ -22,14 +22,14 @@
 import modalMixin from '@/mixins/modalMixin'
 export default {
   props: {
-    tempProduct: {}
+    tempData: {}
   },
   data () {
     return {
       modal: ''
     }
   },
-  emits: ['del-product'],
+  emits: ['del-data'],
   mixins: [modalMixin]
 }
 </script>

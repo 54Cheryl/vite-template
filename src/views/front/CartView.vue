@@ -1,7 +1,7 @@
 <template>
-  <div>
-    購物車頁
-    <br>
+  <NavBar></NavBar>
+  <div class="container">
+    <h3 class="text-center mt-5">購物車列表</h3>
     <div class="text-end">
       <button class="btn btn-outline-danger" type="button" @click="deleteCarts()">清空購物車</button>
     </div>
@@ -34,10 +34,11 @@
                   v-model="item.qty" @change="updateCartItem(item)" :disabled="item.id === loadingItem">
                   <option :value="i" v-for="i in 20" :key="`${i}45678`">{{i}}</option>
                 </select>
+                <div class="input-group-text">/ {{ item.product.unit }}</div>
               </div>
             </td>
             <td class="text-end">
-              <small class="text-success" v-if="item.product.price !== item.product.origin_price">折扣價：</small>
+              <small class="text-success" v-if="item.product.price !== item.product.origin_price">促銷價：</small>
               {{ item.product.price }}
             </td>
             <td class="text-end">
@@ -51,14 +52,33 @@
           <td colspan="4" class="text-end">總計</td>
           <td class="text-end">$ {{ cart.total }}</td>
         </tr>
-        <tr>
+        <tr v-if="cart.total !== cart.final_total">
           <td colspan="4" class="text-end text-success">折扣價</td>
           <td class="text-end text-success">$ {{ cart.final_total }}</td>
         </tr>
       </tfoot>
     </table>
+    <div class="input-group mb-3 input-group-sm w-25 ms-auto">
+      <input
+        type="text"
+        class="form-control"
+        v-model="coupon_code"
+        placeholder="請輸入優惠碼"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          @click="addCouponCode"
+          style="border-top-left-radius: 0; border-bottom-left-radius: 0;"
+        >
+          套用優惠碼
+        </button>
+      </div>
+    </div>
   </div>
   <div class="my-5 row justify-content-center">
+    <h3 class="text-center mt-5">訂購資訊</h3>
     <VForm ref="form" class="col-md-6" v-slot="{ errors }" @submit="createOrder">
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
@@ -138,8 +158,9 @@
 </template>
 
 <script>
+import { Toast, Swal } from '@/methods/swalToast'
+import NavBar from '@/components/NavBar.vue'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
-
 export default {
   data () {
     return {
@@ -166,7 +187,10 @@ export default {
           this.cart = res.data.data
         })
         .catch(err => {
-          console.log(err)
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     },
     updateCartItem (item) {
@@ -177,32 +201,74 @@ export default {
       this.loadingItem = item.id
       this.$http.put(`${VITE_APP_URL}api/${VITE_APP_PATH}/cart/${item.id}`, { data })
         .then(res => {
+          Toast.fire({
+            icon: 'success',
+            title: res.data.message
+          })
           this.getCarts()
           this.loadingItem = ''
         })
         .catch(err => {
-          console.log(err)
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     },
     deleteCartItem (item) {
       this.loadingItem = item.id
       this.$http.delete(`${VITE_APP_URL}api/${VITE_APP_PATH}/cart/${item.id}`)
         .then(res => {
+          Toast.fire({
+            icon: 'success',
+            title: res.data.message
+          })
           this.getCarts()
           this.loadingItem = ''
         })
         .catch(err => {
-          console.log(err)
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     },
     deleteCarts () {
       this.$http.delete(`${VITE_APP_URL}api/${VITE_APP_PATH}/carts`)
         .then(res => {
+          Toast.fire({
+            icon: 'success',
+            title: res.data.message
+          })
           this.getCarts()
         })
         .catch(err => {
-          alert(err.response.data.message)
-          // console.log(err.response.data.message)
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
+        })
+    },
+    addCouponCode () {
+      this.isLoading = true
+      const coupon = {
+        code: this.coupon_code
+      }
+      this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/coupon`, { data: coupon })
+        .then((res) => {
+          this.isLoading = false
+          Toast.fire({
+            icon: 'success',
+            title: '套用優惠券'
+          })
+          this.getCarts()
+        })
+        .catch((err) => {
+          this.isLoading = false
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     },
     isPhone (value) {
@@ -213,15 +279,25 @@ export default {
       const order = this.form
       this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/order`, { data: order })
         .then(res => {
-          alert(res.data.message)
+          Toast.fire({
+            icon: 'success',
+            title: res.data.message
+          })
           this.$refs.form.resetForm()
           this.form.message = ''
+          this.coupon_code = ''
           this.getCarts()
         })
         .catch(err => {
-          alert(err.response.data.message)
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     }
+  },
+  components: {
+    NavBar
   },
   mounted () {
     this.getCarts()

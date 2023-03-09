@@ -1,74 +1,72 @@
 <template>
+  <Loading v-model:active="isLoading" :can-cancel="true" :is-full-page="fullPage"></Loading>
   <div class="container">
-    <div class="row py-3">
-      <div class="col">
-        <h2>產品列表</h2>
-        <div class="text-end">
-          <button type="button" class="btn btn-primary text-light" @click="openModal('new', item)">建立新的產品</button>
+    <div class="py-3">
+      <h2>產品列表</h2>
+      <div class="text-end">
+        <button type="button" class="btn btn-primary text-light" @click="openProduct('new', item)">建立新的產品</button>
+      </div>
+      <!-- 產品列表 -->
+      <table class="table table-hover mt-4">
+        <thead>
+          <tr>
+            <th width="120">分類</th>
+            <th width="150">產品名稱</th>
+            <th width="120">
+              原價
+            </th>
+            <th width="120">
+              售價
+            </th>
+            <th width="150">
+              是否啟用
+            </th>
+            <th width="120">
+              編輯
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item) in products" v-bind:key="item.id">
+            <td width="120">{{ item.category }}</td>
+            <td width="150">{{ item.title }}</td>
+            <td width="120">
+              {{ item.origin_price }}
+            </td>
+            <td width="120">
+              {{ item.price }}
+            </td>
+            <td width="150">
+              <span class="text-success" v-if="item.is_enabled">啟用</span>
+              <span v-else>未啟用</span>
+            </td>
+            <td width="120">
+              <button type="button" class="btn btn-outline-primary btn-sm me-2" @click="openProduct('edit', item)">編輯</button>
+              <button type="button" class="btn btn-outline-danger btn-sm" @click="openProduct('delete', item)">刪除</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="row">
+        <div class="col">
+          <Pagination :pages="pagination" @change-page="getProducts"></Pagination>
         </div>
-        <!-- 產品列表 -->
-        <table class="table table-hover mt-4">
-          <thead>
-            <tr>
-              <th width="120">分類</th>
-              <th width="150">產品名稱</th>
-              <th width="120">
-                原價
-              </th>
-              <th width="120">
-                售價
-              </th>
-              <th width="150">
-                是否啟用
-              </th>
-              <th width="120">
-                編輯
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(item) in products" v-bind:key="item.id">
-              <td width="120">{{ item.category }}</td>
-              <td width="150">{{ item.title }}</td>
-              <td width="120">
-                {{ item.origin_price }}
-              </td>
-              <td width="120">
-                {{ item.price }}
-              </td>
-              <td width="150">
-                <span class="text-success" v-if="item.is_enabled">啟用</span>
-                <span v-else>未啟用</span>
-              </td>
-              <td width="120">
-                <button type="button" class="btn btn-outline-primary btn-sm me-2" @click="openModal('edit', item)">編輯</button>
-                <button type="button" class="btn btn-outline-danger btn-sm" @click="openModal('delete', item)">刪除</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="row">
-          <div class="col">
-            <Pagination :pages="pagination" @change-page="getData"></Pagination>
-          </div>
-          <div class="col">
-            <p class="text-end">本頁有 <span>{{ products.length }}</span> 項產品</p>
-          </div>
-          <ProdModal
-            :product="tempProduct"
-            :isNew="isNew"
-            ref="productModal"
-            @update-data ="updateData"
-            @cancel-modal ="cancelModal"
-            @create-images ="createImages"
-          ></ProdModal>
-          <DelModal
-            :temp-product="tempProduct"
-            ref="deleteModal"
-            @del-product="deleteData"
-            @cancel-modal ="cancelModal('del')"
-          ></DelModal>
+        <div class="col">
+          <p class="text-end">本頁有 <span>{{ products.length }}</span> 項產品</p>
         </div>
+        <ProdModal
+          :product="tempProduct"
+          :isNew="isNew"
+          ref="productModal"
+          @update-product ="updateProduct"
+          @cancel-product ="cancelProduct"
+          @create-images ="createImages"
+        ></ProdModal>
+        <DelModal
+          :temp-data="tempProduct"
+          ref="deleteModal"
+          @del-data="deleteProduct"
+        ></DelModal>
       </div>
     </div>
   </div>
@@ -78,6 +76,9 @@
 import Pagination from '@/components/PaginationView.vue'
 import DelModal from '@/components/DelModal.vue'
 import ProdModal from '@/components/ProdModal.vue'
+import { Toast, Swal } from '@/methods/swalToast'
+import Loading from 'vue-loading-overlay'
+import 'vue-loading-overlay/dist/css/index.css'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 
 export default {
@@ -90,27 +91,29 @@ export default {
       tempProduct: {
         imagesUrl: [],
         tempImage: ''
-      }
+      },
+      isLoading: false,
+      fullPage: true
     }
   },
   methods: {
-    // #5 取得後台產品列表
-    getData (page = 1) { // 參數預設值
+    getProducts (page = 1) {
+      this.isLoading = true
       this.$http.get(`${VITE_APP_URL}api/${VITE_APP_PATH}/admin/products/?page=${page}`)
         .then((res) => {
-          // console.log(res.data);
+          this.isLoading = false
           this.products = res.data.products
           this.pagination = res.data.pagination
         })
         .catch((err) => {
-          // console.dir(err);
-          alert(err.response.data.message)
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     },
-    // modal.show()
-    openModal (event, item) {
+    openProduct (event, item) {
       if (event === 'new') {
-        // console.log(this.tempProduct);
         this.isNew = true
         this.tempProduct = { imagesUrl: [] }
         this.$refs.productModal.showModal()
@@ -120,22 +123,14 @@ export default {
         this.$refs.productModal.showModal()
       } else if (event === 'delete') {
         this.tempProduct = { ...item }
-        // console.log(this.tempProduct)
         this.$refs.deleteModal.showModal()
       }
     },
-    // 取消鈕，modal.hide()
-    cancelModal (ent) {
-      if (ent === 'del') {
-        this.tempProduct = { imagesUrl: [] }
-        this.$refs.deleteModal.hideModal()
-      } else {
-        this.tempProduct = { imagesUrl: [] }
-        this.$refs.productModal.hideModal()
-      }
+    cancelProduct () {
+      this.tempProduct = { imagesUrl: [] }
+      this.$refs.productModal.hideModal()
     },
-    // 建立新產品 編輯產品
-    updateData () {
+    updateProduct () {
       let api = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/product`
       let apiMethod = 'post'
       if (!this.isNew) {
@@ -145,45 +140,54 @@ export default {
       this.tempProduct.tempImage = ''
       this.$http[apiMethod](api, { data: this.tempProduct })
         .then((res) => {
-          alert(res.data.message)
+          Toast.fire({
+            icon: 'success',
+            title: res.data.message
+          })
           this.tempProduct = {
             imagesUrl: [],
             tempImage: ''
           }
           this.$refs.productModal.hideModal()
-          this.getData()
+          this.getProducts()
         })
         .catch((err) => {
-          alert(err.response.data.message)
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     },
-    // 新增上傳圖片
     createImages () {
       this.tempProduct.imagesUrl.push('')
     },
-    // 刪除產品
-    deleteData () {
+    deleteProduct () {
       const deleteUrl = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/product/${this.tempProduct.id}`
       this.$http.delete(deleteUrl)
         .then((res) => {
-          // console.log(res.data);
-          alert(res.data.message)
+          Toast.fire({
+            icon: 'success',
+            title: res.data.message
+          })
           this.$refs.deleteModal.hideModal()
-          this.getData()
+          this.getProducts()
         })
         .catch((err) => {
-          // console.dir(err);
-          alert(err.response.data.message)
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     }
   },
   components: {
     Pagination,
     DelModal,
-    ProdModal
+    ProdModal,
+    Loading
   },
   mounted () {
-    this.getData()
+    this.getProducts()
   }
 }
 </script>
