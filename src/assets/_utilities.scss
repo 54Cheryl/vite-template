@@ -9,8 +9,10 @@
 .Serif-TC{
   font-family: 'Noto Serif Tc', Serif;
 }
-.writing-lr{
-  writing-mode: vertical-lr;
+@media screen and (min-width: 576px) {
+  .writing-lr{
+    writing-mode: vertical-lr;
+  }
 }
 .writing-rl{
   writing-mode: vertical-rl;
@@ -26,10 +28,6 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   overflow: hidden;
-}
-//定位
-.topNegative{
-  top: -16px;
 }
 //顏色
 .accent-color{
