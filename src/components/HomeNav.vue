@@ -41,7 +41,6 @@
                   <span class="position-relative">
                     <span class="position-absolute topNegative start-50 translate-middle badge rounded-pill bg-danger fs-sm">
                       99+
-                      <span class="visually-hidden">unread messages</span>
                     </span>
                     <span class="d-block writing-nav letter-spacing">
                       購物車
@@ -52,7 +51,6 @@
                 <div class="col-auto m-auto endNegative">
                   <span class="badge rounded bg-danger">
                     99+
-                    <span class="visually-hidden">unread messages</span>
                   </span>
                 </div>
               </div>

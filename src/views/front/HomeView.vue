@@ -134,7 +134,7 @@
       </div>
     </div>
     <div class="py-4 mb-4">
-      <button class="Serif-TC text-center btn btn-outline-primary d-block m-auto px-4">更 多 消 息</button>
+      <button class="Serif-TC text-center btn btn-custom d-block m-auto px-4">更 多 消 息</button>
     </div>
   </div>
   <!-- 第四屏 -->
