@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg fixed-top py-2 desktopPx"
   :class="{
-    'bg-opacity-20': isScrolled,
+    'bg-opacity-20': !isScrolled,
     'bg-white': isScrolled,
     'navbar-light': isScrolled,
     'navbar-dark': !isScrolled,
