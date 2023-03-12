@@ -54,7 +54,7 @@
         <div class="col-lg-6 col-md-10 my-auto p-0 position-relative appeal-img">
           <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678386479583.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=BgjYYRaG8DhhUI78tq8bmjolmvX4CB%2B8bpWCrZXW5x4Xc59Pd%2Ffn%2B%2BOA6MA3Z%2FouJLmBQfbkdRPeTIhsQ01QlRbHmbszQMDxTj08xp35CW3LRg5iYGPXvDANAl4ElEAfZNI98QGmtFJIM3XbXHx86S3AA2DLXJJ%2Bbpjd6%2FMV%2BhJYu7LOX966w2Z5%2BxWpDw5JbbNC95O3pnJoGZVKDcNiS998PgHG1ii7a6swGBi7HhzqQ63ipTWJFy8c8jNK4HT8Kq2duI%2Fcq%2FgIWynloH%2BDsCONAUf5xYkQuRfPtdd%2FApwwqi33ZgvaBIXHlyhRyznTdl5WxVCznkjaVptbsE8eig%3D%3D" alt="" class="img-fluid">
         </div>
-        <div class="col-lg-6 col-md-10 p-0 d-flex justify-content-evenly position-relative" style="max-height: 55vh; z-index: 2;">
+        <div class="col-lg-6 col-md-10 p-0 d-flex justify-content-evenly position-relative" style="max-height: 450px; height: 55vh; z-index: 2;">
           <div class="mx-4 col-md-auto">
             <div class="d-flex">
               <h3 class="letter-spacing Serif-TC mt-3 mx-0 writing-lr">品牌理念
