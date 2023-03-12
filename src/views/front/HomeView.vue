@@ -31,8 +31,8 @@
           <div class="d-flex my-4 col-md-2">
             <div class="col-auto ps-3 position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657190077.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KlWtrqmPixbMSIZMgexLakY33rh8Np7Ltcbo79AMG2%2FWgSprUf9%2BmfPpSRYYkhtMQp%2BJDTZaUPzN%2FhqTuuvU2dT8Yir0eJzJ9RFPV7cYJoJ4tzXlwZUXq%2BeTBA3sMox9pw5jGngU6Y8DM%2BTo8cFK%2BTJFzbUm2GULC%2FpheeRdRX6TVSd5g4O5tlITEJ4o%2BVHerWlptyUPASQufdWdZlZQs3mq3ea%2FbthMUDcJpFyRXllC3EIIod3juzbrVPY2GVlSIo2PX%2FW8Rx6QjqpHR9FnZaKLbQnUvBWEgrDi%2FwMC%2BNM9amzSX9x%2Bjap2h7fHzd6pjdRL79n9YpUjRfUrx9PJUw%3D%3D" alt="" class="position-absolute" style="left: -0.1rem; top: -1rem;">
-              <h3 class="letter-spacing Serif-TC mb-0">品牌理念</h3>
-              <span class="text-center fs-7 Serif-TC mt-4">Brand Appeal</span>
+              <h3 class="letter-spacing Serif-TC mb-0 neutral-900">品牌理念</h3>
+              <span class="text-center fs-7 Serif-TC mt-4 neutral-900">Brand Appeal</span>
             </div>
             <div class="col m-auto ps-3">
               <p class="bg-n500 m-auto" style="height: 1px;"></p>
@@ -40,7 +40,7 @@
           </div>
           <div class="col-12 col-md-auto my-auto p-0">
             <div class="bg-opacity-80 px-4">
-              <p class="Sans-TC pt-4 m-0 fs-5 writing-lr">別茶寄與愛茶人</p>
+              <p class="Sans-TC pt-4 m-0 neutral-700 fs-5 writing-lr">別茶寄與愛茶人</p>
               <p class="Sans-TC py-4 m-0 neutral-300 writing-lr">品牌名稱取自於《謝李六郎中寄新蜀茶》詩中的尾句「別茶人」，即專業的茶葉品評師。我們像白居易一樣，熱愛茶文化，將最好的茶葉帶給每位愛茶人。別茶二字象徵著我們對茶葉的鑑賞、了解和熱愛。我們期待與您分享這份熱情，為您帶來最美好的品茶體驗。無論您是在家中享用或與好友分享，我們的使命就是為您提供最好的茶葉。讓我們一起品嚐這份美好，享受別具風味的茶葉文化。</p>
             </div>
           </div>
@@ -59,14 +59,14 @@
           <div class="mx-4 col-md-auto">
             <div class="d-flex position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="" class="position-absolute" style="right: 0.5rem; top: -0.2rem;">
-              <h3 class="letter-spacing Serif-TC mt-3 mx-0 writing-lr">品牌理念
+              <h3 class="letter-spacing Serif-TC mt-3 mx-0 writing-lr neutral-900">品牌理念
               </h3>
-              <span class="text-center fs-7 Serif-TC writing-lr mt-3">Brand Appeal</span>
+              <span class="text-center fs-7 Serif-TC writing-lr mt-3 neutral-900">Brand Appeal</span>
             </div>
             <p class="bg-n500 m-auto" style="width: 1px; height: 15vh;"></p>
           </div>
           <div class="col-md-auto bg-opacity-80 writing-lr my-4">
-            <p class="letter-spacing Sans-TC fs-5 mt-4">別茶寄與愛茶人</p>
+            <p class="letter-spacing Sans-TC neutral-700 fs-5 mt-4">別茶寄與愛茶人</p>
             <p class="letter-spacing Sans-TC neutral-300 mb-0 mt-4">品牌名稱取自於《謝李六郎中寄新蜀茶》詩中的尾句「別茶人」，即專業的茶葉品評師。我們像白居易一樣，熱愛茶文化，將最好的茶葉帶給每位愛茶人。別茶二字象徵著我們對茶葉的鑑賞、了解和熱愛。我們期待與您分享這份熱情，為您帶來最美好的品茶體驗。無論您是在家中享用或與好友分享，我們的使命就是為您提供最好的茶葉。讓我們一起品嚐這份美好，享受別具風味的茶葉文化。</p>
           </div>
         </div>
@@ -80,8 +80,8 @@
         <div class="d-flex col-md-2">
           <div class="col-auto ps-3 position-relative">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657190077.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KlWtrqmPixbMSIZMgexLakY33rh8Np7Ltcbo79AMG2%2FWgSprUf9%2BmfPpSRYYkhtMQp%2BJDTZaUPzN%2FhqTuuvU2dT8Yir0eJzJ9RFPV7cYJoJ4tzXlwZUXq%2BeTBA3sMox9pw5jGngU6Y8DM%2BTo8cFK%2BTJFzbUm2GULC%2FpheeRdRX6TVSd5g4O5tlITEJ4o%2BVHerWlptyUPASQufdWdZlZQs3mq3ea%2FbthMUDcJpFyRXllC3EIIod3juzbrVPY2GVlSIo2PX%2FW8Rx6QjqpHR9FnZaKLbQnUvBWEgrDi%2FwMC%2BNM9amzSX9x%2Bjap2h7fHzd6pjdRL79n9YpUjRfUrx9PJUw%3D%3D" alt="" class="position-absolute" style="left: -0.1rem; top: -1rem;">
-            <h3 class="letter-spacing Serif-TC mb-0">別茶消息</h3>
-            <span class="text-center fs-7 Serif-TC mt-4">News</span>
+            <h3 class="letter-spacing Serif-TC mb-0 neutral-900">別茶消息</h3>
+            <span class="text-center fs-7 Serif-TC mt-4 neutral-900">News</span>
           </div>
           <div class="col m-auto ps-3">
             <p class="bg-n500 m-auto" style="height: 1px;"></p>
@@ -98,9 +98,9 @@
           <div class="card mb-4 mx-auto" style="max-width: 22rem;">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678648054156.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=PW4bi0hxb9ycCFLT6eQUXJCoqw0GVy8yErDD57OJV9yPRgp1aF3k5BWhAev7w7G9utoG%2FORYFFelcJ8VXfewdq2YzJC5hVq1E17b8m9nhH6HhDbx9TTjZeQ%2Bt7G1N7mzhFHAP64aAetngbLBBuFq4wsHbJF2M2gbpJ8IVeVk%2BmRxSqfmXdpKoGZOHNs7b092TtZG1%2FeM5%2B3aspWJ5SwBfhPAPpks8m1NAdx4o27%2F2c%2F1CfH0CDD0jkkp8ft4uonK%2Bh2nY%2FoEnn4OWMAv2gipkZpwXKNe10p%2Bz9U8fTs%2FyqnozWxEgfOWAHdHjt791JwNexVI8fNVkk%2BiG%2BWHdhpTsA%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 200px;">
             <div class="card-body">
-              <h5 class="card-title Serif-TC">梨山翠峰</h5>
+              <h5 class="card-title Serif-TC neutral-900">梨山翠峰</h5>
               <p class="fs-sm neutral-300 Sans-TC">2022年11月30日</p>
-              <p class="card-text Serif-TC multiline-ellipsis">我們很榮幸向您介紹我們最新的茶葉產品 - 梨山翠峰！這款茶葉來自台灣高山茶區，以其清新香氣和淡雅口感而聞名。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐梨山翠峰，您會感受到茶葉的清新和柔和，並且留下持久的甘甜口感。無論您是茶葉愛好者還是想要嚐試新口味的人，梨山翠峰都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於梨山翠峰的詳細資訊，並在家中享受最好的品質和味道。</p>
+              <p class="card-text Serif-TC multiline-ellipsis neutral-500">我們很榮幸向您介紹我們最新的茶葉產品 - 梨山翠峰！這款茶葉來自台灣高山茶區，以其清新香氣和淡雅口感而聞名。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐梨山翠峰，您會感受到茶葉的清新和柔和，並且留下持久的甘甜口感。無論您是茶葉愛好者還是想要嚐試新口味的人，梨山翠峰都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於梨山翠峰的詳細資訊，並在家中享受最好的品質和味道。</p>
               <a href="/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
             </div>
           </div>
@@ -109,9 +109,9 @@
           <div class="card mb-4 mx-auto" style="max-width: 22rem;">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678648579838.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KzyYtLglR69iKpV6EYcng16Wc5g6eoGZhQy5iGKDwxJjhCh4gM%2FktPIolpxYG9SZAxzcZaqM0xFbjhkEp7HWUvsly%2FKK6rgoF47%2F8azRm%2BP4wInR%2Bu%2FKRvXnOA9HqY6TWrc%2Fyj5XaAHdd%2BQAKkwLc69FNLXJMnKodRa97she7Hwt5pC6CIZM0UQxtIFYFehZc5EWS%2ByadlhMwPVQ5jQqi%2Bx8LkRQqWxOZq4G1Rm%2B8b%2BmAh%2FO9lxHvMw0NdYAsyBYYtgUhYdPsRpdz6Zzh7zUgXswk54dO025B3biZUkMwzE31E9QawxofAPnrWn6zuTjG4hRjFy51cRaDGjom%2FDvcQ%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 200px;">
             <div class="card-body">
-              <h5 class="card-title Serif-TC">2022年最受歡迎的商品</h5>
+              <h5 class="card-title Serif-TC neutral-900">2022年最受歡迎的商品</h5>
               <p class="fs-sm neutral-300 Sans-TC">2022年12月12日</p>
-              <p class="card-text Serif-TC multiline-ellipsis">「品味絕佳，享受舌尖饗宴」。阿里山烏龍茶將帶你走進一場味覺盛宴。我們獨家挑選高山茶園最優質的茶葉，以傳統烘焙技法製成，帶有獨特的花香和果香，入口柔和順滑，回甘悠長。適合搭配各式美食，讓你的餐桌增添無限美味。現在購買，還可享受限時優惠！趕快選購，開啟美味之旅！</p>
+              <p class="card-text Serif-TC multiline-ellipsis neutral-500">「品味絕佳，享受舌尖饗宴」。阿里山烏龍茶將帶你走進一場味覺盛宴。我們獨家挑選高山茶園最優質的茶葉，以傳統烘焙技法製成，帶有獨特的花香和果香，入口柔和順滑，回甘悠長。適合搭配各式美食，讓你的餐桌增添無限美味。現在購買，還可享受限時優惠！趕快選購，開啟美味之旅！</p>
               <a href="/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
             </div>
           </div>
@@ -120,9 +120,9 @@
           <div class="card mb-4 mx-auto" style="max-width: 22rem;">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678649830585.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Df4NIesJG1a2lfCuUQ%2F44I1mx7%2FsQgzo6XvudjtIp132XCJRzwtfW8EW4r7NZiDsQa70apDDYZ9f3GzBS7K75UtCQHMAd0KHh%2Bqrchy4UecstdfBk77vJC0PyNPF2rGjaEYXTPYxT2iN3sBoS2F4oqMvuyAkeaOKyRHZ%2BUZdoQcMdZ%2BX91J%2F7h9O7oxZL3ii%2BM6J8F74aqpgwfR6y4nX%2FU5hh9IVntNG7hbit6iFu%2BL7iKJimpeqWKWV774uZ6NYtSb9nlOvwVIbPyyYLi48JxpkkP5Ae0Af1oyKoliHMvLfnufKr4prBG9NXOrwca7DT4swZbx8%2BqN0lW6jXuiamA%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 200px;">
             <div class="card-body">
-              <h5 class="card-title Serif-TC">癸卯新春禮盒上市</h5>
+              <h5 class="card-title Serif-TC neutral-900">癸卯新春禮盒上市</h5>
               <p class="fs-sm neutral-300 Sans-TC">2023年01月16日</p>
-              <p class="card-text Serif-TC multiline-ellipsis">「祝福新年，品味好茶」。癸卯新春禮盒上市啦！我們精選高山茶、烏龍茶、普洱茶等多種茶葉，以精美包裝送至你手中。每一口，都是對新年美好祝福的傳遞。無論是與摯愛分享，還是獨自品味，都能感受茶香濃郁，韻味無窮。趕快選購，與親朋好友一起開啟幸福新年！</p>
+              <p class="card-text Serif-TC multiline-ellipsis neutral-500">「祝福新年，品味好茶」。癸卯新春禮盒上市啦！我們精選高山茶、烏龍茶、普洱茶等多種茶葉，以精美包裝送至你手中。每一口，都是對新年美好祝福的傳遞。無論是與摯愛分享，還是獨自品味，都能感受茶香濃郁，韻味無窮。趕快選購，與親朋好友一起開啟幸福新年！</p>
               <a href="/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
             </div>
           </div>
@@ -133,9 +133,9 @@
           <div class="me-4 pe-5">
             <div class="d-flex position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="" class="position-absolute" style="right: 0.5rem; top: 0.3rem;">
-              <h3 class="letter-spacing Serif-TC mt-4 mx-0 writing-lr">別茶消息
+              <h3 class="letter-spacing Serif-TC mt-4 mx-0 writing-lr neutral-900">別茶消息
               </h3>
-              <span class="text-left fs-7 Serif-TC writing-lr mt-4 pt-4">News</span>
+              <span class="text-left fs-7 Serif-TC writing-lr mt-4 pt-4 neutral-900">News</span>
             </div>
             <p class="bg-n500 m-auto" style="width: 1px; height: 15vh;"></p>
           </div>
@@ -153,8 +153,8 @@
         <div class="d-flex col-md-2">
           <div class="col-auto ps-3 position-relative">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657190077.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KlWtrqmPixbMSIZMgexLakY33rh8Np7Ltcbo79AMG2%2FWgSprUf9%2BmfPpSRYYkhtMQp%2BJDTZaUPzN%2FhqTuuvU2dT8Yir0eJzJ9RFPV7cYJoJ4tzXlwZUXq%2BeTBA3sMox9pw5jGngU6Y8DM%2BTo8cFK%2BTJFzbUm2GULC%2FpheeRdRX6TVSd5g4O5tlITEJ4o%2BVHerWlptyUPASQufdWdZlZQs3mq3ea%2FbthMUDcJpFyRXllC3EIIod3juzbrVPY2GVlSIo2PX%2FW8Rx6QjqpHR9FnZaKLbQnUvBWEgrDi%2FwMC%2BNM9amzSX9x%2Bjap2h7fHzd6pjdRL79n9YpUjRfUrx9PJUw%3D%3D" alt="" class="position-absolute" style="left: -0.1rem; top: -1rem;">
-            <h3 class="letter-spacing Serif-TC mb-0">茶品介紹</h3>
-            <span class="text-center fs-7 Serif-TC mt-4">Tea Intro</span>
+            <h3 class="letter-spacing Serif-TC mb-0 neutral-900">茶品介紹</h3>
+            <span class="text-center fs-7 Serif-TC mt-4 neutral-900">Tea Intro</span>
           </div>
           <div class="col m-auto ps-3">
             <p class="bg-n500 m-auto" style="height: 1px;"></p>
@@ -166,9 +166,9 @@
           <div class="ms-4 ps-5">
             <div class="d-flex position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="" class="position-absolute" style="right: 0.5rem; top: 0.3rem;">
-              <h3 class="letter-spacing Serif-TC mt-4 mx-0 writing-lr">茶品介紹
+              <h3 class="letter-spacing Serif-TC mt-4 mx-0 writing-lr neutral-900">茶品介紹
               </h3>
-              <span class="text-left fs-7 Serif-TC writing-lr mt-4 pt-4">Tea Intro</span>
+              <span class="text-left fs-7 Serif-TC writing-lr mt-4 pt-4 neutral-900">Tea Intro</span>
             </div>
             <p class="bg-n500 m-auto" style="width: 1px; height: 15vh;"></p>
           </div>
@@ -184,7 +184,7 @@
               </div>
             </div>
             <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis">紅茶在六大茶系當中是屬於近全發酵的茶款，其製茶流程從採茶後進行萎凋，後續進行發酵工藝至全發酵狀態。常見的蜜香紅茶、紅玉、紅韻、阿薩姆紅茶、錫蘭紅茶、大吉嶺紅茶等經典茶款皆是此茶系的茶款。</p>
+              <p class="card-text Serif-TC multiline-ellipsis neutral-500">紅茶在六大茶系當中是屬於近全發酵的茶款，其製茶流程從採茶後進行萎凋，後續進行發酵工藝至全發酵狀態。常見的蜜香紅茶、紅玉、紅韻、阿薩姆紅茶、錫蘭紅茶、大吉嶺紅茶等經典茶款皆是此茶系的茶款。</p>
               <div class="text-center">
                 <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
@@ -200,7 +200,7 @@
               </div>
             </div>
             <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis">綠茶在六大茶系當中是屬於不發酵的茶款，其製茶流程採茶後立刻進行殺青破壞酵素。台灣經典的綠茶款如三峽碧螺春、龍井即為綠茶系茶款。</p>
+              <p class="card-text Serif-TC multiline-ellipsis neutral-500">綠茶在六大茶系當中是屬於不發酵的茶款，其製茶流程採茶後立刻進行殺青破壞酵素。台灣經典的綠茶款如三峽碧螺春、龍井即為綠茶系茶款。</p>
               <div class="text-center">
                 <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
@@ -216,7 +216,7 @@
               </div>
             </div>
             <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis">青茶又被大家廣稱作烏龍茶，也是最常見的一款茶，在六大茶系當中是屬於部分發酵的茶款，發酵程度是介於綠茶與紅茶之間，擁有了綠茶的清爽鮮，又擁有紅茶的甘甜口感。<br>台灣常見如：凍頂烏龍、鐵觀音、包種茶、阿里山烏龍、梨山烏龍、東方美人、貴妃茶等都是青茶系列的茶款。</p>
+              <p class="card-text Serif-TC multiline-ellipsis neutral-500">青茶又被大家廣稱作烏龍茶，也是最常見的一款茶，在六大茶系當中是屬於部分發酵的茶款，發酵程度是介於綠茶與紅茶之間，擁有了綠茶的清爽鮮，又擁有紅茶的甘甜口感。<br>台灣常見如：凍頂烏龍、鐵觀音、包種茶、阿里山烏龍、梨山烏龍、東方美人、貴妃茶等都是青茶系列的茶款。</p>
               <div class="text-center">
                 <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
@@ -232,7 +232,7 @@
               </div>
             </div>
             <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis">黑茶在六大茶系中，屬於100%發酵的茶款，在茶葉進行加工後堆積發酵的時間較長，讓茶葉呈現為暗褐色的樣態，常見茶款如：「普洱茶」。</p>
+              <p class="card-text Serif-TC multiline-ellipsis neutral-500">黑茶在六大茶系中，屬於100%發酵的茶款，在茶葉進行加工後堆積發酵的時間較長，讓茶葉呈現為暗褐色的樣態，常見茶款如：「普洱茶」。</p>
               <div class="text-center">
                 <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
