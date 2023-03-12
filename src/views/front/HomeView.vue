@@ -51,10 +51,10 @@
   <div class="bg-sec other-use">
     <div class="container py-5">
       <div class="row flex-row-reverse justify-content-evenly my-5 position-relative">
-        <div class="col-lg-6 col-md-10 my-auto p-0 pb-4">
+        <div class="col-lg-6 col-md-10 my-auto p-0 pb-4 position-relative appeal-img">
           <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678386479583.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=BgjYYRaG8DhhUI78tq8bmjolmvX4CB%2B8bpWCrZXW5x4Xc59Pd%2Ffn%2B%2BOA6MA3Z%2FouJLmBQfbkdRPeTIhsQ01QlRbHmbszQMDxTj08xp35CW3LRg5iYGPXvDANAl4ElEAfZNI98QGmtFJIM3XbXHx86S3AA2DLXJJ%2Bbpjd6%2FMV%2BhJYu7LOX966w2Z5%2BxWpDw5JbbNC95O3pnJoGZVKDcNiS998PgHG1ii7a6swGBi7HhzqQ63ipTWJFy8c8jNK4HT8Kq2duI%2Fcq%2FgIWynloH%2BDsCONAUf5xYkQuRfPtdd%2FApwwqi33ZgvaBIXHlyhRyznTdl5WxVCznkjaVptbsE8eig%3D%3D" alt="" class="img-fluid">
         </div>
-        <div class="col-lg-6 col-md-10 p-0 d-flex justify-content-evenly position-relative" style="max-height: 45vh; z-index: 2;">
+        <div class="col-lg-6 col-md-10 p-0 d-flex justify-content-evenly position-relative" style="max-height: 55vh; z-index: 2;">
           <div class="mx-4 col-md-auto">
             <div class="d-flex">
               <h3 class="letter-spacing Serif-TC mt-4 mx-0 writing-lr">品牌理念
@@ -63,7 +63,7 @@
             </div>
             <p class="bg-n500 m-auto" style="width: 1px; height: 15vh;"></p>
           </div>
-          <div class="col-md-auto bg-opacity-80 writing-lr mt-5">
+          <div class="col-md-auto bg-opacity-80 writing-lr my-4">
             <p class="letter-spacing Sans-TC fs-5 mt-4">別茶寄與愛茶人</p>
             <p class="letter-spacing Sans-TC neutral-300 mb-0 mt-4">品牌名稱取自於《謝李六郎中寄新蜀茶》詩中的尾句「別茶人」，即專業的茶葉品評師。我們像白居易一樣，熱愛茶文化，將最好的茶葉帶給每位愛茶人。別茶二字象徵著我們對茶葉的鑑賞、了解和熱愛。我們期待與您分享這份熱情，為您帶來最美好的品茶體驗。無論您是在家中享用或與好友分享，我們的使命就是為您提供最好的茶葉。讓我們一起品嚐這份美好，享受別具風味的茶葉文化。</p>
           </div>
@@ -232,6 +232,11 @@ export default {
 }
 .other-use{
   display: block;
+}
+@media screen and (min-width: 992px) {
+  .appeal-img{
+    right: 5rem
+  }
 }
 @media screen and (max-width: 575px) {
   .tel-use{
