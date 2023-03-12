@@ -51,15 +51,15 @@
   <div class="bg-sec other-use">
     <div class="container py-5">
       <div class="row flex-row-reverse justify-content-evenly my-5 position-relative">
-        <div class="col-lg-6 col-md-10 my-auto p-0 pb-4 position-relative appeal-img">
+        <div class="col-lg-6 col-md-10 my-auto p-0 position-relative appeal-img">
           <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678386479583.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=BgjYYRaG8DhhUI78tq8bmjolmvX4CB%2B8bpWCrZXW5x4Xc59Pd%2Ffn%2B%2BOA6MA3Z%2FouJLmBQfbkdRPeTIhsQ01QlRbHmbszQMDxTj08xp35CW3LRg5iYGPXvDANAl4ElEAfZNI98QGmtFJIM3XbXHx86S3AA2DLXJJ%2Bbpjd6%2FMV%2BhJYu7LOX966w2Z5%2BxWpDw5JbbNC95O3pnJoGZVKDcNiS998PgHG1ii7a6swGBi7HhzqQ63ipTWJFy8c8jNK4HT8Kq2duI%2Fcq%2FgIWynloH%2BDsCONAUf5xYkQuRfPtdd%2FApwwqi33ZgvaBIXHlyhRyznTdl5WxVCznkjaVptbsE8eig%3D%3D" alt="" class="img-fluid">
         </div>
         <div class="col-lg-6 col-md-10 p-0 d-flex justify-content-evenly position-relative" style="max-height: 55vh; z-index: 2;">
           <div class="mx-4 col-md-auto">
             <div class="d-flex">
-              <h3 class="letter-spacing Serif-TC mt-4 mx-0 writing-lr">品牌理念
+              <h3 class="letter-spacing Serif-TC mt-3 mx-0 writing-lr">品牌理念
               </h3>
-              <span class="text-center fs-7 Serif-TC writing-lr mt-4">Brand Appeal</span>
+              <span class="text-center fs-7 Serif-TC writing-lr mt-3">Brand Appeal</span>
             </div>
             <p class="bg-n500 m-auto" style="width: 1px; height: 15vh;"></p>
           </div>
@@ -86,41 +86,46 @@
         </div>
       </div>
       <div class="row col-md-9 d-flex justify-content-left pt-5 m-auto">
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 position-relative">
+          <div class="position-absolute bg-opacity-100" style="z-index: 2; left: 2rem; top: -1rem; border: 1px solid #BB0000;">
+            <p class="text-white Serif-TC letter-spacing px-1 pt-3 pb-2 m-1" style="writing-mode: vertical-lr; background: #E52E2E;">
+              新品上架
+            </p>
+          </div>
           <div class="card mb-4 mx-auto" style="max-width: 22rem;">
-            <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="card-img-top" alt="">
+            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678648054156.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=PW4bi0hxb9ycCFLT6eQUXJCoqw0GVy8yErDD57OJV9yPRgp1aF3k5BWhAev7w7G9utoG%2FORYFFelcJ8VXfewdq2YzJC5hVq1E17b8m9nhH6HhDbx9TTjZeQ%2Bt7G1N7mzhFHAP64aAetngbLBBuFq4wsHbJF2M2gbpJ8IVeVk%2BmRxSqfmXdpKoGZOHNs7b092TtZG1%2FeM5%2B3aspWJ5SwBfhPAPpks8m1NAdx4o27%2F2c%2F1CfH0CDD0jkkp8ft4uonK%2Bh2nY%2FoEnn4OWMAv2gipkZpwXKNe10p%2Bz9U8fTs%2FyqnozWxEgfOWAHdHjt791JwNexVI8fNVkk%2BiG%2BWHdhpTsA%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 200px;">
             <div class="card-body">
               <h5 class="card-title Serif-TC">梨山翠峰</h5>
               <p class="fs-sm neutral-300 Sans-TC">2022年11月30日</p>
               <p class="card-text Serif-TC multiline-ellipsis">我們很榮幸向您介紹我們最新的茶葉產品 - 梨山翠峰！這款茶葉來自台灣高山茶區，以其清新香氣和淡雅口感而聞名。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐梨山翠峰，您會感受到茶葉的清新和柔和，並且留下持久的甘甜口感。無論您是茶葉愛好者還是想要嚐試新口味的人，梨山翠峰都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於梨山翠峰的詳細資訊，並在家中享受最好的品質和味道。</p>
-              <a href="#" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
+              <a href="/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card mb-4 mx-auto" style="max-width: 22rem;">
-            <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="card-img-top" alt="">
+            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678648579838.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KzyYtLglR69iKpV6EYcng16Wc5g6eoGZhQy5iGKDwxJjhCh4gM%2FktPIolpxYG9SZAxzcZaqM0xFbjhkEp7HWUvsly%2FKK6rgoF47%2F8azRm%2BP4wInR%2Bu%2FKRvXnOA9HqY6TWrc%2Fyj5XaAHdd%2BQAKkwLc69FNLXJMnKodRa97she7Hwt5pC6CIZM0UQxtIFYFehZc5EWS%2ByadlhMwPVQ5jQqi%2Bx8LkRQqWxOZq4G1Rm%2B8b%2BmAh%2FO9lxHvMw0NdYAsyBYYtgUhYdPsRpdz6Zzh7zUgXswk54dO025B3biZUkMwzE31E9QawxofAPnrWn6zuTjG4hRjFy51cRaDGjom%2FDvcQ%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 200px;">
             <div class="card-body">
-              <h5 class="card-title Serif-TC">梨山翠峰</h5>
-              <p class="fs-sm neutral-300 Sans-TC">2022年11月30日</p>
-              <p class="card-text Serif-TC multiline-ellipsis">我們很榮幸向您介紹我們最新的茶葉產品 - 梨山翠峰！這款茶葉來自台灣高山茶區，以其清新香氣和淡雅口感而聞名。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐梨山翠峰，您會感受到茶葉的清新和柔和，並且留下持久的甘甜口感。無論您是茶葉愛好者還是想要嚐試新口味的人，梨山翠峰都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於梨山翠峰的詳細資訊，並在家中享受最好的品質和味道。</p>
-              <a href="#" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
+              <h5 class="card-title Serif-TC">2022年最受歡迎的商品</h5>
+              <p class="fs-sm neutral-300 Sans-TC">2022年12月12日</p>
+              <p class="card-text Serif-TC multiline-ellipsis">「品味絕佳，享受舌尖饗宴」。阿里山烏龍茶將帶你走進一場味覺盛宴。我們獨家挑選高山茶園最優質的茶葉，以傳統烘焙技法製成，帶有獨特的花香和果香，入口柔和順滑，回甘悠長。適合搭配各式美食，讓你的餐桌增添無限美味。現在購買，還可享受限時優惠！趕快選購，開啟美味之旅！</p>
+              <a href="/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card mb-4 mx-auto" style="max-width: 22rem;">
-            <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="card-img-top" alt="">
+            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678649830585.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Df4NIesJG1a2lfCuUQ%2F44I1mx7%2FsQgzo6XvudjtIp132XCJRzwtfW8EW4r7NZiDsQa70apDDYZ9f3GzBS7K75UtCQHMAd0KHh%2Bqrchy4UecstdfBk77vJC0PyNPF2rGjaEYXTPYxT2iN3sBoS2F4oqMvuyAkeaOKyRHZ%2BUZdoQcMdZ%2BX91J%2F7h9O7oxZL3ii%2BM6J8F74aqpgwfR6y4nX%2FU5hh9IVntNG7hbit6iFu%2BL7iKJimpeqWKWV774uZ6NYtSb9nlOvwVIbPyyYLi48JxpkkP5Ae0Af1oyKoliHMvLfnufKr4prBG9NXOrwca7DT4swZbx8%2BqN0lW6jXuiamA%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 200px;">
             <div class="card-body">
-              <h5 class="card-title Serif-TC">梨山翠峰</h5>
-              <p class="fs-sm neutral-300 Sans-TC">2022年11月30日</p>
-              <p class="card-text Serif-TC multiline-ellipsis">我們很榮幸向您介紹我們最新的茶葉產品 - 梨山翠峰！這款茶葉來自台灣高山茶區，以其清新香氣和淡雅口感而聞名。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐梨山翠峰，您會感受到茶葉的清新和柔和，並且留下持久的甘甜口感。無論您是茶葉愛好者還是想要嚐試新口味的人，梨山翠峰都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於梨山翠峰的詳細資訊，並在家中享受最好的品質和味道。</p>
-              <a href="#" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
+              <h5 class="card-title Serif-TC">癸卯新春禮盒上市</h5>
+              <p class="fs-sm neutral-300 Sans-TC">2023年01月16日</p>
+              <p class="card-text Serif-TC multiline-ellipsis">「祝福新年，品味好茶」。癸卯新春禮盒上市啦！我們精選高山茶、烏龍茶、普洱茶等多種茶葉，以精美包裝送至你手中。每一口，都是對新年美好祝福的傳遞。無論是與摯愛分享，還是獨自品味，都能感受茶香濃郁，韻味無窮。趕快選購，與親朋好友一起開啟幸福新年！</p>
+              <a href="/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-auto other-use px-0">
+      <div class="col-md-auto px-0 other-use">
         <div class="d-flex" style="max-height: 40vh;">
           <div class="me-4 pe-5">
             <div class="d-flex">
@@ -133,8 +138,8 @@
         </div>
       </div>
     </div>
-    <div class="py-4 mb-4">
-      <button class="Serif-TC text-center btn btn-custom d-block m-auto px-4">更 多 消 息</button>
+    <div class="py-4 mb-4 text-center">
+      <a href="/#/news" class="Serif-TC text-center btn btn-custom m-auto px-4">更 多 消 息</a>
     </div>
   </div>
   <!-- 第四屏 -->
@@ -166,44 +171,64 @@
       <div class="row col-md-9 d-flex justify-content-left pt-5 m-auto">
         <div class="col-12 col-md-6 col-lg-3">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
-            <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="card-img-top" alt="">
+            <div class="position-relative">
+              <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678654028165.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=LC47Shpv7K0%2FUpSJj72%2FsN9PAazDh6lruK68PZAkTxZhw6YJb0rJybX1990%2FsoCdFdh9GcYehIqXyGvMSReYqdEuYtTvnJasnz6ED9E%2FPjquJ8N%2BhLtNsRIcqbdHbr8jvccHdsQTsLMlbtzmzJjf283PvoJWo2ZDHoj0L6wa%2FdkgLZ4SAq5lsqKLivUik%2F8%2B3f5Wq%2FXD0T2K9%2Fe2oi%2Fg4xwqSXat4frAJ%2FiK7mSal7vdm6df9WDT%2BPQyrrtIusdw1l4IOIHjczB0LNHS9mkBmDYNak9PawHpUc8iW49ZmVWc%2BRKKEDheCjp64gc4a4tmM6NTj0sQIRJt7nPfMN0SaA%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
+              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%;">
+                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3" style="writing-mode: vertical-lr;">紅茶</p>
+              </div>
+            </div>
             <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis">我們很榮幸向您介紹我們最新的茶葉產品 - 梨山翠峰！這款茶葉來自台灣高山茶區，以其清新香氣和淡雅口感而聞名。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐梨山翠峰，您會感受到茶葉的清新和柔和，並且留下持久的甘甜口感。無論您是茶葉愛好者還是想要嚐試新口味的人，梨山翠峰都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於梨山翠峰的詳細資訊，並在家中享受最好的品質和味道。</p>
+              <p class="card-text Serif-TC multiline-ellipsis">紅茶在六大茶系當中是屬於近全發酵的茶款，其製茶流程從採茶後進行萎凋，後續進行發酵工藝至全發酵狀態。常見的蜜香紅茶、紅玉、紅韻、阿薩姆紅茶、錫蘭紅茶、大吉嶺紅茶等經典茶款皆是此茶系的茶款。</p>
               <div class="text-center">
-                <a href="#" class="link-primary text-decoration-none Serif-TC">前往選購</a>
+                <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
-            <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="card-img-top" alt="">
+            <div class="position-relative">
+              <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678650979468.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=fAjYNK5UZjaErisWaxDZ460vHOyR6P6Ul5mOjDKFDM7WM5gH%2B88SlxbrZOxiVmaPdi598CcskFMbNc04%2BVJ8LCylzMlXy8naQjLdiR2yPaWPF3Ib4eZCvv8cw8qD0cItPMmnFKTlVdNPuS6HMV6%2Bp1eB%2BLIxoPLUMvXhJ%2FHSu5qGHk%2FSytgUnGatTlT%2B8ODy4pCqtgL0JkWpbGoj94Tws4CAD3Oi8cRhA5BiuxS%2B3LeBKjPO1OpzvD%2BXZjZuUuQFVKtqEJ7gBRB7veAiUiF6%2BHFJaLThLSsrwkh4csDdG%2FlRj5xMSTtDUgJu6z7KKBvZfg1o19gY79i2iCZT0JUWfQ%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
+              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%;">
+                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3" style="writing-mode: vertical-lr;">綠茶</p>
+              </div>
+            </div>
             <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis">我們很榮幸向您介紹我們最新的茶葉產品 - 梨山翠峰！這款茶葉來自台灣高山茶區，以其清新香氣和淡雅口感而聞名。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐梨山翠峰，您會感受到茶葉的清新和柔和，並且留下持久的甘甜口感。無論您是茶葉愛好者還是想要嚐試新口味的人，梨山翠峰都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於梨山翠峰的詳細資訊，並在家中享受最好的品質和味道。</p>
+              <p class="card-text Serif-TC multiline-ellipsis">綠茶在六大茶系當中是屬於不發酵的茶款，其製茶流程採茶後立刻進行殺青破壞酵素。台灣經典的綠茶款如三峽碧螺春、龍井即為綠茶系茶款。</p>
               <div class="text-center">
-                <a href="#" class="link-primary text-decoration-none Serif-TC">前往選購</a>
+                <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
-            <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="card-img-top" alt="">
+            <div class="position-relative">
+              <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678650992588.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=NkkQix5293%2B0%2BWvMgu9qRuspvSeMQ0hI43EJp%2BO%2BN7dybDdclMXgI53spyqi7oi2mUDT8USlrYE1rYs2Z%2FC1BIftZDpy8E3BH7RS97fhE9bHnHtJNpRRRhKc7SGcFgL08O7sDNKKPnTJqDbeRBUBq16J03401YPftRkIC4QdALrl%2FWwMh%2BabCfswpfbODGRf7YBMWKq8diyFY2m%2F%2BzlCPSA%2BoeTqwxiCkey3snbEV9AJEPfI7hSB%2Ba8NeBahBuxVCLWBUkccfJxINCBcVfGM%2FaZVn5M8j1qXV1ljGu9%2BjmqGmchJ99yfxQLVESyAXvxXUbvk88wKEzStqxWXdex%2BAw%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
+              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%;">
+                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3" style="writing-mode: vertical-lr;">青茶</p>
+              </div>
+            </div>
             <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis">我們很榮幸向您介紹我們最新的茶葉產品 - 梨山翠峰！這款茶葉來自台灣高山茶區，以其清新香氣和淡雅口感而聞名。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐梨山翠峰，您會感受到茶葉的清新和柔和，並且留下持久的甘甜口感。無論您是茶葉愛好者還是想要嚐試新口味的人，梨山翠峰都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於梨山翠峰的詳細資訊，並在家中享受最好的品質和味道。</p>
+              <p class="card-text Serif-TC multiline-ellipsis">青茶又被大家廣稱作烏龍茶，也是最常見的一款茶，在六大茶系當中是屬於部分發酵的茶款，發酵程度是介於綠茶與紅茶之間，擁有了綠茶的清爽鮮，又擁有紅茶的甘甜口感。<br>台灣常見如：凍頂烏龍、鐵觀音、包種茶、阿里山烏龍、梨山烏龍、東方美人、貴妃茶等都是青茶系列的茶款。</p>
               <div class="text-center">
-                <a href="#" class="link-primary text-decoration-none Serif-TC">前往選購</a>
+                <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
-            <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="card-img-top" alt="">
+            <div class="position-relative">
+              <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678651005190.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=jCRrwj3Drnr6MdBDaIqkPsGUVI45F9bYjMgffYUzQyLVzYb8w0CANrNGMfOurvatlPU6kS6E1QbOJP1WKSIPmpDHtb6qEbUdZLQRk1BG6b7GUhpK8yX3S%2F4Hp0FewVnDwmdDxvVwP3ielBFJMws3WV%2FuQijktcb%2Fu6tTMUdMrZs6hI%2FF5oz6E7gPUUtwZgFfUG2tER9rJfZI9wfsTc3haCS753LrCzeX7ML%2BYT1HJij0oJbita4cCsqzqNFt9Ur%2BF9z%2Fmypc75F3WOwDX6CaYxLJrm1Lz4YCJIRV8TW3XoC6nxEQwxN%2Fpg%2BCqVrhXpBICvInXJpVwa%2FD0cK54Fc72Q%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
+              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%;">
+                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3" style="writing-mode: vertical-lr;">黑茶</p>
+              </div>
+            </div>
             <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis">我們很榮幸向您介紹我們最新的茶葉產品 - 梨山翠峰！這款茶葉來自台灣高山茶區，以其清新香氣和淡雅口感而聞名。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐梨山翠峰，您會感受到茶葉的清新和柔和，並且留下持久的甘甜口感。無論您是茶葉愛好者還是想要嚐試新口味的人，梨山翠峰都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於梨山翠峰的詳細資訊，並在家中享受最好的品質和味道。</p>
+              <p class="card-text Serif-TC multiline-ellipsis">黑茶在六大茶系中，屬於100%發酵的茶款，在茶葉進行加工後堆積發酵的時間較長，讓茶葉呈現為暗褐色的樣態，常見茶款如：「普洱茶」。</p>
               <div class="text-center">
-                <a href="#" class="link-primary text-decoration-none Serif-TC">前往選購</a>
+                <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>
           </div>
@@ -235,7 +260,7 @@ export default {
 }
 @media screen and (min-width: 992px) {
   .appeal-img{
-    right: 5rem
+    right: 7rem
   }
 }
 @media screen and (max-width: 575px) {
