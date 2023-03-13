@@ -255,25 +255,5 @@ export default {
 </script>
 
 <style>
-@media screen and (min-width: 992px) {
-  .appeal-img{
-    right: 7rem
-  }
-}
-@media screen and (max-width: 575px) {
-  .tel-use{
-    display: block;
-  }
-  .other-use{
-    display: none;
-  }
-  .appeal-top{
-    margin-top: 0px;
-  }
-}
-@media screen and (max-width: 991px) {
-  .appeal-top{
-    margin-top: 1.5rem;
-  }
-}
+
 </style>
