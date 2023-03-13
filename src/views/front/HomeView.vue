@@ -4,17 +4,17 @@
   <div style="background-image: url(https://images.unsplash.com/photo-1531970227416-f0cddeb1f748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1; height: 100vh;">
     <div class="d-flex align-item-center h-100 justify-content-center m-auto" style="">
       <div style="box-sizing: border-box;">
-        <div class="p-2" style="border: 4px solid rgb(255, 255, 255, 0.8); margin-top: 20vh; ">
+        <div class="p-2 w-100" style="border: 4px solid rgb(255, 255, 255, 0.8); margin-top: 20vh;">
           <div class="text-center text-white fs-1 Serif-TC bg-opacity-20 px-3" style="writing-mode: vertical-lr;letter-spacing: 1.5rem; border: 1px solid rgb(255, 255, 255, 0.8); box-sizing: border-box;">
-            <p class="pt-5 pb-4 px-3 m-0">坐酌泠泠水，</p>
-            <p class="pt-5 pb-4 px-3 m-0">看煎瑟瑟塵。</p>
-            <p class="pt-5 pb-4 px-3 m-0">無由持一碗，</p>
-            <p class="pt-5 pb-4 px-3 m-0">寄與愛茶人。</p>
+            <p class="pt-5 pb-4 m-0">坐酌泠泠水，</p>
+            <p class="pt-5 pb-4 m-0">看煎瑟瑟塵。</p>
+            <p class="pt-5 pb-4 m-0">無由持一碗，</p>
+            <p class="pt-5 pb-4 m-0">寄與愛茶人。</p>
           </div>
         </div>
         <div class="text-center position-relative" style="bottom: 30px">
           <p class="bg-white m-auto" style="width: 1px; height: 90px;"></p>
-          <span class="text-white letter-spacing Serif-TC">滾動觀看更多</span>
+          <span class="text-white letter-spacing Serif-TC ps-2">滾動觀看更多</span>
           <i class="bi bi-chevron-down text-white d-block"></i>
         </div>
       </div>
