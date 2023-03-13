@@ -88,8 +88,8 @@
       </div>
       <div class="row col-md-9 d-flex justify-content-left pt-5 m-auto">
         <div class="col-12 col-md-6 col-lg-4 position-relative">
-          <div class="position-absolute bg-opacity-100" style="z-index: 2; left: 2rem; top: -1rem; border: 1px solid #BB0000;">
-            <p class="text-white Serif-TC letter-spacing px-1 pt-3 pb-2 m-1" style="writing-mode: vertical-lr; background: #E52E2E;">
+          <div class="position-absolute bg-opacity-100" style="writing-mode: vertical-lr; z-index: 2; left: 2rem; top: -1rem; border: 1px solid #BB0000;">
+            <p class="text-white Serif-TC letter-spacing px-1 pt-3 pb-2 m-1" style="background: #E52E2E;">
               新品上架
             </p>
           </div>
