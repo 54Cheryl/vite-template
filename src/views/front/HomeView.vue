@@ -141,7 +141,7 @@
       </div>
     </div>
     <div class="py-4 mb-4 text-center">
-      <a href="/vite-template/#/news" class="Serif-TC text-center btn btn-custom m-auto px-4">更 多 消 息</a>
+      <a href="/vite-template/#/news" class="Serif-TC text-center btn btn-outline-custom m-auto px-4">更 多 消 息</a>
     </div>
   </div>
   <!-- 第四屏 -->
@@ -173,7 +173,7 @@
         </div>
       </div>
       <div class="row col-md-9 d-flex justify-content-left pt-5 m-auto">
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678654028165.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=LC47Shpv7K0%2FUpSJj72%2FsN9PAazDh6lruK68PZAkTxZhw6YJb0rJybX1990%2FsoCdFdh9GcYehIqXyGvMSReYqdEuYtTvnJasnz6ED9E%2FPjquJ8N%2BhLtNsRIcqbdHbr8jvccHdsQTsLMlbtzmzJjf283PvoJWo2ZDHoj0L6wa%2FdkgLZ4SAq5lsqKLivUik%2F8%2B3f5Wq%2FXD0T2K9%2Fe2oi%2Fg4xwqSXat4frAJ%2FiK7mSal7vdm6df9WDT%2BPQyrrtIusdw1l4IOIHjczB0LNHS9mkBmDYNak9PawHpUc8iW49ZmVWc%2BRKKEDheCjp64gc4a4tmM6NTj0sQIRJt7nPfMN0SaA%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
@@ -181,15 +181,15 @@
                 <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3">紅茶</p>
               </div>
             </div>
-            <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis neutral-500">紅茶在六大茶系當中是屬於近全發酵的茶款，其製茶流程從採茶後進行萎凋，後續進行發酵工藝至全發酵狀態。常見的蜜香紅茶、紅玉、紅韻、阿薩姆紅茶、錫蘭紅茶、大吉嶺紅茶等經典茶款皆是此茶系的茶款。</p>
-              <div class="text-center">
+            <div class="card-body d-flex flex-column">
+              <p class="card-text Serif-TC neutral-500">紅茶在六大茶系當中是屬於近全發酵的茶款，其製茶流程從採茶後進行萎凋，後續進行發酵工藝至全發酵狀態。常見的阿薩姆紅茶、錫蘭紅茶、紅玉等皆紅茶系茶款。</p>
+              <div class="align-self-start mt-auto mx-auto">
                 <a href="/vite-template/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678650979468.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=fAjYNK5UZjaErisWaxDZ460vHOyR6P6Ul5mOjDKFDM7WM5gH%2B88SlxbrZOxiVmaPdi598CcskFMbNc04%2BVJ8LCylzMlXy8naQjLdiR2yPaWPF3Ib4eZCvv8cw8qD0cItPMmnFKTlVdNPuS6HMV6%2Bp1eB%2BLIxoPLUMvXhJ%2FHSu5qGHk%2FSytgUnGatTlT%2B8ODy4pCqtgL0JkWpbGoj94Tws4CAD3Oi8cRhA5BiuxS%2B3LeBKjPO1OpzvD%2BXZjZuUuQFVKtqEJ7gBRB7veAiUiF6%2BHFJaLThLSsrwkh4csDdG%2FlRj5xMSTtDUgJu6z7KKBvZfg1o19gY79i2iCZT0JUWfQ%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
@@ -197,15 +197,15 @@
                 <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3">綠茶</p>
               </div>
             </div>
-            <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis neutral-500">綠茶在六大茶系當中是屬於不發酵的茶款，其製茶流程採茶後立刻進行殺青破壞酵素。台灣經典的綠茶款如三峽碧螺春、龍井即為綠茶系茶款。</p>
-              <div class="text-center">
+            <div class="card-body d-flex flex-column">
+              <p class="card-text Serif-TC neutral-500">綠茶在六大茶系當中是屬於不發酵的茶款，其製茶流程採茶後立刻進行殺青破壞酵素。台灣經典的綠茶款如三峽碧螺春、龍井即為綠茶系茶款。</p>
+              <div class="align-self-start mt-auto mx-auto">
                 <a href="/vite-template/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678650992588.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=NkkQix5293%2B0%2BWvMgu9qRuspvSeMQ0hI43EJp%2BO%2BN7dybDdclMXgI53spyqi7oi2mUDT8USlrYE1rYs2Z%2FC1BIftZDpy8E3BH7RS97fhE9bHnHtJNpRRRhKc7SGcFgL08O7sDNKKPnTJqDbeRBUBq16J03401YPftRkIC4QdALrl%2FWwMh%2BabCfswpfbODGRf7YBMWKq8diyFY2m%2F%2BzlCPSA%2BoeTqwxiCkey3snbEV9AJEPfI7hSB%2Ba8NeBahBuxVCLWBUkccfJxINCBcVfGM%2FaZVn5M8j1qXV1ljGu9%2BjmqGmchJ99yfxQLVESyAXvxXUbvk88wKEzStqxWXdex%2BAw%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
@@ -213,15 +213,15 @@
                 <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3">青茶</p>
               </div>
             </div>
-            <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis neutral-500">青茶又被大家廣稱作烏龍茶，也是最常見的一款茶，在六大茶系當中是屬於部分發酵的茶款，發酵程度是介於綠茶與紅茶之間，擁有了綠茶的清爽鮮，又擁有紅茶的甘甜口感。<br>台灣常見如：凍頂烏龍、鐵觀音、包種茶、阿里山烏龍、梨山烏龍、東方美人、貴妃茶等都是青茶系列的茶款。</p>
-              <div class="text-center">
+            <div class="card-body d-flex flex-column">
+              <p class="card-text Serif-TC neutral-500">青茶又被廣稱作烏龍茶，青茶在六大茶系當中是屬於部分發酵的茶款，發酵程度是介於綠茶與紅茶之間。台灣常見如：凍頂烏龍、阿里山烏龍、梨山烏龍等皆青茶系茶款。</p>
+              <div class="align-self-start mt-auto mx-auto">
                 <a href="/vite-template/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678651005190.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=jCRrwj3Drnr6MdBDaIqkPsGUVI45F9bYjMgffYUzQyLVzYb8w0CANrNGMfOurvatlPU6kS6E1QbOJP1WKSIPmpDHtb6qEbUdZLQRk1BG6b7GUhpK8yX3S%2F4Hp0FewVnDwmdDxvVwP3ielBFJMws3WV%2FuQijktcb%2Fu6tTMUdMrZs6hI%2FF5oz6E7gPUUtwZgFfUG2tER9rJfZI9wfsTc3haCS753LrCzeX7ML%2BYT1HJij0oJbita4cCsqzqNFt9Ur%2BF9z%2Fmypc75F3WOwDX6CaYxLJrm1Lz4YCJIRV8TW3XoC6nxEQwxN%2Fpg%2BCqVrhXpBICvInXJpVwa%2FD0cK54Fc72Q%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
@@ -229,9 +229,9 @@
                 <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3">黑茶</p>
               </div>
             </div>
-            <div class="card-body">
-              <p class="card-text Serif-TC multiline-ellipsis neutral-500">黑茶在六大茶系中，屬於100%發酵的茶款，在茶葉進行加工後堆積發酵的時間較長，讓茶葉呈現為暗褐色的樣態，常見茶款如：「普洱茶」。</p>
-              <div class="text-center">
+            <div class="card-body d-flex flex-column">
+              <p class="card-text Serif-TC neutral-500">黑茶在六大茶系中，屬於100%發酵的茶款，在茶葉進行加工後堆積發酵的時間較長，讓茶葉呈現為暗褐色的樣態。常見茶款如：普洱茶。</p>
+              <div class="align-self-start mt-auto mx-auto">
                 <a href="/vite-template/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>

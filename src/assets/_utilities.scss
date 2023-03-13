@@ -1,10 +1,28 @@
 //按鈕
 .btn-custom{
+  background: #ab7e52;
+  color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 1.5rem;
+  border-radius: 0;
+}
+.btn-custom:hover{
+  background: rgb(171, 126, 82, 0.8);
+  color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 1.5rem;
+  border-radius: 0;
+}
+.btn-outline-custom{
   border: 1px solid #292524;
   padding: 0.5rem 1.5rem;
   border-radius: 0;
 }
-.btn-custom:hover{
+.btn-outline-custom:hover{
   background: #ab7e52;
   border: 1px solid #292524;
   color: #fff;
@@ -86,6 +104,17 @@
   .appeal-img{
     right: 7rem
   }
+  .productsImg{
+    height: 250px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .appeal-top{
+    margin-top: 1.5rem;
+  }
+  .productsImg{
+    height: 200px;
+  }
 }
 @media screen and (max-width: 575px) {
   .tel-use{
@@ -97,9 +126,7 @@
   .appeal-top{
     margin-top: 0px;
   }
-}
-@media screen and (max-width: 991px) {
-  .appeal-top{
-    margin-top: 1.5rem;
+  .productsImg{
+    height: 250px;
   }
 }

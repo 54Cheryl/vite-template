@@ -1,29 +1,37 @@
 <template>
   <Loading v-model:active="isLoading" :can-cancel="true" :is-full-page="fullPage"></Loading>
   <NavBar></NavBar>
-  <div class="container">
-    <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 200px;">
-      <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1480399129128-2066acb5009e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80); background-position: center center; opacity: 0.1;"></div>
-      <h2 class="fw-bold">Lorem ipsum.</h2>
+  <div style="padding-top: 90px; padding-bottom: 6vh;">
+    <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
+      <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
+      <h2 class="fw-bold Serif-TC letter-spacing position-relative text-white mb-0">產品列表</h2>
     </div>
-    <div class="row mt-4">
-      <div class="col-2">側欄</div>
-      <div class="row col-10">
-        <div class="col-md-4 mb-3" v-for="product in products" :key="product.id">
-          <div class="card border-0 mb-4 position-relative position-relative">
-            <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover" height="250" alt="">
-            <a href="#" class="text-dark">
-              <i class="far fa-heart position-absolute" style="right: 16px; top: 16px"></i>
-            </a>
-            <div class="card-body p-0">
-              <h4 class="mb-0 mt-3">
-                <router-link :to="`/product/${product.id}`" class="text-dark text-decoration-none">{{ product.title }}</router-link>
-              </h4>
-              <p class="card-text text-muted mb-0">{{ product.content }}</p>
-              <p class="text-muted mt-3">NT$ {{ product.price }}</p>
+    <div class="container mt-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white px-0 mb-0 pb-3">
+          <li class="breadcrumb-item"><a class="neutral-300" href="/vite-template/#/">Home</a></li>
+          <li class="breadcrumb-item"><router-link to="/tea-intro" class="neutral-300">茶品介紹</router-link></li>
+          <li class="breadcrumb-item neutral-500" aria-current="page">產品列表</li>
+        </ol>
+      </nav>
+      <div class="row">
+        <div class="col-lg-3 col-md-4 mb-3" v-for="product in products" :key="product.id">
+          <router-link :to="`/product/${product.id}`" class="text-decoration-none">
+            <div class="card border-0 mb-4 position-relative position-relative">
+              <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover productsImg" alt="">
+              <a href="#" class="text-danger">
+                <!-- <i class="far fa-heart position-absolute" style="right: 16px; top: 16px"></i> -->
+              </a>
+              <div class="card-body p-0">
+                <h4 class="mb-0 mt-3 neutral-900 Serif-TC">
+                  {{ product.title }}
+                </h4>
+                <p class="card-text neutral-500 mb-0 Sans-TC">{{ product.content }}</p>
+                <p class="accent-color Sans-TC">NT$ {{ product.price }}</p>
+              </div>
+              <button class="btn btn-custom Serif-TC letter-spacing w-100" @click="addToCart(product.id)">加入購物車</button>
             </div>
-            <button class="btn btn-primary ms-1 text-white" @click="addToCart(product.id)">加入購物車</button>
-          </div>
+          </router-link>
         </div>
       </div>
     </div>

@@ -111,7 +111,7 @@ export default {
     writing-mode: vertical-lr;
   }
   .desktopPx{
-    padding: 0 11rem;
+    padding: 0 12rem;
   }
 }
 @media screen and (max-width: 991px) {
