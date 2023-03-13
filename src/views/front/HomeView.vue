@@ -99,7 +99,7 @@
               <h5 class="card-title Serif-TC neutral-900">梨山翠峰</h5>
               <p class="fs-sm neutral-300 Sans-TC">2022年11月30日</p>
               <p class="card-text Serif-TC multiline-ellipsis neutral-500">我們很榮幸向您介紹我們最新的茶葉產品 - 梨山翠峰！這款茶葉來自台灣高山茶區，以其清新香氣和淡雅口感而聞名。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐梨山翠峰，您會感受到茶葉的清新和柔和，並且留下持久的甘甜口感。無論您是茶葉愛好者還是想要嚐試新口味的人，梨山翠峰都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於梨山翠峰的詳細資訊，並在家中享受最好的品質和味道。</p>
-              <a href="/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
+              <a href="/vite-template/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
               <h5 class="card-title Serif-TC neutral-900">2022年最受歡迎的商品</h5>
               <p class="fs-sm neutral-300 Sans-TC">2022年12月12日</p>
               <p class="card-text Serif-TC multiline-ellipsis neutral-500">「品味絕佳，享受舌尖饗宴」。阿里山烏龍茶將帶你走進一場味覺盛宴。我們獨家挑選高山茶園最優質的茶葉，以傳統烘焙技法製成，帶有獨特的花香和果香，入口柔和順滑，回甘悠長。適合搭配各式美食，讓你的餐桌增添無限美味。現在購買，還可享受限時優惠！趕快選購，開啟美味之旅！</p>
-              <a href="/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
+              <a href="/vite-template/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@
               <h5 class="card-title Serif-TC neutral-900">癸卯新春禮盒上市</h5>
               <p class="fs-sm neutral-300 Sans-TC">2023年01月16日</p>
               <p class="card-text Serif-TC multiline-ellipsis neutral-500">「祝福新年，品味好茶」。癸卯新春禮盒上市啦！我們精選高山茶、烏龍茶、普洱茶等多種茶葉，以精美包裝送至你手中。每一口，都是對新年美好祝福的傳遞。無論是與摯愛分享，還是獨自品味，都能感受茶香濃郁，韻味無窮。趕快選購，與親朋好友一起開啟幸福新年！</p>
-              <a href="/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
+              <a href="/vite-template/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@
       </div>
     </div>
     <div class="py-4 mb-4 text-center">
-      <a href="/#/news" class="Serif-TC text-center btn btn-custom m-auto px-4">更 多 消 息</a>
+      <a href="/vite-template/#/news" class="Serif-TC text-center btn btn-custom m-auto px-4">更 多 消 息</a>
     </div>
   </div>
   <!-- 第四屏 -->
@@ -184,7 +184,7 @@
             <div class="card-body">
               <p class="card-text Serif-TC multiline-ellipsis neutral-500">紅茶在六大茶系當中是屬於近全發酵的茶款，其製茶流程從採茶後進行萎凋，後續進行發酵工藝至全發酵狀態。常見的蜜香紅茶、紅玉、紅韻、阿薩姆紅茶、錫蘭紅茶、大吉嶺紅茶等經典茶款皆是此茶系的茶款。</p>
               <div class="text-center">
-                <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
+                <a href="/vite-template/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>
           </div>
@@ -200,7 +200,7 @@
             <div class="card-body">
               <p class="card-text Serif-TC multiline-ellipsis neutral-500">綠茶在六大茶系當中是屬於不發酵的茶款，其製茶流程採茶後立刻進行殺青破壞酵素。台灣經典的綠茶款如三峽碧螺春、龍井即為綠茶系茶款。</p>
               <div class="text-center">
-                <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
+                <a href="/vite-template/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>
           </div>
@@ -216,7 +216,7 @@
             <div class="card-body">
               <p class="card-text Serif-TC multiline-ellipsis neutral-500">青茶又被大家廣稱作烏龍茶，也是最常見的一款茶，在六大茶系當中是屬於部分發酵的茶款，發酵程度是介於綠茶與紅茶之間，擁有了綠茶的清爽鮮，又擁有紅茶的甘甜口感。<br>台灣常見如：凍頂烏龍、鐵觀音、包種茶、阿里山烏龍、梨山烏龍、東方美人、貴妃茶等都是青茶系列的茶款。</p>
               <div class="text-center">
-                <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
+                <a href="/vite-template/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>
           </div>
@@ -232,12 +232,11 @@
             <div class="card-body">
               <p class="card-text Serif-TC multiline-ellipsis neutral-500">黑茶在六大茶系中，屬於100%發酵的茶款，在茶葉進行加工後堆積發酵的時間較長，讓茶葉呈現為暗褐色的樣態，常見茶款如：「普洱茶」。</p>
               <div class="text-center">
-                <a href="/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
+                <a href="/vite-template/#/products" class="link-primary text-decoration-none Serif-TC">前往選購</a>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
