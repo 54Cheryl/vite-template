@@ -1,16 +1,18 @@
 <template>
   <HomeNav></HomeNav>
   <!-- 第一屏 -->
-  <div class="text-center" style="background-image: url(https://images.unsplash.com/photo-1531970227416-f0cddeb1f748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1; height: 100vh;">
-    <div class="d-inline-block" style="border: 4px solid rgb(255, 255, 255, 0.8); margin-top: 20vh; box-sizing: border-box;">
-      <div class="text-white fs-1 Serif-TC d-inline-block bg-opacity-20 pt-5 m-2" style="writing-mode: vertical-lr; letter-spacing: 1.5rem;border: 1px solid rgb(255, 255, 255, 0.8);vertical-align: middle;">
-        <p class="">坐酌泠泠水，</p>
-        <p class="">看煎瑟瑟塵。</p>
-        <p class="">無由持一碗，</p>
-        <p class="">寄與愛茶人。</p>
+  <div class="pt-5" style="background-image: url(https://images.unsplash.com/photo-1531970227416-f0cddeb1f748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1; height: 100vh;">
+    <div class="text-center">
+      <div class="p-2 d-inline-block" style="border: 4px solid rgb(255, 255, 255, 0.8); margin-top: 20vh; box-sizing: border-box; writing-mode: vertical-lr;"> <!-- writing-mode: vertical-lr;  -->
+        <div class="text-white fs-1 Serif-TC bg-opacity-20 pt-5" style="letter-spacing: 1rem; border: 1px solid rgb(255, 255, 255, 0.8);vertical-align: middle; box-sizing: border-box;">
+          <p class="">坐酌泠泠水，</p>
+          <p class="">看煎瑟瑟塵。</p>
+          <p class="">無由持一碗，</p>
+          <p class="">寄與愛茶人。</p>
+        </div>
       </div>
     </div>
-    <div class="position-relative" style="top: -2rem;">
+    <div class="position-relative text-center" style="top: -3rem;">
       <p class="bg-white mx-auto" style="width: 1px; height: 90px;"></p>
       <span class="text-white letter-spacing Serif-TC ps-2">滾動觀看更多</span>
       <i class="bi bi-chevron-down text-white d-block"></i>
