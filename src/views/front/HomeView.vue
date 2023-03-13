@@ -3,7 +3,7 @@
   <!-- 第一屏 -->
   <div class="pt-5" style="background-image: url(https://images.unsplash.com/photo-1531970227416-f0cddeb1f748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1; height: 100vh;">
     <div class="text-center">
-      <div class="p-2 d-inline-block" style="border: 4px solid rgb(255, 255, 255, 0.8); margin-top: 20vh; box-sizing: border-box; writing-mode: vertical-lr;"> <!-- writing-mode: vertical-lr;  -->
+      <div class="p-2 d-inline-block" style="border: 4px solid rgb(255, 255, 255, 0.8); margin-top: 20vh; box-sizing: border-box; writing-mode: vertical-lr;">
         <div class="text-white fs-1 Serif-TC bg-opacity-20 pt-5" style="letter-spacing: 1rem; border: 1px solid rgb(255, 255, 255, 0.8);vertical-align: middle; box-sizing: border-box;">
           <p class="">坐酌泠泠水，</p>
           <p class="">看煎瑟瑟塵。</p>
@@ -177,8 +177,8 @@
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678654028165.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=LC47Shpv7K0%2FUpSJj72%2FsN9PAazDh6lruK68PZAkTxZhw6YJb0rJybX1990%2FsoCdFdh9GcYehIqXyGvMSReYqdEuYtTvnJasnz6ED9E%2FPjquJ8N%2BhLtNsRIcqbdHbr8jvccHdsQTsLMlbtzmzJjf283PvoJWo2ZDHoj0L6wa%2FdkgLZ4SAq5lsqKLivUik%2F8%2B3f5Wq%2FXD0T2K9%2Fe2oi%2Fg4xwqSXat4frAJ%2FiK7mSal7vdm6df9WDT%2BPQyrrtIusdw1l4IOIHjczB0LNHS9mkBmDYNak9PawHpUc8iW49ZmVWc%2BRKKEDheCjp64gc4a4tmM6NTj0sQIRJt7nPfMN0SaA%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
-              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%;">
-                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3" style="writing-mode: vertical-lr;">紅茶</p>
+              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%; writing-mode: vertical-lr;">
+                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3">紅茶</p>
               </div>
             </div>
             <div class="card-body">
@@ -193,8 +193,8 @@
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678650979468.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=fAjYNK5UZjaErisWaxDZ460vHOyR6P6Ul5mOjDKFDM7WM5gH%2B88SlxbrZOxiVmaPdi598CcskFMbNc04%2BVJ8LCylzMlXy8naQjLdiR2yPaWPF3Ib4eZCvv8cw8qD0cItPMmnFKTlVdNPuS6HMV6%2Bp1eB%2BLIxoPLUMvXhJ%2FHSu5qGHk%2FSytgUnGatTlT%2B8ODy4pCqtgL0JkWpbGoj94Tws4CAD3Oi8cRhA5BiuxS%2B3LeBKjPO1OpzvD%2BXZjZuUuQFVKtqEJ7gBRB7veAiUiF6%2BHFJaLThLSsrwkh4csDdG%2FlRj5xMSTtDUgJu6z7KKBvZfg1o19gY79i2iCZT0JUWfQ%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
-              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%;">
-                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3" style="writing-mode: vertical-lr;">綠茶</p>
+              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%; writing-mode: vertical-lr;">
+                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3">綠茶</p>
               </div>
             </div>
             <div class="card-body">
@@ -209,8 +209,8 @@
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678650992588.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=NkkQix5293%2B0%2BWvMgu9qRuspvSeMQ0hI43EJp%2BO%2BN7dybDdclMXgI53spyqi7oi2mUDT8USlrYE1rYs2Z%2FC1BIftZDpy8E3BH7RS97fhE9bHnHtJNpRRRhKc7SGcFgL08O7sDNKKPnTJqDbeRBUBq16J03401YPftRkIC4QdALrl%2FWwMh%2BabCfswpfbODGRf7YBMWKq8diyFY2m%2F%2BzlCPSA%2BoeTqwxiCkey3snbEV9AJEPfI7hSB%2Ba8NeBahBuxVCLWBUkccfJxINCBcVfGM%2FaZVn5M8j1qXV1ljGu9%2BjmqGmchJ99yfxQLVESyAXvxXUbvk88wKEzStqxWXdex%2BAw%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
-              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%;">
-                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3" style="writing-mode: vertical-lr;">青茶</p>
+              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%; writing-mode: vertical-lr;">
+                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3">青茶</p>
               </div>
             </div>
             <div class="card-body">
@@ -225,8 +225,8 @@
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678651005190.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=jCRrwj3Drnr6MdBDaIqkPsGUVI45F9bYjMgffYUzQyLVzYb8w0CANrNGMfOurvatlPU6kS6E1QbOJP1WKSIPmpDHtb6qEbUdZLQRk1BG6b7GUhpK8yX3S%2F4Hp0FewVnDwmdDxvVwP3ielBFJMws3WV%2FuQijktcb%2Fu6tTMUdMrZs6hI%2FF5oz6E7gPUUtwZgFfUG2tER9rJfZI9wfsTc3haCS753LrCzeX7ML%2BYT1HJij0oJbita4cCsqzqNFt9Ur%2BF9z%2Fmypc75F3WOwDX6CaYxLJrm1Lz4YCJIRV8TW3XoC6nxEQwxN%2Fpg%2BCqVrhXpBICvInXJpVwa%2FD0cK54Fc72Q%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
-              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%;">
-                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3" style="writing-mode: vertical-lr;">黑茶</p>
+              <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%; writing-mode: vertical-lr;">
+                <p class="text-white fs-4  Serif-TC letter-spacing m-0 px-1 pb-2 pt-3">黑茶</p>
               </div>
             </div>
             <div class="card-body">
