@@ -2,8 +2,8 @@
   <HomeNav></HomeNav>
   <!-- 第一屏 -->
   <div style="background-image: url(https://images.unsplash.com/photo-1531970227416-f0cddeb1f748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1; height: 100vh;">
-    <div class="d-flex align-item-center h-100">
-      <div class="m-auto">
+    <div class="d-flex align-item-center h-100 justify-content-center">
+      <div>
         <div class="p-2" style="border: 4px solid rgb(255, 255, 255, 0.8); margin-top: 20vh; ">
           <div class="text-center text-white fs-1 Serif-TC bg-opacity-20" style="writing-mode: vertical-lr;letter-spacing: 1.5rem; border: 1px solid rgb(255, 255, 255, 0.8);">
             <p class="mt-5 mb-4">坐酌泠泠水，</p>
