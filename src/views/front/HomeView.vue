@@ -255,12 +255,6 @@ export default {
 </script>
 
 <style>
-.tel-use{
-  display: none;
-}
-.other-use{
-  display: block;
-}
 @media screen and (min-width: 992px) {
   .appeal-img{
     right: 7rem
