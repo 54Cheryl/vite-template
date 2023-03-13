@@ -9,25 +9,25 @@
     <div class="container mt-4">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white px-0 mb-0 pb-3">
-          <li class="breadcrumb-item"><a class="neutral-300" href="/vite-template/#/">Home</a></li>
-          <li class="breadcrumb-item"><router-link class="neutral-300" to="/tea-intro">茶品介紹</router-link></li>
-          <li class="breadcrumb-item neutral-500" aria-current="page">產品列表</li>
+          <li class="breadcrumb-item Serif-TC"><a class="neutral-300" href="/vite-template/#/">Home</a></li>
+          <li class="breadcrumb-item Serif-TC"><router-link class="neutral-300" to="/tea-intro">茶品介紹</router-link></li>
+          <li class="breadcrumb-item neutral-500 Serif-TC" aria-current="page">產品列表</li>
         </ol>
       </nav>
       <div class="row">
-        <div class="col-lg-3 col-md-4 mb-3" v-for="product in products" :key="product.id">
+        <div class="col-lg-3 col-md-4 mb-5" v-for="product in products" :key="product.id">
           <div class="card border-0 position-relative position-relative">
             <router-link :to="`/product/${product.id}`" class="text-decoration-none">
               <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover productsImg" alt="">
               <a href="#" class="text-danger">
                 <!-- <i class="far fa-heart position-absolute" style="right: 16px; top: 16px"></i> -->
               </a>
-              <div class="card-body p-0">
-                <h4 class="mb-0 mt-3 neutral-900 Serif-TC">
+              <div class="card-body px-0 bg-all">
+                <h4 class="mb-0 neutral-900 Serif-TC">
                   {{ product.title }}
                 </h4>
                 <p class="card-text neutral-500 mb-0 Sans-TC">{{ product.content }}</p>
-                <p class="accent-color Sans-TC">NT$ {{ product.price }}</p>
+                <p class="accent-color Sans-TC mb-0">NT$ {{ product.price }}</p>
               </div>
             </router-link>
           </div>
