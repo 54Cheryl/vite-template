@@ -22,7 +22,7 @@
               <a href="#" class="text-danger">
                 <!-- <i class="far fa-heart position-absolute" style="right: 16px; top: 16px"></i> -->
               </a>
-              <div class="card-body px-0 bg-all">
+              <div class="card-body px-0 bg-all ps-2">
                 <h4 class="mb-0 neutral-900 Serif-TC">
                   {{ product.title }}
                 </h4>

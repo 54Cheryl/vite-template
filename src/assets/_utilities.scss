@@ -27,6 +27,16 @@
   border: 1px solid #292524;
   color: #fff;
 }
+.btn-outline-n500{
+  border: 1px solid #292524;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0;
+}
+.btn-outline-n500:hover{
+  background: #57534E;
+  border: 1px solid #292524;
+  color: #fff;
+}
 //圖片
 .object-cover{
   object-fit: cover;
