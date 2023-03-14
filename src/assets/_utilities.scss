@@ -37,6 +37,17 @@
   border: 1px solid #292524;
   color: #fff;
 }
+.btn-outline-accent{
+  border: 1px solid #BB0000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0;
+  color: #BB0000;
+}
+.btn-outline-accent:hover{
+  background: #BB0000;
+  border: 1px solid #BB0000;
+  color: #fff;
+}
 //圖片
 .object-cover{
   object-fit: cover;

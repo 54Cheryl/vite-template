@@ -77,7 +77,7 @@ export default {
   },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
-    this.getCart()
+    this.getCarts()
   },
   methods: {
     handleScroll () {
@@ -95,7 +95,7 @@ export default {
         this.isOpen = false
       }
     },
-    ...mapActions(cartStore, ['getCart'])
+    ...mapActions(cartStore, ['getCarts'])
   },
   beforeUnmount () {
     window.removeEventListener('scroll', this.handleScroll)

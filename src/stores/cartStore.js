@@ -5,20 +5,16 @@ const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 const cartStore = defineStore('cart', {
   state: () => {
     return {
-      carts: {},
-      total: 0,
-      final_total: 0,
+      cart: {},
       cartNum: 0
     }
   },
   actions: {
-    getCart () {
+    getCarts () {
       axios.get(`${VITE_APP_URL}api/${VITE_APP_PATH}/cart`)
         .then(res => {
-          this.carts = res.data.data.carts
+          this.cart = res.data.data
           this.cartNum = res.data.data.carts.length
-          this.total = res.data.data.total
-          this.final_total = res.data.data.total
         })
         .catch(err => {
           Swal.fire({
@@ -34,7 +30,7 @@ const cartStore = defineStore('cart', {
       }
       axios.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`, { data })
         .then(res => {
-          this.getCart()
+          this.getCarts()
           Toast.fire({
             icon: 'success',
             title: res.data.message
@@ -46,8 +42,68 @@ const cartStore = defineStore('cart', {
             title: err.response.data.message
           })
         })
+    },
+    updateCartItem (item) {
+      const data = {
+        product_id: item.product.id,
+        qty: item.qty
+      }
+      this.loadingItem = item.id
+      axios.put(`${VITE_APP_URL}api/${VITE_APP_PATH}/cart/${item.id}`, { data })
+        .then(res => {
+          Toast.fire({
+            icon: 'success',
+            title: res.data.message
+          })
+          this.getCarts()
+          this.loadingItem = ''
+        })
+        .catch(err => {
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
+        })
+    },
+    deleteCartItem (item) {
+      this.loadingItem = item.id
+      axios.delete(`${VITE_APP_URL}api/${VITE_APP_PATH}/cart/${item.id}`)
+        .then(res => {
+          Toast.fire({
+            icon: 'success',
+            title: res.data.message
+          })
+          this.getCarts()
+          this.loadingItem = ''
+        })
+        .catch(err => {
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
+        })
+    },
+    deleteCarts () {
+      axios.delete(`${VITE_APP_URL}api/${VITE_APP_PATH}/carts`)
+        .then(res => {
+          Toast.fire({
+            icon: 'success',
+            title: res.data.message
+          })
+          this.getCarts()
+        })
+        .catch(err => {
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
+        })
     }
   },
-  getters: {}
+  getters: {
+    getCart: ({ cart }) => {
+      return cart
+    }
+  }
 })
 export default cartStore

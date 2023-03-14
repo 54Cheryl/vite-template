@@ -52,10 +52,10 @@ export default {
     ...mapState(cartStore, ['cartNum'])
   },
   mounted () {
-    this.getCart()
+    this.getCarts()
   },
   methods: {
-    ...mapActions(cartStore, ['getCart'])
+    ...mapActions(cartStore, ['getCarts'])
   }
 }
 </script>

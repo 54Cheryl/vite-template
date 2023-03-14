@@ -4,12 +4,12 @@
     <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 0.8;"></div>
   </div>
   <div class="container">
-    <h3 class="text-center mt-5">購物車列表</h3>
+    <h3 class="text-center mt-5 Serif-TC">購物車列表</h3>
     <div class="text-end">
-      <button class="btn btn-outline-danger" type="button" @click="() => deleteCarts()">清空購物車</button>
+      <button class="btn btn-outline-accent Serif-TC" type="button" @click="() => deleteCarts()">清空購物車</button>
     </div>
     <table class="table align-middle">
-      <thead>
+      <thead class="Serif-TC">
         <tr>
           <th></th>
           <th>品名</th>
@@ -19,8 +19,8 @@
         </tr>
       </thead>
       <tbody>
-        <template v-if="cart.carts">
-          <tr v-for="item in cart.carts" :key="item.id">
+        <template v-if="getCart.carts">
+          <tr v-for="item in getCart.carts" :key="item.id">
             <td>
               <button type="button" class="btn btn-outline-danger btn-sm"
                 @click="() => deleteCartItem(item)" :disabled="item.id === loadingItem">
@@ -28,10 +28,10 @@
                 x
               </button>
             </td>
-            <td>
+            <td class="Sans-TC">
               {{ item.product.title }}
             </td>
-            <td>
+            <td class="Sans-TC">
               <div class="input-group input-group-sm">
                 <select name="" id="" class="form-select"
                   v-model="item.qty" @change="updateCartItem(item)" :disabled="item.id === loadingItem">
@@ -40,37 +40,37 @@
                 <div class="input-group-text">/ {{ item.product.unit }}</div>
               </div>
             </td>
-            <td class="text-end">
+            <td class="text-end Sans-TC">
               <small class="text-success" v-if="item.product.price !== item.product.origin_price">促銷價：</small>
               {{ item.product.price }}
             </td>
-            <td class="text-end">
+            <td class="text-end Sans-TC">
               {{ item.total }}
             </td>
           </tr>
         </template>
       </tbody>
       <tfoot>
-        <tr>
+        <tr class="Sans-TC">
           <td colspan="4" class="text-end">總計</td>
-          <td class="text-end">$ {{ cart.total }}</td>
+          <td class="text-end">$ {{ getCart.total }}</td>
         </tr>
-        <tr v-if="cart.total !== cart.final_total">
+        <tr class="Sans-TC" v-if="getCart.total !== getCart.final_total">
           <td colspan="4" class="text-end text-success">折扣價</td>
-          <td class="text-end text-success">$ {{ cart.final_total }}</td>
+          <td class="text-end text-success">$ {{ getCart.final_total }}</td>
         </tr>
       </tfoot>
     </table>
     <div class="input-group mb-3 input-group-sm w-25 ms-auto">
       <input
         type="text"
-        class="form-control"
+        class="form-control Sans-TC"
         v-model="coupon_code"
         placeholder="請輸入優惠碼"
       />
       <div class="input-group-append">
         <button
-          class="btn btn-outline-secondary"
+          class="btn btn-outline-n500 Serif-TC"
           type="button"
           @click="addCouponCode"
           style="border-top-left-radius: 0; border-bottom-left-radius: 0;"
@@ -81,15 +81,15 @@
     </div>
   </div>
   <div class="my-5 row justify-content-center">
-    <h3 class="text-center mt-5">訂購資訊</h3>
+    <h3 class="text-center mt-5 Serif-TC">訂購資訊</h3>
     <VForm ref="form" class="col-md-6" v-slot="{ errors }" @submit="createOrder">
       <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
+        <label for="email" class=" form-label Serif-TC">Email</label>
         <VField
           id="email"
           name="email"
           type="email"
-          class="form-control"
+          class="form-control Sans-TC"
           placeholder="請輸入 Email"
           :class="{ 'is-invalid': errors['email'] }"
           rules="email|required"
@@ -99,12 +99,12 @@
       </div>
 
       <div class="mb-3">
-        <label for="name" class="form-label">收件人姓名</label>
+        <label for="name" class=" form-label Serif-TC">收件人姓名</label>
         <VField
           id="name"
           name="姓名"
           type="text"
-          class="form-control"
+          class="form-control Sans-TC"
           :class="{ 'is-invalid': errors['姓名'] }"
           placeholder="請輸入姓名"
           rules="required"
@@ -114,12 +114,12 @@
       </div>
 
       <div class="mb-3">
-        <label for="tel" class="form-label">收件人電話</label>
+        <label for="tel" class=" form-label Serif-TC">收件人電話</label>
         <VField
           id="tel"
           name="電話"
           type="text"
-          class="form-control"
+          class="form-control Sans-TC"
           :class="{ 'is-invalid': errors['電話'] }"
           placeholder="請輸入手機號碼"
           :rules="isPhone"
@@ -129,12 +129,12 @@
       </div>
 
       <div class="mb-3">
-        <label for="address" class="form-label">收件人地址</label>
+        <label for="address" class=" form-label Serif-TC">收件人地址</label>
         <VField
           id="address"
           name="地址"
           type="text"
-          class="form-control"
+          class="form-control Sans-TC"
           :class="{ 'is-invalid': errors['地址'] }"
           placeholder="請輸入地址"
           rules="required"
@@ -144,17 +144,17 @@
       </div>
 
       <div class="mb-3">
-        <label for="message" class="form-label">留言</label>
+        <label for="message" class=" form-label Serif-TC">留言</label>
         <textarea
           id="message"
-          class="form-control"
+          class="form-control Sans-TC"
           cols="30"
           rows="10"
           v-model="form.message"
         ></textarea>
       </div>
       <div class="text-end">
-        <button type="submit" class="btn btn-danger">送出訂單</button>
+        <button type="submit" class="btn btn-outline-accent Serif-TC">送出訂單</button>
       </div>
     </VForm>
   </div>
@@ -162,6 +162,8 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'pinia'
+import cartStore from '@/stores/cartStore'
 import { Toast, Swal } from '@/methods/swalToast'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
@@ -171,7 +173,6 @@ export default {
     return {
       products: [],
       productId: '',
-      cart: {},
       form: {
         user: {
           name: '',
@@ -181,79 +182,15 @@ export default {
         },
         message: ''
       },
-      coupon_code: '',
+      coupon_code: 'couponAll8',
       loadingItem: ''
     }
   },
+  computed: {
+    ...mapState(cartStore, ['getCart'])
+  },
   methods: {
-    getCarts () {
-      this.$http.get(`${VITE_APP_URL}api/${VITE_APP_PATH}/cart`)
-        .then(res => {
-          this.cart = res.data.data
-        })
-        .catch(err => {
-          Swal.fire({
-            icon: 'error',
-            title: err.response.data.message
-          })
-        })
-    },
-    updateCartItem (item) {
-      const data = {
-        product_id: item.product.id,
-        qty: item.qty
-      }
-      this.loadingItem = item.id
-      this.$http.put(`${VITE_APP_URL}api/${VITE_APP_PATH}/cart/${item.id}`, { data })
-        .then(res => {
-          Toast.fire({
-            icon: 'success',
-            title: res.data.message
-          })
-          this.getCarts()
-          this.loadingItem = ''
-        })
-        .catch(err => {
-          Swal.fire({
-            icon: 'error',
-            title: err.response.data.message
-          })
-        })
-    },
-    deleteCartItem (item) {
-      this.loadingItem = item.id
-      this.$http.delete(`${VITE_APP_URL}api/${VITE_APP_PATH}/cart/${item.id}`)
-        .then(res => {
-          Toast.fire({
-            icon: 'success',
-            title: res.data.message
-          })
-          this.getCarts()
-          this.loadingItem = ''
-        })
-        .catch(err => {
-          Swal.fire({
-            icon: 'error',
-            title: err.response.data.message
-          })
-        })
-    },
-    deleteCarts () {
-      this.$http.delete(`${VITE_APP_URL}api/${VITE_APP_PATH}/carts`)
-        .then(res => {
-          Toast.fire({
-            icon: 'success',
-            title: res.data.message
-          })
-          this.getCarts()
-        })
-        .catch(err => {
-          Swal.fire({
-            icon: 'error',
-            title: err.response.data.message
-          })
-        })
-    },
+    ...mapActions(cartStore, ['getCarts', 'updateCartItem', 'deleteCartItem', 'deleteCarts']),
     addCouponCode () {
       this.isLoading = true
       const coupon = {
