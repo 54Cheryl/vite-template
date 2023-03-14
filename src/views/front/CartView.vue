@@ -6,7 +6,7 @@
   <div class="container">
     <h3 class="text-center mt-5">購物車列表</h3>
     <div class="text-end">
-      <button class="btn btn-outline-danger" type="button" @click="deleteCarts()">清空購物車</button>
+      <button class="btn btn-outline-danger" type="button" @click="() => deleteCarts()">清空購物車</button>
     </div>
     <table class="table align-middle">
       <thead>
@@ -23,7 +23,7 @@
           <tr v-for="item in cart.carts" :key="item.id">
             <td>
               <button type="button" class="btn btn-outline-danger btn-sm"
-                @click="deleteCartItem(item)" :disabled="item.id === loadingItem">
+                @click="() => deleteCartItem(item)" :disabled="item.id === loadingItem">
                 <i class="fas fa-spinner fa-pulse" v-if="loadingItem === item.id"></i>
                 x
               </button>

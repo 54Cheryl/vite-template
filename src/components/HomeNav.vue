@@ -40,7 +40,7 @@
                 <div class="col-10 endflex">
                   <span class="position-relative">
                     <span class="position-absolute topNegative start-50 translate-middle badge rounded-pill bg-danger fs-sm">
-                      99+
+                      {{ cartNum }}
                     </span>
                     <span class="d-block writing-nav letter-spacing" :class="{'hb-navColor': isOpen}">
                       購物車
@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-auto m-auto endNegative">
                   <span class="badge rounded bg-danger">
-                    99+
+                    {{ cartNum }}
                   </span>
                 </div>
               </div>
@@ -63,6 +63,8 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'pinia'
+import cartStore from '@/stores/cartStore'
 export default {
   data () {
     return {
@@ -70,8 +72,12 @@ export default {
       isOpen: false
     }
   },
+  computed: {
+    ...mapState(cartStore, ['cartNum'])
+  },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
+    this.getCart()
   },
   methods: {
     handleScroll () {
@@ -88,7 +94,8 @@ export default {
       } else {
         this.isOpen = false
       }
-    }
+    },
+    ...mapActions(cartStore, ['getCart'])
   },
   beforeUnmount () {
     window.removeEventListener('scroll', this.handleScroll)

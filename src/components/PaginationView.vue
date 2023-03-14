@@ -6,7 +6,7 @@
           class="page-link"
           href="#"
           aria-label="Previous"
-          @click.prevent="updatePage(pages.current_page - 1)"
+          @click.prevent="() => updatePage(pages.current_page - 1)"
         >
           <span aria-hidden="true">&laquo;</span>
         </a>
@@ -17,12 +17,12 @@
         v-for="page in pages.total_pages"
         :key="page + 'page'"
       >
-        <a class="page-link" href="#" @click.prevent="$emit('change-page', page)">{{ page }}</a>
+        <a class="page-link" href="#" @click.prevent="() => $emit('change-page', page)">{{ page }}</a>
       </li>
 
       <li class="page-item" :class="{ disabled: !pages.has_next }">
         <a class="page-link" href="#" aria-label="Next"
-          @click.prevent="updatePage(pages.current_page + 1)"
+          @click.prevent="() => updatePage(pages.current_page + 1)"
         >
           <span aria-hidden="true">&raquo;</span>
         </a>

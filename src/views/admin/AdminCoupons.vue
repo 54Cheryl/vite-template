@@ -4,7 +4,7 @@
     <div class="py-3">
       <h2>優惠券列表</h2>
       <div class="text-end">
-        <button type="button" class="btn btn-primary text-light" @click="openCoupon('new', item)">建立新的優惠券</button>
+        <button type="button" class="btn btn-primary text-light" @click="() => openCoupon('new', item)">建立新的優惠券</button>
       </div>
       <!-- 產品列表 -->
       <table class="table table-hover mt-4">
@@ -29,8 +29,8 @@
               <span v-else>未啟用</span>
             </td>
             <td width="120">
-              <button type="button" class="btn btn-outline-primary btn-sm me-2" @click="openCoupon('edit', item)">編輯</button>
-              <button type="button" class="btn btn-outline-danger btn-sm" @click="openCoupon('delete', item)">刪除</button>
+              <button type="button" class="btn btn-outline-primary btn-sm me-2" @click="() => openCoupon('edit', item)">編輯</button>
+              <button type="button" class="btn btn-outline-danger btn-sm" @click="() => openCoupon('delete', item)">刪除</button>
             </td>
           </tr>
         </tbody>

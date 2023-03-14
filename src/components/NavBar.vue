@@ -32,7 +32,7 @@
               <div class="d-flex align-items-center justify-content-between">
                 <span class="d-block letter-spacing">購物車</span>
                 <span class="d-block badge rounded-pill bg-danger fs-sm">
-                  99+
+                  {{ cartNum }}
                 </span>
               </div>
               <span class="d-block">Cart</span>
@@ -45,8 +45,18 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'pinia'
+import cartStore from '@/stores/cartStore'
 export default {
-
+  computed: {
+    ...mapState(cartStore, ['cartNum'])
+  },
+  mounted () {
+    this.getCart()
+  },
+  methods: {
+    ...mapActions(cartStore, ['getCart'])
+  }
 }
 </script>
 

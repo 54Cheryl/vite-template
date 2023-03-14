@@ -4,13 +4,14 @@
   <div style="padding-top: 90px; padding-bottom: 6vh;">
     <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
       <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
-      <h2 class="fw-bold Serif-TC letter-spacing position-relative text-white mb-0">產品列表</h2>
+      <h2 class="fw-bold Serif-TC letter-spacing position-relative text-white mb-0">產品列表 - {{pageCategory}}</h2>
     </div>
     <div class="container mt-4">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white px-0 mb-0 pb-3">
-          <li class="breadcrumb-item neutral-500 Serif-TC" aria-current="page">全部產品</li>
+          <li class="breadcrumb-item Serif-TC"><router-link class="neutral-300" to="/products">全部產品</router-link></li>
           <li class="breadcrumb-item Serif-TC"><router-link class="neutral-300" to="/tea-intro">茶品介紹</router-link></li>
+          <li class="breadcrumb-item neutral-500 Serif-TC" aria-current="page">{{pageCategory}}</li>
         </ol>
       </nav>
       <div class="row">
@@ -42,17 +43,18 @@
 import { RouterLink } from 'vue-router'
 import Loading from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/css/index.css'
-import { mapActions } from 'pinia'
-import cartStore from '@/stores/cartStore'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
+import { mapActions } from 'pinia'
+import cartStore from '@/stores/cartStore'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 export default {
   data () {
     return {
       products: [],
       isLoading: false,
-      fullPage: true
+      fullPage: true,
+      pageCategory: ''
     }
   },
   components: {
@@ -62,9 +64,11 @@ export default {
     FrontFooter
   },
   methods: {
-    getProducts () {
+    getProducts (page = 1) {
       this.isLoading = true
-      this.$http.get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/products/all`)
+      const { category } = this.$route.params
+      this.pageCategory = category
+      this.$http.get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/products/?page=${page}&category=${category}`)
         .then((res) => {
           this.isLoading = false
           this.products = res.data.products

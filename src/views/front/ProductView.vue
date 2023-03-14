@@ -8,18 +8,18 @@
         </div>
         <div class="row my-4">
           <div class="col-4 text-center overflow-hidden">
-            <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover smImg" @click="showImg(product.imageUrl)">
+            <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover smImg" @click="() => showImg(product.imageUrl)">
           </div>
           <div class="col-4 text-center overflow-hidden" v-for="(imgItem, i) in product.imagesUrl" :key="i">
-            <img :src="imgItem" class="card-img-top rounded-0 object-cover smImg" @click="showImg(imgItem)">
+            <img :src="imgItem" class="card-img-top rounded-0 object-cover smImg" @click="() => showImg(imgItem)">
           </div>
         </div>
       </div>
       <div class="col-lg-7">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-white px-0 mb-0 pb-3 Serif-TC">
-            <li class="breadcrumb-item neutral-300"><a class="text-muted" href="#">Home</a></li>
-            <li class="breadcrumb-item neutral-300"><router-link to="/products" class="text-muted">產品列表</router-link></li>
+            <li class="breadcrumb-item neutral-300"><router-link to="/products" class="text-muted">全部產品</router-link></li>
+            <li class="breadcrumb-item neutral-300"><router-link :to="`/category/${product.category}`" class="text-muted">{{product.category}}</router-link></li>
             <li class="breadcrumb-item active neutral-500" aria-current="page">{{ product.title }}</li>
           </ol>
         </nav>
@@ -45,13 +45,13 @@
             <button class="btn btn-outline-n500 w-100">加入收藏</button>
           </div>
           <div class="col-6">
-            <button class="btn btn-custom w-100 text-white" @click="addToCart(product.id)">加入購物車</button>
+            <button class="btn btn-custom w-100 text-white" @click="() => addToCart(product.id)">加入購物車</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="mt-3 mx-5 row justify-content-between">
-      <div class="accordion col-12 col-md-5">
+    <div class="mt-3 mx-4 row justify-content-between">
+      <div class="accordion col-12 col-md-5 py-0 px-2">
         <h2 class="accordion-header">
           <button
           class="accordion-button Serif-TC fs-4 collapsed"
@@ -61,7 +61,7 @@
           </button>
         </h2>
         <div class="collapse" id="collapseDelivery">
-          <div class="card card-body border-0 Sans-TC">
+          <div class="card card-body border-0 Sans-TC px-0">
             <ul>
               <li>新竹物流宅配</li>
               <li>黑貓宅配 (商品含茶點建議選用)</li>
@@ -78,7 +78,7 @@
           </div>
         </div>
       </div>
-      <div class="accordion col-12 col-md-7">
+      <div class="accordion col-12 col-md-7 py-0 px-2">
         <h2 class="accordion-header">
           <button
           class="accordion-button Serif-TC fs-4"
@@ -101,7 +101,8 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
-import { Toast, Swal } from '@/methods/swalToast'
+import { mapActions } from 'pinia'
+import cartStore from '@/stores/cartStore'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 export default {
   data () {
@@ -120,25 +121,7 @@ export default {
           this.mainImg = res.data.product.imageUrl
         })
     },
-    addToCart (id) {
-      const data = {
-        product_id: id,
-        qty: this.tempQty
-      }
-      this.$http.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`, { data })
-        .then(res => {
-          Toast.fire({
-            icon: 'success',
-            title: res.data.message
-          })
-        })
-        .catch(err => {
-          Swal.fire({
-            icon: 'error',
-            title: err.response.data.message
-          })
-        })
-    },
+    ...mapActions(cartStore, ['addToCart']),
     showImg (url) {
       this.mainImg = url
     }

@@ -51,8 +51,8 @@
               </div>
             </td>
             <td width="100" class="text-center">
-              <button class="btn btn-outline-primary btn-sm me-2" @click="openOrder('edit', item)">檢視</button>
-              <button class="btn btn-outline-danger btn-sm" @click="openOrder('delete', item)">刪除</button>
+              <button class="btn btn-outline-primary btn-sm me-2" @click="() => openOrder('edit', item)">檢視</button>
+              <button class="btn btn-outline-danger btn-sm" @click="() => openOrder('delete', item)">刪除</button>
             </td>
           </tr>
         </tbody>
