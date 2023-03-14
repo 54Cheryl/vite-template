@@ -4,14 +4,14 @@
     <div class="row mx-4">
       <div class="col-lg-5">
         <div class="text-center overflow-hidden">
-          <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover mainImg">
+          <img :src="mainImg" class="card-img-top rounded-0 object-cover mainImg">
         </div>
         <div class="row my-4">
           <div class="col-4 text-center overflow-hidden">
-            <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover smImg">
+            <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover smImg" @click="showImg(product.imageUrl)">
           </div>
           <div class="col-4 text-center overflow-hidden" v-for="(imgItem, i) in product.imagesUrl" :key="i">
-            <img :src="imgItem" class="card-img-top rounded-0 object-cover smImg">
+            <img :src="imgItem" class="card-img-top rounded-0 object-cover smImg" @click="showImg(imgItem)">
           </div>
         </div>
       </div>
@@ -107,7 +107,8 @@ export default {
   data () {
     return {
       product: {},
-      tempQty: 1
+      tempQty: 1,
+      mainImg: ''
     }
   },
   methods: {
@@ -116,6 +117,7 @@ export default {
       this.$http.get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/product/${id}`)
         .then((res) => {
           this.product = res.data.product
+          this.mainImg = res.data.product.imageUrl
         })
     },
     addToCart (id) {
@@ -136,6 +138,9 @@ export default {
             title: err.response.data.message
           })
         })
+    },
+    showImg (url) {
+      this.mainImg = url
     }
   },
   components: {
