@@ -15,7 +15,7 @@
     <div class="position-relative text-center" style="top: -3rem;">
       <p class="bg-white mx-auto" style="width: 1px; height: 90px;"></p>
       <span class="text-white letter-spacing Serif-TC ps-2">滾動觀看更多</span>
-      <i class="bi bi-chevron-down text-white d-block"></i>
+      <i class="bi bi-chevron-down text-white d-block downFrames"></i>
     </div>
   </div>
   <!-- 第二屏-手機 -->
@@ -255,5 +255,21 @@ export default {
 </script>
 
 <style>
-
+.downFrames{
+  position: relative;
+  animation: 2s;
+  animation-name: moving;
+  animation-iteration-count: infinite;
+}
+@keyframes moving {
+  0%{
+    top: 0
+  }
+  50%{
+    top: 10px
+  }
+  100%{
+    top: 0
+  }
+}
 </style>
