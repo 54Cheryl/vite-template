@@ -200,7 +200,7 @@
             <div class="card-body d-flex flex-column">
               <p class="card-text Serif-TC neutral-500">綠茶在六大茶系當中是屬於不發酵的茶款，其製茶流程採茶後立刻進行殺青破壞酵素。台灣經典的綠茶款如三峽碧螺春、龍井即為綠茶系茶款。</p>
               <div class="align-self-start mt-auto mx-auto">
-                <router-link to="/category/蛋糕" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
+                <router-link to="/category/綠茶" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
               </div>
             </div>
           </div>
@@ -232,7 +232,7 @@
             <div class="card-body d-flex flex-column">
               <p class="card-text Serif-TC neutral-500">黑茶在六大茶系中，屬於100%發酵的茶款，在茶葉進行加工後堆積發酵的時間較長，讓茶葉呈現為暗褐色的樣態。常見茶款如：普洱茶。</p>
               <div class="align-self-start mt-auto mx-auto">
-                <router-link to="/category/水果" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
+                <router-link to="/category/黑茶" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
               </div>
             </div>
           </div>
