@@ -112,28 +112,36 @@ export default {
       }
     },
     updateCoupon () {
-      let api = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/coupon`
-      let apiMethod = 'post'
-      if (!this.isNew) {
-        api = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/coupon/${this.tempCoupon.id}`
-        apiMethod = 'put'
+      if (this.tempCoupon.percent > 100 || this.tempCoupon.percent < 0) {
+        Swal.fire({
+          icon: 'error',
+          title: '輸入錯誤',
+          text: '折扣百分比只能為0~100'
+        })
+      } else {
+        let api = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/coupon`
+        let apiMethod = 'post'
+        if (!this.isNew) {
+          api = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/coupon/${this.tempCoupon.id}`
+          apiMethod = 'put'
+        }
+        this.$http[apiMethod](api, { data: this.tempCoupon })
+          .then((res) => {
+            Toast.fire({
+              icon: 'success',
+              title: res.data.message
+            })
+            this.tempCoupon = {}
+            this.$refs.couponModal.hideModal()
+            this.getCoupons()
+          })
+          .catch((err) => {
+            Swal.fire({
+              icon: 'error',
+              title: err.response.data.message
+            })
+          })
       }
-      this.$http[apiMethod](api, { data: this.tempCoupon })
-        .then((res) => {
-          Toast.fire({
-            icon: 'success',
-            title: res.data.message
-          })
-          this.tempCoupon = {}
-          this.$refs.couponModal.hideModal()
-          this.getCoupons()
-        })
-        .catch((err) => {
-          Swal.fire({
-            icon: 'error',
-            title: err.response.data.message
-          })
-        })
     },
     deleteCoupon () {
       const deleteUrl = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/coupon/${this.tempCoupon.id}`

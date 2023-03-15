@@ -108,11 +108,11 @@
               <div class="row">
                 <div class="col-6">
                   <label class="form-label mt-2" for="">原價</label>
-                  <input type="number" class="form-control" id="" placeholder="請輸入原價" v-model.number="tempProduct.origin_price">
+                  <input type="number" min="0" class="form-control" id="" placeholder="請輸入原價" v-model.number="tempProduct.origin_price">
                 </div>
                 <div class="col-6">
                   <label class="form-label mt-2" for="">售價</label>
-                  <input type="number" class="form-control" id="" placeholder="請輸入售價" v-model.number="tempProduct.price">
+                  <input type="number" min="0" class="form-control" id="" placeholder="請輸入售價" v-model.number="tempProduct.price">
                 </div>
               </div>
               <label class="form-label mt-2" for="">產品描述</label>
