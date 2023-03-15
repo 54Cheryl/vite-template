@@ -111,28 +111,6 @@
         </div>
       </div>
     </div>
-    <!-- 原第二屏 -->
-    <!-- <div class="py-5 bg-all">
-      <div class="container">
-        <div class="row">
-          <div class="col-7 my-3 py-5" style="box-sizing: border-box;">
-            <div class="row position-relative">
-              <div class="col-7 pe-0">
-                <img class="card-img-top object-cover" src="https://images.unsplash.com/photo-1531877038798-51499a9eedf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=450&q=80" alt="">
-              </div>
-              <div class="col-5 ps-0 position-absolute" style="bottom: -40px; right: 20px;">
-                <img class="card-img-top object-cover" src="https://images.unsplash.com/photo-1519095615130-d36e0fe3bf63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=270&q=80" alt="" style="max-height: 270px;">
-              </div>
-            </div>
-          </div>
-          <div class="col-5 writing-rl py-3" style="max-height: 50vh;">
-            <h3 class="letter-spacing Serif-TC ms-0">別茶品茶師</h3>
-            <p class="py-5 fs-5 letter-spacing Sans-TC">首席品茶師 GRACE</p>
-            <p class="mb-5 pt-5 letter-spacing Sans-TC" style="line-height: 2rem;">擁有超過二十年的茶席經驗，並且曾受邀前往日本、德國等地推廣茶文化，以專業的品評技巧，創造出獨具特色的品茶體驗。透過「茶乾香、茶湯味、杯底香」的細膩層次感受，深刻地展現出台灣茶的美妙向度，其中的芬芳則源自土壤、雨水以及製茶師的手藝。憑藉對茶葉的熱情與堅持，她將引領您探索不同種類的茶葉風味，讓您品味茶葉的多種層次。</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
   <FrontFooter></FrontFooter>
 </template>
