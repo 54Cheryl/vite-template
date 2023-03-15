@@ -17,9 +17,9 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto pt-3 Serif-TC endHeight">
           <li class="nav-item px-3 hb">
-            <router-link to="/products" class="nav-link writing-nav">
-              <span class="d-block letter-spacing" :class="{'hb-navColor': isOpen}">產品介紹</span>
-              <span class="d-block" :class="{'hb-navColor': isOpen}">Product</span>
+            <router-link to="/tea-intro" class="nav-link writing-nav">
+              <span class="d-block letter-spacing" :class="{'hb-navColor': isOpen}">茶品介紹</span>
+              <span class="d-block" :class="{'hb-navColor': isOpen}">Tea Intro</span>
             </router-link>
           </li>
           <li class="nav-item px-3 hb">

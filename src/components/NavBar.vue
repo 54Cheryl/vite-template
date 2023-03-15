@@ -10,9 +10,9 @@
       <div class="collapse navbar-collapse" id="navbarNav2">
         <ul class="navbar-nav ms-auto pt-3 Serif-TC endHeight">
           <li class="nav-item px-3 hb">
-            <router-link to="/products" class="nav-link">
-              <span class="d-block letter-spacing">產品介紹</span>
-              <span class="d-block">Product</span>
+            <router-link to="/tea-intro" class="nav-link">
+              <span class="d-block letter-spacing">茶品介紹</span>
+              <span class="d-block">Tea Intro</span>
             </router-link>
           </li>
           <li class="nav-item px-3 hb">
