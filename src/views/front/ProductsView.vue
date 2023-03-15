@@ -25,19 +25,19 @@
                 <h5 class="mb-0 neutral-900 Serif-TC text-center pb-2 pt-1">
                   {{ product.title }}
                 </h5>
-                <div class="d-flex px-3">
-                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec">品種</p>
-                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1">{{ product.variety }}</p>
+                <div class="d-flex px-2 mb-2">
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec col-auto d-flex align-items-center">品種</p>
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 col-10">{{ product.variety }}</p>
                 </div>
-                <div class="d-flex px-3">
-                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-all">香氣</p>
-                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1">{{ product.aroma }}</p>
+                <div class="d-flex px-2 mb-2">
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec col-auto d-flex align-items-center">香氣</p>
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 col-10">{{ product.aroma }}</p>
                 </div>
-                <div class="d-flex px-3">
-                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec">滋味</p>
-                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1">{{ product.taste }}</p>
+                <div class="d-flex px-2 mb-2">
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec col-auto d-flex align-items-center">滋味</p>
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 col-10">{{ product.taste }}</p>
                 </div>
-                <p class="accent-color Sans-TC mb-0 pt-2 fs-5 px-3">NT$ {{ product.price }}</p>
+                <p class="accent-color Sans-TC mb-0 pt-2 fs-5 px-2">NT$ {{ product.price }}</p>
               </div>
             </router-link>
           </div>
