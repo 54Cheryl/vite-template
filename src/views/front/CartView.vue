@@ -67,13 +67,13 @@
         class="form-control Sans-TC"
         v-model="coupon_code"
         placeholder="請輸入優惠碼"
+        style="border-top-left-radius: 0; border-bottom-left-radius: 0;"
       />
       <div class="input-group-append">
         <button
           class="btn btn-outline-n500 Serif-TC"
           type="button"
           @click="addCouponCode"
-          style="border-top-left-radius: 0; border-bottom-left-radius: 0;"
         >
           套用優惠碼
         </button>

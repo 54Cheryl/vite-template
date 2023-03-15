@@ -43,7 +43,7 @@
               <div class="card-body d-flex flex-column">
                 <p class="card-text Serif-TC neutral-500">紅茶在六大茶系當中是屬於近全發酵的茶款，其製茶流程從採茶後進行萎凋，後續進行發酵工藝至全發酵狀態。常見的阿薩姆紅茶、錫蘭紅茶、紅玉等皆紅茶系茶款。</p>
                 <div class="align-self-start mt-auto mx-auto">
-                  <router-link to="/category/甜甜圈" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
+                  <router-link to="/category/紅茶" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
                 </div>
               </div>
             </div>
@@ -75,7 +75,7 @@
               <div class="card-body d-flex flex-column">
                 <p class="card-text Serif-TC neutral-500">青茶又被廣稱作烏龍茶，青茶在六大茶系當中是屬於部分發酵的茶款，發酵程度是介於綠茶與紅茶之間。台灣常見如：凍頂烏龍、阿里山烏龍、梨山烏龍等皆青茶系茶款。</p>
                 <div class="align-self-start mt-auto mx-auto">
-                  <router-link to="/category/水果" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
+                  <router-link to="/category/青茶" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
                 </div>
               </div>
             </div>

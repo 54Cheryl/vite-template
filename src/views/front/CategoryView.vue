@@ -22,12 +22,23 @@
               <a href="#" class="text-danger">
                 <!-- <i class="far fa-heart position-absolute" style="right: 16px; top: 16px"></i> -->
               </a>
-              <div class="card-body px-0 bg-all ps-2">
-                <h4 class="mb-0 neutral-900 Serif-TC">
+              <div class="card-body px-0 ps-2 py-2">
+                <h5 class="mb-0 neutral-900 Serif-TC text-center pb-2 pt-1">
                   {{ product.title }}
-                </h4>
-                <p class="card-text neutral-500 mb-0 Sans-TC">{{ product.content }}</p>
-                <p class="accent-color Sans-TC mb-0">NT$ {{ product.price }}</p>
+                </h5>
+                <div class="d-flex">
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec">品種</p>
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1">{{ product.variety }}</p>
+                </div>
+                <div class="d-flex">
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-all">香氣</p>
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1">{{ product.aroma }}</p>
+                </div>
+                <div class="d-flex">
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec">滋味</p>
+                  <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1">{{ product.taste }}</p>
+                </div>
+                <p class="accent-color Sans-TC mb-0 pt-2 fs-5">NT$ {{ product.price }}</p>
               </div>
             </router-link>
           </div>

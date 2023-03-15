@@ -7,10 +7,10 @@
           <img :src="mainImg" class="card-img-top rounded-0 object-cover mainImg">
         </div>
         <div class="row my-4">
-          <div class="col-4 text-center overflow-hidden">
+          <div class="col-3 text-center overflow-hidden">
             <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover smImg" @click="() => showImg(product.imageUrl)">
           </div>
-          <div class="col-4 text-center overflow-hidden" v-for="(imgItem, i) in product.imagesUrl" :key="i">
+          <div class="col-3 text-center overflow-hidden" v-for="(imgItem, i) in product.imagesUrl" :key="i">
             <img :src="imgItem" class="card-img-top rounded-0 object-cover smImg" @click="() => showImg(imgItem)">
           </div>
         </div>
@@ -24,47 +24,32 @@
           </ol>
         </nav>
         <h2 class="fw-bold h1 mb-3 Serif-TC">{{ product.title }}</h2>
-        <table>
-          <tbody>
-            <tr>
-              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-sec">產地</td>
-              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.origin_place }}</td>
-            </tr>
-            <tr style="height: 0.5rem;"></tr>
-            <tr>
-              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-all">品種</td>
-              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.variety }}</td>
-            </tr>
-            <tr style="height: 0.5rem;"></tr>
-            <tr>
-              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-sec">香氣</td>
-              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.aroma }}</td>
-            </tr>
-            <tr style="height: 0.5rem;"></tr>
-            <tr>
-              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-all">滋味</td>
-              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.taste }}</td>
-            </tr>
-            <tr style="height: 0.5rem;"></tr>
-            <tr>
-              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-sec">茶乾</td>
-              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.tea_dried }}</td>
-            </tr>
-            <tr style="height: 0.5rem;"></tr>
-            <tr>
-              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-all">說明</td>
-              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.content }}</td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- <p class="py-1 fs-6 m-0 Sans-TC">{{ product.origin_place }}</p>
-        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.variety }}</p>
-        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.aroma }}</p>
-        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.taste }}</p>
-        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.tea_dried }}</p>
-        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.content }}</p> -->
+        <div class="d-flex mb-2">
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec">產地</p>
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1">{{ product.origin_place }}</p>
+        </div>
+        <div class="d-flex mb-2">
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec">品種</p>
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1">{{ product.variety }}</p>
+        </div>
+        <div class="d-flex mb-2">
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec">香氣</p>
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1">{{ product.aroma }}</p>
+        </div>
+        <div class="d-flex mb-2">
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec">滋味</p>
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1">{{ product.taste }}</p>
+        </div>
+        <div class="d-flex mb-2">
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec">茶乾</p>
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1">{{ product.tea_dried }}</p>
+        </div>
+        <div class="d-flex mb-2">
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec d-flex align-items-center">說明</p>
+          <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 w-75">{{ product.content }}</p>
+        </div>
         <div class="mt-3 Sans-TC">
-          <p class="fs-5 mb-0 text-muted"><del>NT$ {{ product.origin_price }}</del></p>
+          <p class="fs-5 mb-0 text-muted" v-if="product.origin_price !== product.price"><del>NT$ {{ product.origin_price }}</del></p>
           <p class="fs-3 fw-bold text-primary">NT$ {{ product.price }}</p>
         </div>
         <div class="my-3 col-12 col-md-6 qty-pe">
@@ -174,7 +159,7 @@ export default {
   height: 56vh;
 }
 .smImg{
-  height: 17vh;
+  height: 13vh;
 }
 .qty-pe{
   padding-right: 0.75rem;
@@ -184,7 +169,7 @@ export default {
     height: 45vh;
   }
   .smImg{
-    height: 15vh;
+    height: 12vh;
   }
 }
 @media screen and (max-width: 575px) {
@@ -192,7 +177,7 @@ export default {
     height: 32vh;
   }
   .smImg{
-    height: 9vh;
+    height: 7vh;
   }
   .qty-pe{
     padding-right: 0rem;
