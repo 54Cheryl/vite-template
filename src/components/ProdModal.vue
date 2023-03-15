@@ -65,12 +65,40 @@
               </div>
             </div>
             <div class="col-8">
-              <label class="form-label mt-2" for="">標題</label>
-              <input type="text" class="form-control" id="" placeholder="請輸入標題" v-model="tempProduct.title">
               <div class="row">
                 <div class="col-6">
-                  <label class="form-label mt-2" for="">分類</label>
-                  <input type="text" class="form-control" id="" placeholder="請輸入分類" v-model="tempProduct.category">
+                  <label class="form-label mt-2" for="">品名</label>
+                  <input type="text" class="form-control" id="" placeholder="請輸入品名" v-model="tempProduct.title">
+                </div>
+                <div class="col-6">
+                  <label class="form-label mt-2" for="">類別</label>
+                  <input type="text" class="form-control" id="" placeholder="請輸入類別" v-model="tempProduct.category">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <label class="form-label mt-2" for="">產地</label>
+                  <input type="text" class="form-control" id="" placeholder="請輸入產地" v-model="tempProduct.origin_place">
+                </div>
+                <div class="col-6">
+                  <label class="form-label mt-2" for="">品種</label>
+                  <input type="text" class="form-control" id="" placeholder="請輸入品種" v-model="tempProduct.variety">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <label class="form-label mt-2" for="">香氣</label>
+                  <input type="text" class="form-control" id="" placeholder="請輸入香氣" v-model="tempProduct.aroma">
+                </div>
+                <div class="col-6">
+                  <label class="form-label mt-2" for="">滋味</label>
+                  <input type="text" class="form-control" id="" placeholder="請輸入滋味" v-model="tempProduct.taste">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <label class="form-label mt-2" for="">茶乾</label>
+                  <input type="text" class="form-control" id="" placeholder="請輸入茶乾" v-model="tempProduct.tea_dried">
                 </div>
                 <div class="col-6">
                   <label class="form-label mt-2" for="">單位</label>

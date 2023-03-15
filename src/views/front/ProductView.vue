@@ -24,12 +24,45 @@
           </ol>
         </nav>
         <h2 class="fw-bold h1 mb-3 Serif-TC">{{ product.title }}</h2>
-        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.content }}</p>
-        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.content }}</p>
-        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.content }}</p>
-        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.content }}</p>
-        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.content }}</p>
-        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.content }}</p>
+        <table>
+          <tbody>
+            <tr>
+              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-sec">產地</td>
+              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.origin_place }}</td>
+            </tr>
+            <tr style="height: 0.5rem;"></tr>
+            <tr>
+              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-all">品種</td>
+              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.variety }}</td>
+            </tr>
+            <tr style="height: 0.5rem;"></tr>
+            <tr>
+              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-sec">香氣</td>
+              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.aroma }}</td>
+            </tr>
+            <tr style="height: 0.5rem;"></tr>
+            <tr>
+              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-all">滋味</td>
+              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.taste }}</td>
+            </tr>
+            <tr style="height: 0.5rem;"></tr>
+            <tr>
+              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-sec">茶乾</td>
+              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.tea_dried }}</td>
+            </tr>
+            <tr style="height: 0.5rem;"></tr>
+            <tr>
+              <td class="py-1 fs-6 m-0 Sans-TC px-3 bg-all">說明</td>
+              <td class="py-1 fs-6 m-0 Sans-TC px-2">{{ product.content }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <p class="py-1 fs-6 m-0 Sans-TC">{{ product.origin_place }}</p>
+        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.variety }}</p>
+        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.aroma }}</p>
+        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.taste }}</p>
+        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.tea_dried }}</p>
+        <p class="py-1 fs-6 m-0 Sans-TC">{{ product.content }}</p> -->
         <div class="mt-3 Sans-TC">
           <p class="fs-5 mb-0 text-muted"><del>NT$ {{ product.origin_price }}</del></p>
           <p class="fs-3 fw-bold text-primary">NT$ {{ product.price }}</p>
