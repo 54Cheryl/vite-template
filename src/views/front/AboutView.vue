@@ -62,7 +62,7 @@
       <div class="container py-5">
         <div class="row">
           <div class="col-12 col-md-5">
-            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678386479583.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=BgjYYRaG8DhhUI78tq8bmjolmvX4CB%2B8bpWCrZXW5x4Xc59Pd%2Ffn%2B%2BOA6MA3Z%2FouJLmBQfbkdRPeTIhsQ01QlRbHmbszQMDxTj08xp35CW3LRg5iYGPXvDANAl4ElEAfZNI98QGmtFJIM3XbXHx86S3AA2DLXJJ%2Bbpjd6%2FMV%2BhJYu7LOX966w2Z5%2BxWpDw5JbbNC95O3pnJoGZVKDcNiS998PgHG1ii7a6swGBi7HhzqQ63ipTWJFy8c8jNK4HT8Kq2duI%2Fcq%2FgIWynloH%2BDsCONAUf5xYkQuRfPtdd%2FApwwqi33ZgvaBIXHlyhRyznTdl5WxVCznkjaVptbsE8eig%3D%3D" alt="" class="img-fluid">
+            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678902302593.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=THH5yaOyGS8LsgFFP9VoyagU8eUgtOQptlrCChUGkjWWiqJiWx29xMfDFm0viyMhM3Uo9BFTtvJ3RPe6Sf7ieK48nLuXRLIe6ZsdKJ6P41m7HgMhswA4Ciq%2F6onEojS6O%2F9FMqWrAjdfQTNBxufFNt%2F1fRiF0%2B89xWtsvLiXFD2P1bh8IfzZU01xZKETWJF4H0pqDhGlQq0uZNJ622vT3Xlj%2BNOBsqiipwwtQ3XS6uXjo29CRcRW96wRt3JV0K%2BEWCmkwWD89DVdczcJMNsWiPD9n5Hf9GhrFFIHZRkSnGu35nH65uPRmpSmVV1iroxN0%2BrvTSvucf1Lolu5nW%2BXqw%3D%3D" alt="" class="img-fluid">
           </div>
           <div class="tel-use mt-2">
             <div class="d-flex my-4 col-md-2">
