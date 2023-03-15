@@ -5,7 +5,6 @@
     <div class="bg-all">
       <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
         <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
-        <h2 class="fw-bold Serif-TC letter-spacing position-relative text-white mb-0">產品列表 - {{pageCategory}}</h2>
       </div>
       <div class="container mt-4">
         <nav aria-label="breadcrumb">
