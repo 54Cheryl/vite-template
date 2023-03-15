@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-    <!-- 第一屏-手機 -->
+    <!-- 第二屏-手機 -->
     <div class="bg-sec tel-use">
       <div class="container py-5">
         <div class="row">
@@ -85,17 +85,17 @@
         </div>
       </div>
     </div>
-    <!-- 第一屏 -->
+    <!-- 第二屏 -->
     <div class="bg-sec other-use">
       <div class="container py-5">
         <div class="row justify-content-evenly my-5 position-relative">
           <div class="col-lg-6 col-md-10 my-auto p-0 position-relative biechaer-img">
-            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678386479583.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=BgjYYRaG8DhhUI78tq8bmjolmvX4CB%2B8bpWCrZXW5x4Xc59Pd%2Ffn%2B%2BOA6MA3Z%2FouJLmBQfbkdRPeTIhsQ01QlRbHmbszQMDxTj08xp35CW3LRg5iYGPXvDANAl4ElEAfZNI98QGmtFJIM3XbXHx86S3AA2DLXJJ%2Bbpjd6%2FMV%2BhJYu7LOX966w2Z5%2BxWpDw5JbbNC95O3pnJoGZVKDcNiS998PgHG1ii7a6swGBi7HhzqQ63ipTWJFy8c8jNK4HT8Kq2duI%2Fcq%2FgIWynloH%2BDsCONAUf5xYkQuRfPtdd%2FApwwqi33ZgvaBIXHlyhRyznTdl5WxVCznkjaVptbsE8eig%3D%3D" alt="" class="img-fluid">
+            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678902302593.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=THH5yaOyGS8LsgFFP9VoyagU8eUgtOQptlrCChUGkjWWiqJiWx29xMfDFm0viyMhM3Uo9BFTtvJ3RPe6Sf7ieK48nLuXRLIe6ZsdKJ6P41m7HgMhswA4Ciq%2F6onEojS6O%2F9FMqWrAjdfQTNBxufFNt%2F1fRiF0%2B89xWtsvLiXFD2P1bh8IfzZU01xZKETWJF4H0pqDhGlQq0uZNJ622vT3Xlj%2BNOBsqiipwwtQ3XS6uXjo29CRcRW96wRt3JV0K%2BEWCmkwWD89DVdczcJMNsWiPD9n5Hf9GhrFFIHZRkSnGu35nH65uPRmpSmVV1iroxN0%2BrvTSvucf1Lolu5nW%2BXqw%3D%3D" alt="" class="img-fluid">
           </div>
           <div class="col-lg-6 col-md-10 p-0 d-flex justify-content-evenly position-relative appeal-top" style="max-height: 450px; height: 55vh; z-index: 2;">
             <div class="col-md-auto bg-opacity-80 writing-lr my-4">
               <p class="letter-spacing Sans-TC neutral-300 mb-0 mt-4 writing-rl">擁有超過二十年的茶席經驗，並且曾受邀前往日本、德國等地推廣茶文化，以專業的品評技巧，創造出獨具特色的品茶體驗。透過「茶乾香、茶湯味、杯底香」的細膩層次感受，深刻地展現出台灣茶的美妙向度，其中的芬芳則源自土壤、雨水以及製茶師的手藝。憑藉對茶葉的熱情與堅持，她將引領您探索不同種類的茶葉風味，讓您品味茶葉的多種層次。</p>
-              <p class="letter-spacing Sans-TC neutral-700 fs-5 mt-4">首席品茶師 Grace</p>
+              <p class="letter-spacing Sans-TC neutral-700 fs-5 mt-4">首席品茶師 Chris</p>
             </div>
             <div class="mx-4 col-md-auto">
               <div class="d-flex position-relative">
