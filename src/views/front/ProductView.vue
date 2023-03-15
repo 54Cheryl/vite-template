@@ -19,6 +19,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-white px-0 mb-0 pb-3 Serif-TC">
             <li class="breadcrumb-item neutral-300"><router-link to="/products" class="text-muted">全部產品</router-link></li>
+            <li class="breadcrumb-item neutral-300"><router-link to="/tea-intro" class="text-muted">茶品介紹</router-link></li>
             <li class="breadcrumb-item neutral-300"><router-link :to="`/category/${product.category}`" class="text-muted">{{product.category}}</router-link></li>
             <li class="breadcrumb-item active neutral-500" aria-current="page">{{ product.title }}</li>
           </ol>
