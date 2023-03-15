@@ -104,42 +104,5 @@ export default {
 </script>
 
 <style>
-.topNegative{
-  top: -16px;
-}
-.endNegative{
-  display: none;
-}
-.endflex{
-  display: flex;
-}
-@media screen and (min-width: 992px) {
-  .writing-nav{
-    writing-mode: vertical-lr;
-  }
-  .desktopPx{
-    padding: 0 12rem;
-  }
-}
-@media screen and (max-width: 991px) {
-  .topNegative{
-    display: none;
-  }
-  .endNegative{
-    display: block;
-  }
-  .endHeight{
-    height: 60vh;
-  }
-  .endflex{
-    display: block;
-  }
-  .hb{
-    padding: 1rem 0.5rem;
-    border-bottom: 1px solid #A8A29E;
-  }
-  .hb-navColor{
-    color: #292524;
-  }
-}
+
 </style>

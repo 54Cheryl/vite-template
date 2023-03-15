@@ -8,34 +8,43 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav2">
-        <ul class="navbar-nav ms-auto pt-3 pe-5 Serif-TC">
-          <li class="nav-item px-3">
+        <ul class="navbar-nav ms-auto pt-3 Serif-TC endHeight">
+          <li class="nav-item px-3 hb">
             <router-link to="/products" class="nav-link">
               <span class="d-block letter-spacing">產品介紹</span>
               <span class="d-block">Product</span>
             </router-link>
           </li>
-          <li class="nav-item px-3">
+          <li class="nav-item px-3 hb">
             <router-link to="/news" class="nav-link">
               <span class="d-block letter-spacing">別茶消息</span>
               <span class="d-block">News</span>
             </router-link>
           </li>
-          <li class="nav-item px-3">
+          <li class="nav-item px-3 hb">
             <router-link to="/about" class="nav-link">
               <span class="d-block letter-spacing">關於別茶</span>
               <span class="d-block">About</span>
             </router-link>
           </li>
-          <li class="nav-item px-3">
+          <li class="nav-item px-3 hb">
             <router-link to="/cart" class="nav-link">
-              <div class="d-flex align-items-center justify-content-between">
-                <span class="d-block letter-spacing">購物車</span>
-                <span class="d-block badge rounded-pill bg-danger fs-sm">
-                  {{ cartNum }}
-                </span>
+              <div class="d-flex">
+                <div class="col">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="d-block letter-spacing">購物車</span>
+                    <span class="badge rounded-pill bg-danger fs-sm firstNegative">
+                      {{ cartNum }}
+                    </span>
+                  </div>
+                  <span class="d-block">Cart</span>
+                </div>
+                <div class="col-auto m-auto">
+                  <span class="badge rounded bg-danger secNegative">
+                    {{ cartNum }}
+                  </span>
+                </div>
               </div>
-              <span class="d-block">Cart</span>
             </router-link>
           </li>
         </ul>
@@ -61,4 +70,15 @@ export default {
 </script>
 
 <style>
+.secNegative{
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  .firstNegative{
+    display: none;
+  }
+  .secNegative{
+    display: block;
+  }
+}
 </style>
