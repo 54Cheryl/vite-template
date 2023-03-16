@@ -8,7 +8,7 @@
     <div class="container mt-4">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-all px-0 mb-0 pb-3">
-          <li class="breadcrumb-item neutral-500 Serif-TC" aria-current="page">全部產品</li>
+          <li class="breadcrumb-item text-primary Serif-TC" aria-current="page">全部產品</li>
           <li class="breadcrumb-item Serif-TC"><router-link class="neutral-300 text-decoration-none" to="/tea-intro">茶品介紹</router-link></li>
           <li class="breadcrumb-item dropdown Serif-TC">
             <a class="text-decoration-none neutral-300 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">

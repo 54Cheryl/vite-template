@@ -11,7 +11,7 @@
           <ol class="breadcrumb bg-all px-0 mb-0 pb-3">
             <li class="breadcrumb-item Serif-TC"><router-link class="neutral-300 text-decoration-none" to="/products">全部產品</router-link></li>
             <li class="breadcrumb-item Serif-TC"><router-link class="neutral-300 text-decoration-none" to="/tea-intro">茶品介紹</router-link></li>
-            <li class="breadcrumb-item neutral-500 Serif-TC" aria-current="page">茶品種類 - {{pageCategory}}</li>
+            <li class="breadcrumb-item text-primary Serif-TC" aria-current="page">茶品種類 - {{pageCategory}}</li>
           </ol>
         </nav>
         <div class="row">
