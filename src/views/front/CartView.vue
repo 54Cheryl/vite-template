@@ -11,7 +11,7 @@
           <template v-if="getCart.carts">
             <div class="d-flex mt-4 bg-white" v-for="item in getCart.carts" :key="item.id">
               <router-link :to="`/product/${item.product.id}`" class="text-decoration-none">
-                <img class="object-cover" src="https://images.unsplash.com/photo-1502743780242-f10d2ce370f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1916&q=80" alt="" style="width: 120px; height: 120px;">
+                <img class="object-cover" :src="item.product.imageUrl" alt="" style="width: 120px; height: 120px;">
               </router-link>
               <div class="w-100 p-3 position-relative Sans-TC">
                 <button class="btn text-primary p-0 position-absolute" style="top: 16px; right: 16px;" @click="() => deleteCartItem(item)" :disabled="item.id === loadingItem"><i class="fas fa-times"></i></button>
@@ -207,26 +207,33 @@ export default {
   methods: {
     ...mapActions(cartStore, ['getCarts', 'plusCartQty', 'minusCartQty', 'updateCartItem', 'deleteCartItem', 'deleteCarts']),
     addCouponCode () {
-      this.isLoading = true
-      const coupon = {
-        code: this.coupon_code
+      if (this.cartNum) {
+        this.isLoading = true
+        const coupon = {
+          code: this.coupon_code
+        }
+        this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/coupon`, { data: coupon })
+          .then((res) => {
+            this.isLoading = false
+            Toast.fire({
+              icon: 'success',
+              title: '套用優惠券'
+            })
+            this.getCarts()
+          })
+          .catch((err) => {
+            this.isLoading = false
+            Swal.fire({
+              icon: 'error',
+              title: err.response.data.message
+            })
+          })
+      } else {
+        Toast.fire({
+          icon: 'warning',
+          title: '請先選購產品'
+        })
       }
-      this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/coupon`, { data: coupon })
-        .then((res) => {
-          this.isLoading = false
-          Toast.fire({
-            icon: 'success',
-            title: '套用優惠券'
-          })
-          this.getCarts()
-        })
-        .catch((err) => {
-          this.isLoading = false
-          Swal.fire({
-            icon: 'error',
-            title: err.response.data.message
-          })
-        })
     },
     isPhone (value) {
       const phoneNumber = /^(09)[0-9]{8}$/

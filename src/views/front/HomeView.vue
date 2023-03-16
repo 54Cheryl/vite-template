@@ -141,12 +141,12 @@
       </div>
     </div>
     <div class="py-4 mb-4 text-center">
-      <a href="/vite-template/#/news" class="Serif-TC text-center btn btn-outline-custom m-auto px-4">更 多 消 息</a>
+      <a href="/vite-template/#/news" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">更多消息</a>
     </div>
   </div>
   <!-- 第四屏 -->
   <div class="container">
-    <div class="row py-4 px-0 mb-5">
+    <div class="row pb-4 pt-4 px-0">
       <div class="tel-use">
         <div class="d-flex col-md-2">
           <div class="col-auto ps-3 position-relative">
@@ -238,6 +238,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="pt-4 pb-5 mb-5 text-center">
+      <a href="/vite-template/#/products" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">產品總覽</a>
     </div>
   </div>
   <FrontFooter></FrontFooter>

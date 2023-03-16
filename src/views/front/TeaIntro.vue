@@ -98,6 +98,9 @@
           </div>
         </div>
       </div>
+      <div class="pt-4 pb-5 mb-5 text-center">
+        <a href="/vite-template/#/products" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">產品總覽</a>
+      </div>
     </div>
   </div>
   <FrontFooter></FrontFooter>
