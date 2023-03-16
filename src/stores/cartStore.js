@@ -43,6 +43,16 @@ const cartStore = defineStore('cart', {
           })
         })
     },
+    plusCartQty (item) {
+      item.qty++
+      this.updateCartItem(item)
+    },
+    minusCartQty (item) {
+      if (item.qty > 1) {
+        item.qty--
+        this.updateCartItem(item)
+      }
+    },
     updateCartItem (item) {
       const data = {
         product_id: item.product.id,
