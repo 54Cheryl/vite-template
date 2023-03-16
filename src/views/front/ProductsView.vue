@@ -15,10 +15,10 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <li><router-link class="dropdown-item neutral-300" to="/tea-intro">茶品介紹</router-link></li>
-              <li><a href="/#/category/紅茶" class="dropdown-item neutral-300">紅茶</a></li>
-              <li><a href="/#/category/綠茶" class="dropdown-item neutral-300">綠茶</a></li>
-              <li><a href="/#/category/青茶" class="dropdown-item neutral-300">青茶</a></li>
-              <li><a href="/#/category/黑茶" class="dropdown-item neutral-300">黑茶</a></li>
+              <li><a href="/vite-template/#/category/紅茶" class="dropdown-item neutral-300">紅茶</a></li>
+              <li><a href="/vite-template/#/category/綠茶" class="dropdown-item neutral-300">綠茶</a></li>
+              <li><a href="/vite-template/#/category/青茶" class="dropdown-item neutral-300">青茶</a></li>
+              <li><a href="/vite-template/#/category/黑茶" class="dropdown-item neutral-300">黑茶</a></li>
             </ul>
           </li>
         </ol>

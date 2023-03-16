@@ -16,10 +16,10 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="">
                 <li><router-link class="dropdown-item neutral-500" to="/tea-intro">茶品介紹</router-link></li>
-                <li><a href="/#/category/紅茶" class="dropdown-item neutral-500" :class="{'active': pageCategory === '紅茶'}">紅茶</a></li>
-                <li><a href="/#/category/綠茶" class="dropdown-item neutral-500" :class="{'active': pageCategory === '綠茶'}">綠茶</a></li>
-                <li><a href="/#/category/青茶" class="dropdown-item neutral-500" :class="{'active': pageCategory === '青茶'}">青茶</a></li>
-                <li><a href="/#/category/黑茶" class="dropdown-item neutral-500" :class="{'active': pageCategory === '黑茶'}">黑茶</a></li>
+                <li><a href="/vite-template/#/category/紅茶" class="dropdown-item neutral-500" :class="{'active': pageCategory === '紅茶'}">紅茶</a></li>
+                <li><a href="/vite-template/#/category/綠茶" class="dropdown-item neutral-500" :class="{'active': pageCategory === '綠茶'}">綠茶</a></li>
+                <li><a href="/vite-template/#/category/青茶" class="dropdown-item neutral-500" :class="{'active': pageCategory === '青茶'}">青茶</a></li>
+                <li><a href="/vite-template/#/category/黑茶" class="dropdown-item neutral-500" :class="{'active': pageCategory === '黑茶'}">黑茶</a></li>
               </ul>
             </li>
             <li class="breadcrumb-item neutral-500 Serif-TC" aria-current="page">{{pageCategory}}</li>
