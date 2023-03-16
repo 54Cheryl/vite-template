@@ -68,8 +68,8 @@
             <div class="d-flex my-4 col-md-2">
               <div class="col-auto ps-3 position-relative">
                 <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657190077.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KlWtrqmPixbMSIZMgexLakY33rh8Np7Ltcbo79AMG2%2FWgSprUf9%2BmfPpSRYYkhtMQp%2BJDTZaUPzN%2FhqTuuvU2dT8Yir0eJzJ9RFPV7cYJoJ4tzXlwZUXq%2BeTBA3sMox9pw5jGngU6Y8DM%2BTo8cFK%2BTJFzbUm2GULC%2FpheeRdRX6TVSd5g4O5tlITEJ4o%2BVHerWlptyUPASQufdWdZlZQs3mq3ea%2FbthMUDcJpFyRXllC3EIIod3juzbrVPY2GVlSIo2PX%2FW8Rx6QjqpHR9FnZaKLbQnUvBWEgrDi%2FwMC%2BNM9amzSX9x%2Bjap2h7fHzd6pjdRL79n9YpUjRfUrx9PJUw%3D%3D" alt="" class="position-absolute" style="left: -0.1rem; top: -1rem;">
-                <h3 class="letter-spacing Serif-TC mb-0 neutral-900">品牌理念</h3>
-                <span class="text-center fs-7 Serif-TC mt-4 neutral-900">Brand Appeal</span>
+                <h3 class="letter-spacing Serif-TC mb-0 neutral-900">別茶品茶師</h3>
+                <span class="text-center fs-7 Serif-TC mt-4 neutral-900">Tea Taster</span>
               </div>
               <div class="col m-auto ps-3">
                 <p class="bg-n500 m-auto" style="height: 1px;"></p>
@@ -77,8 +77,8 @@
             </div>
             <div class="col-12 col-md-auto my-auto p-0">
               <div class="bg-opacity-80 px-4">
-                <p class="Sans-TC pt-4 m-0 neutral-700 fs-5 writing-lr">別茶寄與愛茶人</p>
-                <p class="Sans-TC py-4 m-0 neutral-300 writing-lr">品牌名稱取自於《謝李六郎中寄新蜀茶》詩中的尾句「別茶人」，即專業的茶葉品評師。我們像白居易一樣，熱愛茶文化，將最好的茶葉帶給每位愛茶人。別茶二字象徵著我們對茶葉的鑑賞、了解和熱愛。我們期待與您分享這份熱情，為您帶來最美好的品茶體驗。無論您是在家中享用或與好友分享，我們的使命就是為您提供最好的茶葉。讓我們一起品嚐這份美好，享受別具風味的茶葉文化。</p>
+                <p class="Sans-TC pt-4 m-0 neutral-700 fs-5 writing-lr">首席品茶師 Chris</p>
+                <p class="Sans-TC py-4 m-0 neutral-300 writing-lr">擁有超過二十年的茶席經驗，並且曾受邀前往日本、德國等地推廣茶文化，以專業的品評技巧，創造出獨具特色的品茶體驗。透過「茶乾香、茶湯味、杯底香」的細膩層次感受，深刻地展現出台灣茶的美妙向度，其中的芬芳則源自土壤、雨水以及製茶師的手藝。憑藉對茶葉的熱情與堅持，她將引領您探索不同種類的茶葉風味，讓您品味茶葉的多種層次。</p>
               </div>
             </div>
           </div>
