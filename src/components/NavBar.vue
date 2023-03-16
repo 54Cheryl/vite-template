@@ -4,8 +4,14 @@
       <a class="navbar-brand" href="#">
         <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678219730669.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Jr57jwJwQnJxBbVJ6Mjlt4LMI02jKzEl8QFx%2FO0af1bDHh4ohdzqQt%2Fksjh9Q3FRPpaoLlHIMbGxzDA0zictZZvbzjPLl4OASeE3CwdkWnl%2Fqw2sjFBrQJDDeNSIAdvtWjLuaJ548Da0Ro4R9p9dqUHf9EMed7PhYaH6xIyznShARf4bBAH8IOm55edM%2FFlA9BWzmLYph7AAlYQGz0rUuW%2FtdsnV2qjaQKOieegfN8%2FWz%2FuswvapCNg2usNTkvdYLLEUTtkX%2F8OfI1AL5GJ9nF1kFctRa%2By2aU7pUal%2BwjW7rpK7PNk6HHtsa6UVOsw6xmxy9uNgUbO4KWIaBrsqkg%3D%3D" alt="">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler btn border-0 rounded-0 position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation" @click="openHbSec">
+        <i class="bi bi-list fs-1" :class="{'d-none': hbOpen}"></i>
+        <i class="bi bi-x fs-1" :class="{'neutral-900': hbOpen, 'd-none': !hbOpen}"></i>
+        <span
+        class="position-absolute translate-middle p-1 bg-danger border border-light rounded-circle"
+        :class="{'d-none': !cartNum || hbOpen}"
+        style="z-index: 2; top: 25%; left: 70%;">
+        </span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav2">
         <ul class="navbar-nav ms-auto pt-3 Serif-TC endHeight">
@@ -57,6 +63,11 @@
 import { mapActions, mapState } from 'pinia'
 import cartStore from '@/stores/cartStore'
 export default {
+  data () {
+    return {
+      hbOpen: false
+    }
+  },
   computed: {
     ...mapState(cartStore, ['cartNum'])
   },
@@ -64,7 +75,14 @@ export default {
     this.getCarts()
   },
   methods: {
-    ...mapActions(cartStore, ['getCarts'])
+    ...mapActions(cartStore, ['getCarts']),
+    openHbSec () {
+      if (this.hbOpen !== true) {
+        this.hbOpen = true
+      } else {
+        this.hbOpen = false
+      }
+    }
   }
 }
 </script>

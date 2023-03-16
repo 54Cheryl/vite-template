@@ -9,7 +9,18 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-all px-0 mb-0 pb-3">
           <li class="breadcrumb-item neutral-500 Serif-TC" aria-current="page">全部產品</li>
-          <li class="breadcrumb-item Serif-TC"><router-link class="neutral-300" to="/tea-intro">茶品介紹</router-link></li>
+          <li class="breadcrumb-item dropdown Serif-TC">
+            <a class="text-decoration-none neutral-300 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              茶品種類
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><router-link class="dropdown-item neutral-300" to="/tea-intro">茶品介紹</router-link></li>
+              <li><a href="/#/category/紅茶" class="dropdown-item neutral-300">紅茶</a></li>
+              <li><a href="/#/category/綠茶" class="dropdown-item neutral-300">綠茶</a></li>
+              <li><a href="/#/category/青茶" class="dropdown-item neutral-300">青茶</a></li>
+              <li><a href="/#/category/黑茶" class="dropdown-item neutral-300">黑茶</a></li>
+            </ul>
+          </li>
         </ol>
       </nav>
       <div class="row">

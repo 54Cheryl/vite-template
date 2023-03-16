@@ -49,7 +49,7 @@
           </template>
           <template v-if="!cartNum">
             <div class="px-3 mt-4">
-              目前尚未選購商品
+              您目前尚未選購產品
             </div>
           </template>
           <div class="px-3">
@@ -75,7 +75,8 @@
               />
               <div class="input-group-append">
                 <button
-                  class="btn btn-outline-n500 Serif-TC"
+                  style="padding-left: 1.5rem;"
+                  class="btn btn-custom Serif-TC"
                   type="button"
                   @click="addCouponCode"
                 >

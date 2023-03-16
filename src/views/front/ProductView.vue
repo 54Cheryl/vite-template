@@ -61,10 +61,10 @@
         </div>
         <div class="row align-items-center p-0">
           <div class="col-6">
-            <button class="btn btn-outline-n500 w-100">加入收藏</button>
+            <button class="btn btn-outline-n500 Serif-TC letter-spacing w-100">加入收藏</button>
           </div>
           <div class="col-6">
-            <button class="btn btn-custom w-100 text-white" @click="() => addToCart(product.id)">加入購物車</button>
+            <button class="btn btn-custom Serif-TC letter-spacing w-100 text-white" @click="() => addToCart(product.id)">加入購物車</button>
           </div>
         </div>
       </div>

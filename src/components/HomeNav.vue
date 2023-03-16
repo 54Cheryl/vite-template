@@ -10,9 +10,14 @@
       <a class="navbar-brand pb-0" href="#">
         <img src="/src/assets/logo.svg" alt="">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" @click="openHb">
+      <button class="navbar-toggler btn text-white border-0 rounded-0 position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" @click="openHb">
         <i class="bi bi-list fs-1" :class="{'d-none': isOpen}"></i>
         <i class="bi bi-x fs-1" :class="{'neutral-900': isOpen, 'd-none': !isOpen}"></i>
+        <span
+        class="position-absolute translate-middle p-1 bg-danger border border-light rounded-circle"
+        :class="{'d-none': !cartNum || isOpen}"
+        style="z-index: 2; top: 25%; left: 70%;">
+        </span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto pt-3 Serif-TC endHeight">
