@@ -48,7 +48,7 @@
             </div>
           </template>
           <template v-if="!cartNum">
-            <div class="px-3 mt-4">
+            <div class="px-3 mt-4 Sans-TC">
               您目前尚未選購產品
             </div>
           </template>
@@ -253,11 +253,19 @@ export default {
           this.getCarts()
         })
         .catch(() => {
-          Swal.fire({
-            icon: 'error',
-            title: '客戶資訊漏填',
-            text: '請將客戶資訊填寫完整後，再次送出訂單，謝謝!'
-          })
+          if (this.cartNum === 0) {
+            Swal.fire({
+              icon: 'error',
+              title: '您尚未選購產品',
+              text: '請您將產品加入購物車後，再次送出訂單，謝謝!'
+            })
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: '客戶資訊漏填',
+              text: '請將客戶資訊填寫完整後，再次送出訂單，謝謝!'
+            })
+          }
         })
     }
   },
