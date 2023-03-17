@@ -8,21 +8,21 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-0">
-          <li class="nav-item">
+        <ul class="navbar-nav me-auto mb-0 pt-2">
+          <li class="nav-item py-3">
             <router-link to="/admin/products" class="nav-link Serif-TC">產品管理</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item py-3">
             <router-link to="/admin/orders" class="nav-link Serif-TC">訂單管理</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item py-3">
             <router-link to="/admin/coupons" class="nav-link Serif-TC">優惠券管理</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item py-3">
             <router-link to="/" class="nav-link Serif-TC">回到前台</router-link>
           </li>
         </ul>
-        <form class="d-flex">
+        <form class="d-flex py-3">
           <a href="#" @click.prevent="logout" class="text-decoration-none Serif-TC p-md-2 logout">登出</a>
         </form>
       </div>

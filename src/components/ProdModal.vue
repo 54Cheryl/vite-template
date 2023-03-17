@@ -46,7 +46,7 @@
               </div>
               <div class="col mt-5">
                 <label for="customFile" class="fs-4 form-label"
-                  >上傳圖片檔案
+                  >上傳圖檔
                   <i
                     class="fas fa-spinner fa-spin"
                     v-if="imgUploading"
