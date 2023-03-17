@@ -54,17 +54,38 @@
           <p class="fs-3 fw-bold text-primary">NT$ {{ product.price }}</p>
         </div>
         <div class="my-3 col-12 col-md-6 qty-pe">
-          <p class="fs-5 Serif-TC">數量</p>
-          <select class="form-select Sans-TC" aria-label="Default select example" v-model="tempQty">
-            <option :value="i" v-for="i in 20" :key="`${i}45678`">{{i}}</option>
-          </select>
+          <p class="fs-5 Serif-TC mb-2">數量</p>
+          <div class="input-group align-items-center">
+            <div class="input-group-prepend">
+              <button
+                class="btn btn-outline-custom p-2"
+                :class="{ 'text-secondary': tempQty === 1 }"
+                :disabled="tempQty === 1"
+                @click="() => tempQty--"
+              ><i class="fas fa-minus"></i></button>
+            </div>
+            <input
+              type="number"
+              class="form-control text-center p-2" placeholder=""
+              style="border: 1px solid #292524;"
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+              v-model.number="tempQty"
+              min="1"
+            >
+            <div class="input-group-append">
+              <button
+              class="btn btn-outline-custom p-2"
+              @click="() => tempQty++"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
         </div>
-        <div class="row align-items-center p-0">
-          <div class="col-6">
+        <div class="row align-items-center p-0 pt-3">
+          <div class="col-md-6 pb-3">
             <button class="btn btn-outline-n500 Serif-TC letter-spacing w-100">加入收藏</button>
           </div>
-          <div class="col-6">
-            <button class="btn btn-custom Serif-TC letter-spacing w-100 text-white" @click="() => addToCart(product.id)">加入購物車</button>
+          <div class="col-md-6 pb-3">
+            <button class="btn btn-custom Serif-TC letter-spacing w-100 text-white" @click="() => addToCart(product.id, tempQty)">加入購物車</button>
           </div>
         </div>
       </div>

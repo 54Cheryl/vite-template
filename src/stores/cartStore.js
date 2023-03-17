@@ -24,25 +24,46 @@ const cartStore = defineStore('cart', {
           })
         })
     },
-    addToCart (id) {
-      const data = {
-        product_id: id,
-        qty: 1
+    addToCart (id, tempQty) {
+      if (tempQty) {
+        const data = {
+          product_id: id,
+          qty: tempQty
+        }
+        axios.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`, { data })
+          .then(res => {
+            this.getCarts()
+            Toast.fire({
+              icon: 'success',
+              title: res.data.message
+            })
+          })
+          .catch(err => {
+            Swal.fire({
+              icon: 'error',
+              title: err.response.data.message
+            })
+          })
+      } else {
+        const data = {
+          product_id: id,
+          qty: 1
+        }
+        axios.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`, { data })
+          .then(res => {
+            this.getCarts()
+            Toast.fire({
+              icon: 'success',
+              title: res.data.message
+            })
+          })
+          .catch(err => {
+            Swal.fire({
+              icon: 'error',
+              title: err.response.data.message
+            })
+          })
       }
-      axios.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`, { data })
-        .then(res => {
-          this.getCarts()
-          Toast.fire({
-            icon: 'success',
-            title: res.data.message
-          })
-        })
-        .catch(err => {
-          Swal.fire({
-            icon: 'error',
-            title: err.response.data.message
-          })
-        })
     },
     plusCartQty (item) {
       item.qty++
