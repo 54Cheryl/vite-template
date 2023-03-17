@@ -1,13 +1,12 @@
 <template>
   <Loading v-model:active="isLoading" :can-cancel="true" :is-full-page="fullPage"></Loading>
-  <div class="container">
-    <div class="py-3">
-      <h2>產品列表</h2>
+  <div class="container" style="margin-top: 7vh;">
+    <div class="pt-5">
       <div class="text-end">
-        <button type="button" class="btn btn-primary text-light" @click="() => openProduct('new', item)">建立新的產品</button>
+        <button type="button" class="btn btn-custom text-light" @click="() => openProduct('new', item)" style="padding-left: 1.5rem;">新增產品</button>
       </div>
       <!-- 產品列表 -->
-      <table class="table table-hover mt-4">
+      <table class="table table-hover mt-2">
         <thead>
           <tr>
             <th width="120">分類</th>
@@ -41,8 +40,8 @@
               <span v-else>未啟用</span>
             </td>
             <td width="120">
-              <button type="button" class="btn btn-outline-primary btn-sm me-2" @click="() => openProduct('edit', item)">編輯</button>
-              <button type="button" class="btn btn-outline-danger btn-sm" @click="() => openProduct('delete', item)">刪除</button>
+              <button type="button" class="btn btn-outline-main btn-sm me-2 backendBtn" @click="() => openProduct('edit', item)">編輯</button>
+              <button type="button" class="btn btn-outline-accent btn-sm" @click="() => openProduct('delete', item)" style="padding: 0.25rem 0.5rem;">刪除</button>
             </td>
           </tr>
         </tbody>
@@ -52,7 +51,7 @@
           <Pagination :pages="pagination" @change-page="getProducts"></Pagination>
         </div>
         <div class="col">
-          <p class="text-end">本頁有 <span>{{ products.length }}</span> 項產品</p>
+          <p class="text-end mb-0">本頁有 <span>{{ products.length }}</span> 項產品</p>
         </div>
         <ProdModal
           :product="tempProduct"

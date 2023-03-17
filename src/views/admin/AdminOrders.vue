@@ -1,9 +1,8 @@
 <template>
   <Loading v-model:active="isLoading" :can-cancel="true" :is-full-page="fullPage"></Loading>
-  <div class="container">
-    <div class="py-3">
-      <h2>訂單列表</h2>
-      <table class="table table-hover mt-4">
+  <div class="container" style="margin-top: 7vh;">
+    <div class="pt-4">
+      <table class="table table-hover mt-2">
         <thead>
           <tr>
             <th width="120">購買時間</th>
@@ -51,8 +50,8 @@
               </div>
             </td>
             <td width="100" class="text-center">
-              <button class="btn btn-outline-primary btn-sm me-2" @click="() => openOrder('edit', item)">檢視</button>
-              <button class="btn btn-outline-danger btn-sm" @click="() => openOrder('delete', item)">刪除</button>
+              <button class="btn btn-outline-main btn-sm me-2 backendBtn" @click="() => openOrder('edit', item)">檢視</button>
+              <button class="btn btn-outline-accent btn-sm" @click="() => openOrder('delete', item)" style="padding: 0.25rem 0.5rem;">刪除</button>
             </td>
           </tr>
         </tbody>
@@ -62,7 +61,7 @@
           <Pagination :pages="pagination" @change-page="getOrders"></Pagination>
         </div>
         <div class="col">
-          <p class="text-end">本頁有 <span>{{ orders.length }}</span> 張訂單</p>
+          <p class="text-end mb-0">本頁有 <span>{{ orders.length }}</span> 張訂單</p>
         </div>
         <OrderModal
           :order="tempOrder"

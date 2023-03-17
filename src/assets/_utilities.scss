@@ -48,6 +48,19 @@
   border: 1px solid #BB0000;
   color: #fff;
 }
+.btn-outline-main{
+  background: #fff;
+  color: #ab7e52;
+  border: 1px solid #ab7e52;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0;
+}
+.btn-outline-main:hover{
+  background: #ab7e52;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0;
+}
 //圖片
 .object-cover{
   object-fit: cover;
