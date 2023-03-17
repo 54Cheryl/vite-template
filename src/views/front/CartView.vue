@@ -8,6 +8,11 @@
       <div class="row justify-content-center pt-5">
         <div class="col-md-6 bg-all">
           <h2 class="text-center Serif-TC my-4">購物車列表</h2>
+          <div class="text-end pt-2">
+            <button style="padding-left: 1.5rem;" class="btn btn-outline-accent Serif-TC" type="button" @click="deleteCarts">
+              清空購物車
+            </button>
+          </div>
           <template v-if="getCart.carts">
             <div class="d-flex mt-4 bg-white" v-for="item in getCart.carts" :key="item.id">
               <router-link :to="`/product/${item.product.id}`" class="text-decoration-none">
@@ -169,7 +174,7 @@
         </div>
       </div>
       <div class="row justify-content-between px-0" style="padding-top: 4vh;">
-        <router-link to="/products" class="btn btn-outline-n500 Serif-TC letter-spacing col-6 col-md-auto">繼續購物</router-link>
+        <router-link to="/products" class="btn btn-outline-n500 Serif-TC letter-spacing col-6 col-md-auto" style="padding-left: 2rem;">繼續購物</router-link>
         <button @click.prevent="createOrder" class="btn btn-custom Serif-TC letter-spacing col-6 col-md-auto">送出訂單</button>
       </div>
     </div>
