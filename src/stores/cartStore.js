@@ -6,7 +6,8 @@ const cartStore = defineStore('cart', {
   state: () => {
     return {
       cart: {},
-      cartNum: 0
+      cartNum: 0,
+      loadingItem: ''
     }
   },
   actions: {
@@ -94,20 +95,27 @@ const cartStore = defineStore('cart', {
         })
     },
     deleteCarts () {
-      axios.delete(`${VITE_APP_URL}api/${VITE_APP_PATH}/carts`)
-        .then(res => {
-          Toast.fire({
-            icon: 'success',
-            title: res.data.message
+      if (this.cartNum !== 0) {
+        axios.delete(`${VITE_APP_URL}api/${VITE_APP_PATH}/carts`)
+          .then(res => {
+            Toast.fire({
+              icon: 'success',
+              title: res.data.message
+            })
+            this.getCarts()
           })
-          this.getCarts()
-        })
-        .catch(err => {
-          Swal.fire({
-            icon: 'error',
-            title: err.response.data.message
+          .catch(err => {
+            Swal.fire({
+              icon: 'error',
+              title: err.response.data.message
+            })
           })
+      } else {
+        Toast.fire({
+          icon: 'warning',
+          title: '您尚未選購產品'
         })
+      }
     }
   },
   getters: {

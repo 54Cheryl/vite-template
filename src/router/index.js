@@ -2,6 +2,10 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
   {
+    path: '/:pathMatch(.*)*',
+    component: () => import('../views/NotFound.vue')
+  },
+  {
     path: '/',
     component: () => import('../views/FrontLayout.vue'),
     children: [
@@ -44,10 +48,6 @@ const routes = [
       {
         path: 'login',
         component: () => import('../views/front/LoginView.vue')
-      },
-      {
-        path: ':pathMatch(.*)*',
-        component: () => import('../views/front/NotFound.vue')
       }
     ]
   },
