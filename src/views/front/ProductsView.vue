@@ -12,13 +12,13 @@
           <li class="breadcrumb-item Serif-TC"><router-link class="neutral-300 text-decoration-none" to="/tea-intro">茶品介紹</router-link></li>
           <li class="breadcrumb-item dropdown Serif-TC">
             <a class="text-decoration-none neutral-300 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              茶品種類
+              茶品類別
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a href="/vite-template/#/category/紅茶" class="dropdown-item neutral-300">紅茶</a></li>
-              <li><a href="/vite-template/#/category/綠茶" class="dropdown-item neutral-300">綠茶</a></li>
-              <li><a href="/vite-template/#/category/青茶" class="dropdown-item neutral-300">青茶</a></li>
-              <li><a href="/vite-template/#/category/黑茶" class="dropdown-item neutral-300">黑茶</a></li>
+              <li><router-link to="/category/紅茶" class="dropdown-item neutral-300">紅茶</router-link></li>
+              <li><router-link to="/category/綠茶" class="dropdown-item neutral-300">綠茶</router-link></li>
+              <li><router-link to="/category/青茶" class="dropdown-item neutral-300">青茶</router-link></li>
+              <li><router-link to="/category/黑茶" class="dropdown-item neutral-300">黑茶</router-link></li>
             </ul>
           </li>
         </ol>
@@ -54,6 +54,7 @@
           <button class="btn btn-custom Serif-TC letter-spacing w-100" @click="() => addToCart(product.id)">加入購物車</button>
         </div>
       </div>
+      <Pagination :pages="pagination" @change-page="getProducts"></Pagination>
     </div>
   </div>
   <FrontFooter></FrontFooter>
@@ -67,11 +68,13 @@ import { mapActions } from 'pinia'
 import cartStore from '@/stores/cartStore'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
+import Pagination from '@/components/PaginationView.vue'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 export default {
   data () {
     return {
       products: [],
+      pagination: {},
       isLoading: false,
       fullPage: true
     }
@@ -80,15 +83,17 @@ export default {
     RouterLink,
     Loading,
     NavBar,
-    FrontFooter
+    FrontFooter,
+    Pagination
   },
   methods: {
-    getProducts () {
+    getProducts (page = 1) {
       this.isLoading = true
-      this.$http.get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/products/all`)
+      this.$http.get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/products/?page=${page}`)
         .then((res) => {
           this.isLoading = false
           this.products = res.data.products
+          this.pagination = res.data.pagination
         })
     },
     ...mapActions(cartStore, ['addToCart'])
