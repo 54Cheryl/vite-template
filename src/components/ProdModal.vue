@@ -28,13 +28,13 @@
                   <img class="img-fluid" :src="image">
                 </div>
                 <div v-if="!tempProduct.imagesUrl.length || tempProduct.imagesUrl[tempProduct.imagesUrl.length - 1]">
-                  <button class="btn btn-outline-primary btn-sm d-block w-100"
+                  <button class="btn btn-outline-main btn-sm d-block w-100"
                     @click="() => tempProduct.imagesUrl.push('')">
                     新增圖片
                   </button>
                 </div>
                 <div v-else>
-                  <button class="btn btn-outline-danger btn-sm d-block w-100" @click="() => tempProduct.imagesUrl.pop()">
+                  <button class="btn btn-outline-accent btn-sm d-block w-100" style="padding: 0.25rem 0.5rem;" @click="() => tempProduct.imagesUrl.pop()">
                     刪除圖片
                   </button>
                 </div>
@@ -127,8 +127,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" @click="() => $emit('cancel-product')">取消</button>
-          <button type="button" class="btn btn-primary" @click="() => $emit('update-product')">確認</button>
+          <button type="button" class="btn btn-outline-n500" data-bs-dismiss="modal" @click="() => $emit('cancel-product')">取消</button>
+          <button type="button" class="btn btn-custom" style="padding-left: 1.5rem;" @click="() => $emit('update-product')">確認</button>
         </div>
       </div>
     </div>

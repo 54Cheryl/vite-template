@@ -34,8 +34,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">取消</button>
-          <button type="button" class="btn btn-primary" @click="() => $emit('update-coupon')">確認</button>
+          <button type="button" class="btn btn-outline-n500" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-custom" style="padding-left: 1.5rem;" @click="() => $emit('update-coupon')">確認</button>
         </div>
       </div>
     </div>

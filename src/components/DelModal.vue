@@ -10,8 +10,8 @@
           是否刪除<span class="text-danger fw-bold">{{ tempData.title }}</span> (刪除後將無法恢復)。
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">取消</button>
-          <button type="button" class="btn btn-danger" @click="() => $emit('del-data')">確認刪除</button>
+          <button type="button" class="btn btn-outline-n500" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-outline-accent" @click="() => $emit('del-data')">確認刪除</button>
         </div>
       </div>
     </div>

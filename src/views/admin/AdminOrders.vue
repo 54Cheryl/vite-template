@@ -1,7 +1,8 @@
 <template>
   <Loading v-model:active="isLoading" :can-cancel="true" :is-full-page="fullPage"></Loading>
   <div class="container" style="margin-top: 7vh;">
-    <div class="pt-4">
+    <div class="pt-5">
+      <p class="mb-0 px-2">本頁有 <span>{{ orders.length }}</span> 張訂單</p>
       <table class="table table-hover mt-2">
         <thead>
           <tr>
@@ -59,9 +60,6 @@
       <div class="row">
         <div class="col">
           <Pagination :pages="pagination" @change-page="getOrders"></Pagination>
-        </div>
-        <div class="col">
-          <p class="text-end mb-0">本頁有 <span>{{ orders.length }}</span> 張訂單</p>
         </div>
         <OrderModal
           :order="tempOrder"
