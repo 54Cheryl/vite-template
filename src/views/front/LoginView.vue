@@ -2,13 +2,13 @@
   <div class="container">
     <form class="row justify-content-center align-content-center pb-5" @submit.prevent="login" style="height: 100vh;">
       <div class="col-md-6">
-        <h1 class="h3 mb-3 font-weight-normal">請先登入</h1>
+        <h1 class="h3 mb-3 font-weight-normal Serif-TC text-center">請先登入</h1>
         <div class="mb-2">
           <label for="inputEmail" class="sr-only">Email address</label>
           <input
             type="email"
             id="inputEmail"
-            class="form-control"
+            class="form-control rounded-0"
             placeholder="Email address"
             v-model="user.username"
             required
@@ -20,14 +20,14 @@
           <input
             type="password"
             id="inputPassword"
-            class="form-control"
+            class="form-control rounded-0"
             v-model="user.password"
             placeholder="Password"
             required
           />
         </div>
         <div class="text-end mt-4">
-          <button class="btn btn-lg btn-primary btn-block text-white w-100" type="submit">
+          <button class="btn btn-lg btn-primary btn-block text-white w-100 rounded-0 Serif-TC" style="padding-left: 1.5rem;" type="submit">
             登入
           </button>
         </div>
