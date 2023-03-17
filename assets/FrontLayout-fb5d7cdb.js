@@ -1,0 +1,1 @@
+import{_ as t,R as r,r as n,o as s,c}from"./index-cf66e0ec.js";const a={components:{RouterView:r}};function p(o,_,u,i,f,m){const e=n("RouterView");return s(),c(e,{key:o.$route.path})}const d=t(a,[["render",p]]);export{d as default};
