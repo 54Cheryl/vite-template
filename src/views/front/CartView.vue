@@ -22,7 +22,7 @@
                 <button class="btn text-primary p-0 position-absolute border-0" style="top: 16px; right: 16px;" @click="() => deleteCartItem(item)" :disabled="item.id === loadingItem"><i class="fas fa-times"></i></button>
                 <p class="mb-0 fw-bold">{{ item.product.title }}</p>
                 <p class="mb-0 mt-1 neutral-500" style="font-size: 14px;">
-                  <small class="text-success" v-if="item.product.price !== item.product.origin_price">促銷價：</small><small v-else>單價：</small>{{ item.product.price }}
+                  <small class="text-success" v-if="item.product.price !== item.product.origin_price">促銷價：</small><small v-else>單價：</small>{{ item.product.price }} /{{ item.product.unit }}
                 </p>
                 <div class="d-flex justify-content-between align-items-center w-100">
                   <div class="input-group w-50 align-items-center">

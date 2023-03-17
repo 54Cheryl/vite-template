@@ -51,7 +51,7 @@
         </div>
         <div class="mt-3 Sans-TC">
           <p class="fs-5 mb-0 text-muted" v-if="product.origin_price !== product.price"><del>NT$ {{ product.origin_price }}</del></p>
-          <p class="fs-3 fw-bold text-primary">NT$ {{ product.price }}</p>
+          <p class="fs-3 fw-bold text-primary">NT$ {{ product.price }}<span class="fs-5 mb-0"> /{{ product.unit }}</span></p>
         </div>
         <div class="my-3 col-12 col-md-6 qty-pe">
           <p class="fs-5 Serif-TC mb-2">數量</p>
