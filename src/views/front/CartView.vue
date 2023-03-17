@@ -139,7 +139,7 @@
                   :class="{ 'is-invalid': errors['電話'] }"
                   placeholder="請輸入手機號碼"
                   :rules="isPhone"
-                  v-model.number="form.user.tel"
+                  v-model="form.user.tel"
                 ></VField>
                 <ErrorMessage name="電話" class="invalid-feedback"></ErrorMessage>
               </div>
@@ -252,6 +252,7 @@ export default {
             icon: 'success',
             title: res.data.message
           })
+          // console.log(res.data.orderId)
           this.$refs.form.resetForm()
           this.form.message = ''
           this.coupon_code = ''
