@@ -129,12 +129,12 @@
                 <VField
                   id="tel"
                   name="電話"
-                  type="text"
+                  type="number"
                   class="form-control Sans-TC"
                   :class="{ 'is-invalid': errors['電話'] }"
                   placeholder="請輸入手機號碼"
                   :rules="isPhone"
-                  v-model="form.user.tel"
+                  v-model.number="form.user.tel"
                 ></VField>
                 <ErrorMessage name="電話" class="invalid-feedback"></ErrorMessage>
               </div>
