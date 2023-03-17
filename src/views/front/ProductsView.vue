@@ -24,17 +24,17 @@
         </ol>
       </nav>
       <div class="row">
-        <div class="col-lg-3 col-md-4 mb-5" v-for="product in products" :key="product.id">
-          <div class="card border-0 position-relative position-relative">
-            <router-link :to="`/product/${product.id}`" class="text-decoration-none">
-              <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover productsImg" alt="">
-              <a href="#" class="text-danger">
-                <!-- <i class="far fa-heart position-absolute" style="right: 16px; top: 16px"></i> -->
-              </a>
-              <div class="card-body px-0 py-2">
-                <h5 class="mb-0 neutral-900 Serif-TC text-center pb-2 pt-1">
-                  {{ product.title }}
-                </h5>
+        <div class="col-lg-3 col-md-4 mb-5 d-flex align-items-stretch" v-for="product in products" :key="product.id">
+          <div class="card border-0 rounded-0 position-relative" style="width: 18rem;">
+            <a href="#" class="text-danger">
+              <!-- <i class="far fa-heart position-absolute" style="right: 16px; top: 16px"></i> -->
+            </a>
+            <router-link :to="`/product/${product.id}`" class="card-body d-flex flex-column text-decoration-none p-0">
+              <img :src="product.imageUrl" class="card-img-top object-cover productsImg" alt="Card Image">
+              <h5 class="mb-0 neutral-900 Serif-TC text-center pb-2 pt-1">
+                {{ product.title }}
+              </h5>
+              <div class="p-1">
                 <div class="d-flex px-2 mb-2">
                   <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec col-auto d-flex align-items-center">品種</p>
                   <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 col-10">{{ product.variety }}</p>
@@ -47,11 +47,13 @@
                   <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 bg-sec col-auto d-flex align-items-center">滋味</p>
                   <p class="card-text neutral-500 mb-0 Sans-TC px-3 py-1 col-10">{{ product.taste }}</p>
                 </div>
-                <p class="accent-color Sans-TC mb-0 pt-2 fs-5 px-2">NT$ {{ product.price }}</p>
+              </div>
+              <div class="flex-grow-1 d-flex align-items-end">
+                <p class="accent-color Sans-TC mb-0 px-3 py-1 fs-5">NT$ {{ product.price }}</p>
               </div>
             </router-link>
+            <button class="btn btn-custom Serif-TC letter-spacing w-100" @click="() => addToCart(product.id)">加入購物車</button>
           </div>
-          <button class="btn btn-custom Serif-TC letter-spacing w-100" @click="() => addToCart(product.id)">加入購物車</button>
         </div>
       </div>
       <Pagination :pages="pagination" @change-page="getProducts"></Pagination>
