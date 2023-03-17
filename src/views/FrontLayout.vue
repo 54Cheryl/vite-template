@@ -1,5 +1,5 @@
 <template>
-  <button type="button" class="btn position-fixed p-0 my-4 mx-5 end-0 bottom-0 border-0" style="z-index: 3;" @click.prevent="backTop"><i class="bi bi-arrow-up-circle text-primary fs-1"></i></button>
+  <i class="bi bi-arrow-up-circle position-fixed text-primary" :class="{'d-none': !iconShow}" style="font-size: 2.5rem; z-index: 3; bottom: 12.5%; right: 8%;" @click.prevent="backTop"></i>
   <RouterView :key="$route.path"></RouterView>
 </template>
 
@@ -9,10 +9,29 @@ export default {
   components: {
     RouterView
   },
+  data () {
+    return {
+      iconShow: false
+    }
+  },
   methods: {
     backTop () {
       window.scrollTo({ top: 0, behavior: 'smooth' })
+    },
+    scrollDown () {
+      const twentyFive = (window.innerHeight) * 0.25
+      if (window.pageYOffset > twentyFive) {
+        this.iconShow = true
+      } else {
+        this.iconShow = false
+      }
     }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.scrollDown)
+  },
+  beforeUnmount () {
+    window.removeEventListener('scroll', this.scrollDown)
   }
 }
 </script>
