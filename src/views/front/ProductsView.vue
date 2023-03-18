@@ -97,6 +97,8 @@ export default {
           this.products = res.data.products
           this.pagination = res.data.pagination
         })
+        .catch(() => {
+        })
     },
     ...mapActions(cartStore, ['addToCart'])
   },
