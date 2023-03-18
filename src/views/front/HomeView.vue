@@ -53,8 +53,8 @@
         <div class="col-lg-6 col-md-10 my-auto p-0 position-relative appeal-img">
           <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678386479583.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=BgjYYRaG8DhhUI78tq8bmjolmvX4CB%2B8bpWCrZXW5x4Xc59Pd%2Ffn%2B%2BOA6MA3Z%2FouJLmBQfbkdRPeTIhsQ01QlRbHmbszQMDxTj08xp35CW3LRg5iYGPXvDANAl4ElEAfZNI98QGmtFJIM3XbXHx86S3AA2DLXJJ%2Bbpjd6%2FMV%2BhJYu7LOX966w2Z5%2BxWpDw5JbbNC95O3pnJoGZVKDcNiS998PgHG1ii7a6swGBi7HhzqQ63ipTWJFy8c8jNK4HT8Kq2duI%2Fcq%2FgIWynloH%2BDsCONAUf5xYkQuRfPtdd%2FApwwqi33ZgvaBIXHlyhRyznTdl5WxVCznkjaVptbsE8eig%3D%3D" alt="" class="img-fluid">
         </div>
-        <div class="col-lg-6 col-md-10 p-0 d-flex justify-content-evenly position-relative appeal-top" style="max-height: 450px; height: 55vh; z-index: 2;">
-          <div class="mx-4 col-md-auto">
+        <div class="col-lg-6 col-md-10 p-0 d-flex justify-content-md-start justify-content-lg-evenly position-relative appeal-top" style="max-height: 450px; height: 55vh; z-index: 2;">
+          <div class="mx-4 col-md-auto pe-md-4">
             <div class="d-flex position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="" class="position-absolute" style="right: 0.5rem; top: -0.2rem;">
               <h3 class="letter-spacing Serif-TC mt-3 mx-0 writing-lr neutral-900">品牌理念
@@ -73,7 +73,7 @@
   </div>
   <!-- 第三屏 -->
   <div class="container">
-    <div class="row pb-4 pt-5 px-0">
+    <div class="row pb-4 pt-5 px-0 justify-content-evenly">
       <div class="tel-use">
         <div class="d-flex col-md-2">
           <div class="col-auto ps-3 position-relative">
@@ -86,7 +86,7 @@
           </div>
         </div>
       </div>
-      <div class="row col-md-9 d-flex justify-content-left pt-5 m-auto">
+      <div class="row col-md-10 pt-5 m-auto">
         <div class="col-12 col-md-6 col-lg-4 position-relative">
           <div class="position-absolute bg-opacity-100" style="writing-mode: vertical-lr; z-index: 2; left: 2rem; top: -1rem; border: 1px solid #BB0000;">
             <p class="text-white Serif-TC letter-spacing px-1 pt-3 pb-2 m-1" style="background: #E52E2E;">
@@ -128,7 +128,7 @@
       </div>
       <div class="col-md-auto px-0 other-use">
         <div class="d-flex" style="max-height: 40vh;">
-          <div class="me-4 pe-5">
+          <div class="me-4 pe-lg-5">
             <div class="d-flex position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="" class="position-absolute" style="right: 0.5rem; top: 0.3rem;">
               <h3 class="letter-spacing Serif-TC mt-4 mx-0 writing-lr neutral-900">別茶消息
@@ -161,7 +161,7 @@
       </div>
       <div class="col-md-auto other-use px-0">
         <div class="d-flex" style="max-height: 40vh;">
-          <div class="ms-4 ps-5">
+          <div class="ms-4 ps-lg-5">
             <div class="d-flex position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="" class="position-absolute" style="right: 0.5rem; top: 0.3rem;">
               <h3 class="letter-spacing Serif-TC mt-4 mx-0 writing-lr neutral-900">茶品介紹
@@ -172,7 +172,7 @@
           </div>
         </div>
       </div>
-      <div class="row col-md-9 d-flex justify-content-left pt-5 m-auto">
+      <div class="row col-md-10 d-flex justify-content-left pt-5 m-auto">
         <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">

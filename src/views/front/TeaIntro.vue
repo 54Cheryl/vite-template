@@ -20,7 +20,7 @@
         </div>
         <div class="col-md-auto other-use px-0">
           <div class="d-flex" style="max-height: 40vh;">
-            <div class="ms-4 ps-5">
+            <div class="ms-4">
               <div class="d-flex position-relative">
                 <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="" class="position-absolute" style="right: 0.5rem; top: 0.3rem;">
                 <h3 class="letter-spacing Serif-TC mt-4 mx-0 writing-lr neutral-900">茶品介紹
@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-        <div class="row col-md-9 d-flex justify-content-left pt-5 m-auto">
+        <div class="row col-md-10 d-flex justify-content-left pt-5 m-auto">
           <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
             <div class="card mb-4 mx-auto" style="max-width: 20rem;">
               <div class="position-relative">
