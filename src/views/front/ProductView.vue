@@ -94,24 +94,21 @@
       <div class="accordion col-12 col-md-5 py-0 px-2">
         <h2 class="accordion-header">
           <button
-          class="accordion-button Serif-TC fs-4 collapsed"
+          class="accordion-button Serif-TC fs-4"
           type="button"
           data-bs-toggle="collapse" data-bs-target="#collapseDelivery" aria-expanded="false" aria-controls="collapseExample">
             送貨方式
           </button>
         </h2>
-        <div class="collapse" id="collapseDelivery">
+        <div class="collapse show" id="collapseDelivery">
           <div class="card card-body border-0 Sans-TC px-0">
             <ul>
               <li>新竹物流宅配</li>
-              <li>黑貓宅配 (商品含茶點建議選用)</li>
-              <li>黑貓宅配_貨到付款 (商品含茶點建議選用)</li>
-              <li>7-11 取貨不付款</li>
-              <li>7-11 取貨付款</li>
-              <li>全家 取貨不付款</li>
-              <li>全家 取貨付款</li>
+              <li>黑貓宅配</li>
+              <li>7-11 取貨</li>
+              <li>全家 取貨</li>
               <li>跨境宅配</li>
-              <li>7-11 跨境門市取貨不付款</li>
+              <li>7-11 跨境門市取貨</li>
               <li>郵局航空包裹</li>
               <li>郵局宅配（台灣離島地區）</li>
             </ul>
@@ -123,7 +120,7 @@
           <button
           class="accordion-button Serif-TC fs-4"
           type="button"
-          data-bs-toggle="collapse" data-bs-target="#collapseDescription" aria-expanded="true" aria-controls="collapseDescription">
+          data-bs-toggle="collapse" data-bs-target="#collapseDescription" aria-expanded="false" aria-controls="collapseDescription">
             產品描述
           </button>
         </h2>

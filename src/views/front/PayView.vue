@@ -1,0 +1,167 @@
+<template>
+  <NavBar></NavBar>
+  <div class="" style="padding-top: 90px; padding-bottom: 6vh;">
+    <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
+      <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-between px-4 pt-5 mx-lg-5">
+        <h1 class="text-center Serif-TC letter-spacing m-0"><i class="bi bi-check2-circle text-success"></i> 訂單已成立</h1>
+      </div>
+      <div class="row justify-content-center pt-5 px-4 mx-lg-5">
+        <div class="col-md-6 bg-all">
+          <h2 class="text-center Serif-TC my-4">訂單明細</h2>
+          <div class="pe-2" style="max-height: 60vh; overflow-x: hidden;">
+            <div class="d-flex mt-4 bg-white" v-for="(product, i) in order.products" :key="i">
+              <img class="object-cover" :src="product.product.imageUrl" alt="" style="width: 120px; height: 120px;">
+              <div class="w-100 p-3 position-relative Sans-TC">
+                <p class="mb-0 fw-bold">{{ product.product.title }}</p>
+                <p class="mb-0 mt-1 neutral-500" style="font-size: 14px;">
+                  <small>售價：</small>{{ product.product.price }} /{{ product.product.unit }}
+                </p>
+                <div class="d-flex justify-content-between mt-1">
+                  <p class="mb-0">
+                    數量：{{ product.qty }}
+                  </p>
+                  <p class="mb-0">NT$ {{ product.total }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="px-3">
+            <table class="table mt-4 neutral-500 Sans-TC">
+              <tbody>
+                <tr>
+                  <th scope="row" class="border-0 px-0 font-weight-normal">小計</th>
+                  <td class="text-end border-0 px-0">NT$ {{ originTotal }}</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 px-0 pt-0 font-weight-normal">折扣金額</th>
+                  <td class="text-end accent-color border-0 px-0 pt-0">{{ order.total-originTotal }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex justify-content-between mt-4 mb-4 Sans-TC">
+              <p class="mb-0 h4 fw-bold">總計</p>
+              <p class="mb-0 h4 fw-bold">NT$ {{ order.total }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 bg-sec">
+          <h2 class="text-center Serif-TC my-4">客戶資訊</h2>
+          <div class="pb-3">
+            <div class="px-3 m-auto">
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">Email：</p>
+                <p class="Sans-TC">{{ this.user.email }}</p>
+              </div>
+
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">收件人姓名：</p>
+                <p class="Sans-TC">{{ this.user.name }}</p>
+              </div>
+
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">收件人電話：</p>
+                <p class="Sans-TC">{{ this.user.tel }}</p>
+              </div>
+
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">收件人地址：</p>
+                <p class="Sans-TC">{{ this.user.address }}</p>
+              </div>
+            </div>
+          </div>
+          <h2 class="text-center Serif-TC my-4">訂單資訊</h2>
+          <div class="pb-3">
+            <div class="px-3 m-auto">
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">訂單日期：</p>
+                <p class="Sans-TC">{{ $filters.date(order.create_at) }}</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">訂單編號：</p>
+                <p class="Sans-TC">{{ order.id }}</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">付款狀態：</p>
+                <p class="Sans-TC text-success" v-if="order.is_paid">已付款</p>
+                <p class="Sans-TC accent-color" v-else>未付款</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">訂單金額：</p>
+                <p class="Sans-TC">NT$ {{ order.total }}</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">訂單備註：</p>
+                <p class="Sans-TC">{{ order.message }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row justify-content-between px-4 mx-lg-5" style="padding-top: 4vh;">
+        <router-link to="/cart" class="btn btn-outline-n500 Serif-TC letter-spacing col-6 col-md-auto" style="padding-left: 2rem;">訂單查詢</router-link>
+        <button class="btn btn-custom Serif-TC letter-spacing col-6 col-md-auto">確認付款</button>
+      </div> -->
+    </div>
+  </div>
+  <FrontFooter></FrontFooter>
+</template>
+
+<script>
+// import { mapActions, mapState } from 'pinia'
+// import cartStore from '@/stores/cartStore'
+// import orderStore from '@/stores/orderStore'
+import { Toast, Swal } from '@/methods/swalToast'
+import NavBar from '@/components/NavBar.vue'
+import FrontFooter from '@/components/FrontFooter.vue'
+const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
+export default {
+  data () {
+    return {
+      order: {},
+      orderId: '',
+      user: {},
+      payProducts: [],
+      originTotal: 0
+    }
+  },
+  computed: {
+  },
+  methods: {
+    getOrder () {
+      const { orderId } = this.$route.params
+      this.$http.get(`${VITE_APP_URL}api/${VITE_APP_PATH}/order/${orderId}`)
+        .then((res) => {
+          Toast.fire({
+            icon: 'success',
+            title: '取得成功'
+          })
+          this.order = res.data.order
+          this.orderId = res.data.order.id
+          this.user = res.data.order.user
+          const defaultProducts = res.data.order.products
+          this.payProducts = Object.keys(defaultProducts).map(function (_) { return defaultProducts[_] })
+          if (this.payProducts[0].coupon.percent) {
+            const orderPercent = this.payProducts[0].coupon.percent
+            this.originTotal = this.order.total / orderPercent * 100
+          }
+        })
+        .catch((err) => {
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
+        })
+    }
+  },
+  components: {
+    NavBar,
+    FrontFooter
+  },
+  mounted () {
+    this.getOrder()
+  }
+}
+</script>
