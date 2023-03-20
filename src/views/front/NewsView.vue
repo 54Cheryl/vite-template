@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="row col-md-9 d-flex justify-content-left pt-5 m-auto">
-          <div class="col-12 col-md-6 col-lg-4 position-relative" v-for="item in news" :key="item.news_id">
+          <div class="col-12 col-md-6 col-lg-4 position-relative d-flex align-items-stretch" v-for="item in news" :key="item.news_id">
             <div v-if="item.news_hot" class="position-absolute bg-opacity-100" style="writing-mode: vertical-lr; z-index: 2; left: 2rem; top: -1rem; border: 1px solid #BB0000;">
               <p class="text-white Serif-TC letter-spacing px-1 pt-3 pb-2 m-1" style="background: #E52E2E;">
                 新品上架
@@ -40,10 +40,12 @@
             </div>
             <div class="card mb-4 mx-auto" style="max-width: 22rem;">
               <img :src="item.news_img" class="card-img-top rounded-0 object-cover" alt="" style="height: 200px;">
-              <div class="card-body">
-                <h5 class="card-title Serif-TC neutral-900">{{ item.news_title }}</h5>
-                <p class="fs-sm neutral-300 Sans-TC">{{ item.news_date }}</p>
-                <p class="card-text Serif-TC multiline-ellipsis neutral-500">{{ item.news_content }}</p>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="mb-3">
+                  <h5 class="card-title Serif-TC neutral-900">{{ item.news_title }}</h5>
+                  <p class="fs-sm neutral-300 Sans-TC">{{ item.news_date }}</p>
+                  <p class="card-text Serif-TC multiline-ellipsis neutral-500">{{ item.news_content }}</p>
+                </div>
                 <a href="/vite-template/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
               </div>
             </div>
