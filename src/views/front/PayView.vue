@@ -55,17 +55,14 @@
                 <p class="Serif-TC mb-1">Email：</p>
                 <p class="Sans-TC">{{ this.user.email }}</p>
               </div>
-
               <div class="mb-3">
                 <p class="Serif-TC mb-1">收件人姓名：</p>
                 <p class="Sans-TC">{{ this.user.name }}</p>
               </div>
-
               <div class="mb-3">
                 <p class="Serif-TC mb-1">收件人電話：</p>
                 <p class="Sans-TC">{{ this.user.tel }}</p>
               </div>
-
               <div class="mb-3">
                 <p class="Serif-TC mb-1">收件人地址：</p>
                 <p class="Sans-TC">{{ this.user.address }}</p>
@@ -100,19 +97,12 @@
           </div>
         </div>
       </div>
-      <!-- <div class="row justify-content-between px-4 mx-lg-5" style="padding-top: 4vh;">
-        <router-link to="/cart" class="btn btn-outline-n500 Serif-TC letter-spacing col-6 col-md-auto" style="padding-left: 2rem;">訂單查詢</router-link>
-        <button class="btn btn-custom Serif-TC letter-spacing col-6 col-md-auto">確認付款</button>
-      </div> -->
     </div>
   </div>
   <FrontFooter></FrontFooter>
 </template>
 
 <script>
-// import { mapActions, mapState } from 'pinia'
-// import cartStore from '@/stores/cartStore'
-// import orderStore from '@/stores/orderStore'
 import { Toast, Swal } from '@/methods/swalToast'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
@@ -134,10 +124,6 @@ export default {
       const { orderId } = this.$route.params
       this.$http.get(`${VITE_APP_URL}api/${VITE_APP_PATH}/order/${orderId}`)
         .then((res) => {
-          Toast.fire({
-            icon: 'success',
-            title: '取得成功'
-          })
           this.order = res.data.order
           this.orderId = res.data.order.id
           this.user = res.data.order.user

@@ -59,18 +59,6 @@
             </div>
           </template>
           <div class="px-3">
-            <!-- <table class="table mt-4 neutral-500 Sans-TC">
-              <tbody>
-                <tr>
-                  <th scope="row" class="border-0 px-0 font-weight-normal">小計</th>
-                  <td class="text-end border-0 px-0">NT$ {{ getCart.total }}</td>
-                </tr>
-                <tr v-if="getCart.total !== getCart.final_total">
-                  <th scope="row" class="border-0 px-0 pt-0 font-weight-normal">折扣金額</th>
-                  <td class="text-end accent-color border-0 px-0 pt-0">-{{ getCart.total - getCart.final_total }}</td>
-                </tr>
-              </tbody>
-            </table> -->
             <div class="d-flex justify-content-between mt-4 mb-4 Sans-TC">
               <p class="mb-0 h4 fw-bold">總計</p>
               <p class="mb-0 h4 fw-bold">NT$ {{ getCart.total }}</p>
@@ -130,56 +118,6 @@
               </div>
             </div>
           </div>
-          <!-- <div class="text-end pt-2 px-3 pb-4">
-            <button style="padding-left: 1.5rem;" class="btn btn-outline-accent Serif-TC" type="button" @click="deleteCarts">
-              清空購物車
-            </button>
-          </div> -->
-          <!-- <div v-if="getCart.carts" class="pe-2" style="max-height: 40vh; overflow-x: hidden;">
-            <div class="d-flex mb-4 bg-white" v-for="item in getCart.carts" :key="item.id">
-              <router-link :to="`/product/${item.product.id}`" class="text-decoration-none">
-                <img class="object-cover" :src="item.product.imageUrl" alt="" style="width: 120px; height: 120px;">
-              </router-link>
-              <div class="w-100 p-3 position-relative Sans-TC">
-                <button class="btn text-primary p-0 position-absolute border-0" style="top: 16px; right: 16px;" @click="() => deleteCartItem(item)" :disabled="item.id === loadingItem"><i class="fas fa-times"></i></button>
-                <p class="mb-0 fw-bold">{{ item.product.title }}</p>
-                <p class="mb-0 mt-1 neutral-500" style="font-size: 14px;">
-                  <small class="text-success" v-if="item.product.price !== item.product.origin_price">促銷價：</small><small v-else>單價：</small>{{ item.product.price }} /{{ item.product.unit }}
-                </p>
-                <div class="d-flex justify-content-between align-items-center w-100">
-                  <div class="input-group w-50 align-items-center">
-                    <div class="input-group-prepend pe-1">
-                      <button
-                        class="btn px-0 text-primary border-0"
-                        :class="{ 'disabled text-secondary': item.qty === 1 }"
-                        :disabled="item.id === loadingItem"
-                        @click="() => minusCartQty(item)"
-                      ><i class="fas fa-minus"></i></button>
-                    </div>
-                    <input
-                      type="number"
-                      class="form-control border-0 text-center my-auto shadow-none bg-white px-0" placeholder=""
-                      aria-label="Example text with button addon"
-                      aria-describedby="button-addon1"
-                      v-model.number="item.qty"
-                      min="1"
-                      :disabled="item.id === loadingItem"
-                      @change="() => updateCartItem(item)"
-                    >
-                    <div class="input-group-append ps-1">
-                      <button class="btn px-0 text-primary border-0" :disabled="item.id === loadingItem" @click="() => plusCartQty(item)"><i class="fas fa-plus"></i></button>
-                    </div>
-                  </div>
-                  <p class="mb-0 ms-auto">NT$ {{ item.total }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <template v-if="!cartNum">
-            <div class="px-3 mt-4 Sans-TC">
-              您目前尚未選購產品
-            </div>
-          </template> -->
         </div>
       </div>
       <div class="row justify-content-between px-4 mx-lg-5" style="padding-top: 4vh;">
