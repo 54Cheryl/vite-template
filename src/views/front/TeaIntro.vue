@@ -4,7 +4,7 @@
     <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
       <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
     </div>
-    <div class="container pb-5 pt-4">
+    <div class="container pb-5 pt-3">
       <div class="row py-4 px-0">
         <div class="tel-use">
           <div class="d-flex col-md-2">
@@ -98,7 +98,7 @@
           </div>
         </div>
       </div>
-      <div class="pt-4 pb-5 mb-5 text-center">
+      <div class="pb-5 mb-5 text-center">
         <a href="/vite-template/#/products" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">產品總覽</a>
       </div>
     </div>

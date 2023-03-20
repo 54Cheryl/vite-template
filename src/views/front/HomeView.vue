@@ -140,7 +140,7 @@
         </div>
       </div>
     </div>
-    <div class="py-4 mb-4 text-center">
+    <div class="pb-4 mb-4 text-center">
       <a href="/vite-template/#/news" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">更多消息</a>
     </div>
   </div>
@@ -239,7 +239,7 @@
         </div>
       </div>
     </div>
-    <div class="pt-4 pb-5 mb-5 text-center">
+    <div class=" pb-5 mb-5 text-center">
       <a href="/vite-template/#/products" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">產品總覽</a>
     </div>
   </div>
