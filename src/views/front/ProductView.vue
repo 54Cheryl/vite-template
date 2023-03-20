@@ -133,7 +133,7 @@
     </div>
   </div>
   <div class="container" style="padding-bottom: 6vh; margin-top: 15vh;">
-    <div class="row">
+    <div class="row mx-4">
       <div class="tel-use">
         <div class="d-flex col-md-2">
           <div class="col-auto ps-3 position-relative">
