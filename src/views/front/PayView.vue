@@ -39,7 +39,7 @@
                 <tr>
                   <th scope="row" class="border-0 px-0 pt-0 font-weight-normal">折扣金額</th>
                   <td class="text-end accent-color border-0 px-0 pt-0" v-if="originTotal === 0">-0</td>
-                  <td class="text-end accent-color border-0 px-0 pt-0" v-else>-{{ order.total-originTotal }}</td>
+                  <td class="text-end accent-color border-0 px-0 pt-0" v-else>{{ order.total-originTotal }}</td>
                 </tr>
               </tbody>
             </table>
@@ -66,11 +66,12 @@
                 <div>
                   <div class="row">
                     <div class="col-auto">
-                      <p class="Sans-TC text-success fs-5 m-0" v-if="payStatus">付款完成</p>
+                      <!-- <p class="Sans-TC text-success fs-5 m-0" v-if="payStatus">付款完成</p> -->
+                      <p class="Sans-TC text-success fs-5 m-0" v-if="order.is_paid">付款完成</p>
                       <p class="Sans-TC accent-color fs-5 m-0" v-else>尚未付款</p>
                     </div>
                     <form class="col">
-                      <select name="" id="" class="form-select" style="border-radius: 0;">
+                      <select name="" id="" class="form-select" v-model="payMethod" style="border-radius: 0;">
                         <option selected disabled>請選擇付款方式</option>
                         <option value="貨到付款">貨到付款</option>
                         <option value="銀行轉帳/ATM">銀行轉帳/ATM</option>
@@ -135,6 +136,7 @@ export default {
       user: {},
       payProducts: [],
       originTotal: 0,
+      payMethod: '請選擇付款方式',
       payStatus: false
     }
   },
@@ -152,7 +154,7 @@ export default {
           this.payProducts = Object.keys(defaultProducts).map(function (_) { return defaultProducts[_] })
           if (this.payProducts[0]?.coupon?.percent !== undefined) {
             const orderPercent = this.payProducts[0].coupon.percent
-            this.originTotal = this.order.total / orderPercent * 100
+            this.originTotal = parseInt(this.order.total / orderPercent * 100)
           }
         })
         .catch((err) => {
@@ -163,20 +165,27 @@ export default {
         })
     },
     payConfirm () {
-      this.$http.get(`${VITE_APP_URL}api/${VITE_APP_PATH}/pay/${this.orderId}`)
-        .then((res) => {
-          Toast.fire({
-            icon: 'success',
-            title: res.data.message
-          })
-          this.payStatus = true
+      if (this.order.is_paid) {
+        Swal.fire({
+          icon: 'warning',
+          title: '您已付款完成'
         })
-        .catch((err) => {
-          Swal.fire({
-            icon: 'error',
-            title: err.response.data.message
+      } else {
+        this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/pay/${this.orderId}`)
+          .then((res) => {
+            Toast.fire({
+              icon: 'success',
+              title: res.data.message
+            })
+            this.payStatus = true
           })
-        })
+          .catch((err) => {
+            Swal.fire({
+              icon: 'error',
+              title: err.response.data.message
+            })
+          })
+      }
     }
   },
   components: {
