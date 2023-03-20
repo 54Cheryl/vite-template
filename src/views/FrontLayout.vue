@@ -1,5 +1,5 @@
 <template>
-  <i class="bi bi-arrow-up-circle position-fixed text-primary" :class="{'d-none': !iconShow}" style="font-size: 2.5rem; z-index: 3; bottom: 12.5%; right: 8%;" @click.prevent="backTop"></i>
+  <i class="bi bi-arrow-up-circle position-fixed neutral-300" :class="{'d-none': !iconShow}" style="font-size: 2.5rem; z-index: 3; bottom: 3%; right: 2%;" @click.prevent="backTop"></i>
   <RouterView :key="$route.path"></RouterView>
 </template>
 
