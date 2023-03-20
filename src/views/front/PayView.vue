@@ -50,6 +50,50 @@
           </div>
         </div>
         <div class="col-12 col-md-6 bg-sec">
+          <h2 class="text-center Serif-TC my-4">訂單資訊</h2>
+          <div class="pb-3">
+            <div class="px-3 m-auto">
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">訂單日期：</p>
+                <p class="Sans-TC">{{ $filters.date(order.create_at) }}</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">訂單編號：</p>
+                <p class="Sans-TC">{{ order.id }}</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">付款狀態：</p>
+                <div>
+                  <div class="row">
+                    <div class="col-auto">
+                      <p class="Sans-TC text-success fs-5 m-0" v-if="payStatus">付款完成</p>
+                      <p class="Sans-TC accent-color fs-5 m-0" v-else>尚未付款</p>
+                    </div>
+                    <form class="col">
+                      <select name="" id="" class="form-select" style="border-radius: 0;">
+                        <option selected disabled>請選擇付款方式</option>
+                        <option value="貨到付款">貨到付款</option>
+                        <option value="銀行轉帳/ATM">銀行轉帳/ATM</option>
+                        <option value="信用卡">信用卡</option>
+                        <option value="LINE_Pay">LINE Pay</option>
+                      </select>
+                    </form>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-sm btn-custom Sans-TC" style="padding-left: 1.5rem;" @click="payConfirm">確認付款</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">訂單金額：</p>
+                <p class="Sans-TC">NT$ {{ order.total }}</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">訂單備註：</p>
+                <p class="Sans-TC">{{ order.message }}</p>
+              </div>
+            </div>
+          </div>
           <h2 class="text-center Serif-TC my-4">客戶資訊</h2>
           <div class="pb-3">
             <div class="px-3 m-auto">
@@ -71,32 +115,6 @@
               </div>
             </div>
           </div>
-          <h2 class="text-center Serif-TC my-4">訂單資訊</h2>
-          <div class="pb-3">
-            <div class="px-3 m-auto">
-              <div class="mb-3">
-                <p class="Serif-TC mb-1">訂單日期：</p>
-                <p class="Sans-TC">{{ $filters.date(order.create_at) }}</p>
-              </div>
-              <div class="mb-3">
-                <p class="Serif-TC mb-1">訂單編號：</p>
-                <p class="Sans-TC">{{ order.id }}</p>
-              </div>
-              <div class="mb-3">
-                <p class="Serif-TC mb-1">付款狀態：</p>
-                <p class="Sans-TC text-success" v-if="order.is_paid">已付款</p>
-                <p class="Sans-TC accent-color" v-else>未付款</p>
-              </div>
-              <div class="mb-3">
-                <p class="Serif-TC mb-1">訂單金額：</p>
-                <p class="Sans-TC">NT$ {{ order.total }}</p>
-              </div>
-              <div class="mb-3">
-                <p class="Serif-TC mb-1">訂單備註：</p>
-                <p class="Sans-TC">{{ order.message }}</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -105,7 +123,7 @@
 </template>
 
 <script>
-import { Swal } from '@/methods/swalToast'
+import { Toast, Swal } from '@/methods/swalToast'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
@@ -116,7 +134,8 @@ export default {
       orderId: '',
       user: {},
       payProducts: [],
-      originTotal: 0
+      originTotal: 0,
+      payStatus: false
     }
   },
   computed: {
@@ -135,6 +154,22 @@ export default {
             const orderPercent = this.payProducts[0].coupon.percent
             this.originTotal = this.order.total / orderPercent * 100
           }
+        })
+        .catch((err) => {
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
+        })
+    },
+    payConfirm () {
+      this.$http.get(`${VITE_APP_URL}api/${VITE_APP_PATH}/pay/${this.orderId}`)
+        .then((res) => {
+          Toast.fire({
+            icon: 'success',
+            title: res.data.message
+          })
+          this.payStatus = true
         })
         .catch((err) => {
           Swal.fire({

@@ -27,7 +27,7 @@
           />
         </div>
         <div class="text-end mt-4">
-          <button class="btn btn-lg btn-primary btn-block text-white w-100 rounded-0 Serif-TC" style="padding-left: 1.5rem;" type="submit">
+          <button type="submit" class="btn btn-lg btn-primary btn-block text-white w-100 rounded-0 Serif-TC" style="padding-left: 1.5rem;">
             登入
           </button>
         </div>

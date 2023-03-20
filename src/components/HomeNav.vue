@@ -10,7 +10,7 @@
       <a class="navbar-brand pb-0" href="#">
         <img src="/src/assets/logo.svg" alt="">
       </a>
-      <button class="navbar-toggler btn text-white border-0 rounded-0 position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" @click="openHb">
+      <button type="button" class="navbar-toggler btn text-white border-0 rounded-0 position-relative" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" @click="openHb">
         <i class="bi bi-list fs-1" :class="{'d-none': isOpen}"></i>
         <i class="bi bi-x fs-1" :class="{'neutral-900': isOpen, 'd-none': !isOpen}"></i>
         <span

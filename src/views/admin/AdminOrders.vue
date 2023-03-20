@@ -52,8 +52,8 @@
             </td>
             <td>
               <div class="d-flex justify-content-evenly">
-                <button class="btn btn-outline-main btn-sm" @click="() => openOrder('edit', item)">檢視</button>
-                <button class="btn btn-outline-accent btn-sm" @click="() => openOrder('delete', item)" style="padding: 0.25rem 0.5rem;">刪除</button>
+                <button type="button" class="btn btn-outline-main btn-sm" @click="() => openOrder('edit', item)">檢視</button>
+                <button type="button" class="btn btn-outline-accent btn-sm" @click="() => openOrder('delete', item)" style="padding: 0.25rem 0.5rem;">刪除</button>
               </div>
             </td>
           </tr>

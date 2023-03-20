@@ -28,19 +28,19 @@
                   <img class="img-fluid" :src="image">
                 </div>
                 <div v-if="!tempProduct.imagesUrl.length || tempProduct.imagesUrl[tempProduct.imagesUrl.length - 1]">
-                  <button class="btn btn-outline-main btn-sm d-block w-100"
+                  <button type="button" class="btn btn-outline-main btn-sm d-block w-100"
                     @click="() => tempProduct.imagesUrl.push('')">
                     新增圖片
                   </button>
                 </div>
                 <div v-else>
-                  <button class="btn btn-outline-accent btn-sm d-block w-100" style="padding: 0.25rem 0.5rem;" @click="() => tempProduct.imagesUrl.pop()">
+                  <button type="button" class="btn btn-outline-accent btn-sm d-block w-100" style="padding: 0.25rem 0.5rem;" @click="() => tempProduct.imagesUrl.pop()">
                     刪除圖片
                   </button>
                 </div>
               </template>
               <div v-else>
-                <button class="btn btn-outline-primary btn-sm d-block w-100" @click="() => $emit('create-images')">
+                <button type="button" class="btn btn-outline-primary btn-sm d-block w-100" @click="() => $emit('create-images')">
                   新增圖片
                 </button>
               </div>

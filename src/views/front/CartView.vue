@@ -9,7 +9,7 @@
         <div class="col-md-6 bg-all">
           <h2 class="text-center Serif-TC my-4">購物車列表</h2>
           <div class="text-end pt-2 px-3 pb-4">
-            <button style="padding-left: 1.5rem;" class="btn btn-outline-accent Serif-TC" type="button" @click="deleteCarts">
+            <button type="button" style="padding-left: 1.5rem;" class="btn btn-outline-accent Serif-TC" @click="deleteCarts">
               清空購物車
             </button>
           </div>
@@ -19,7 +19,7 @@
                 <img class="object-cover" :src="item.product.imageUrl" alt="" style="width: 120px; height: 120px;">
               </router-link>
               <div class="w-100 p-3 position-relative Sans-TC">
-                <button class="btn text-primary p-0 position-absolute border-0" style="top: 16px; right: 16px;" @click="() => deleteCartItem(item)" :disabled="item.id === loadingItem"><i class="fas fa-times"></i></button>
+                <button type="button" class="btn text-primary p-0 position-absolute border-0" style="top: 16px; right: 16px;" @click="() => deleteCartItem(item)" :disabled="item.id === loadingItem"><i class="fas fa-times"></i></button>
                 <p class="mb-0 fw-bold">{{ item.product.title }}</p>
                 <p class="mb-0 mt-1 neutral-500" style="font-size: 14px;">
                   <small class="text-success" v-if="item.product.price !== item.product.origin_price">促銷價：</small><small v-else>單價：</small>{{ item.product.price }} /{{ item.product.unit }}
@@ -28,6 +28,7 @@
                   <div class="input-group w-50 align-items-center">
                     <div class="input-group-prepend pe-1">
                       <button
+                        type="button"
                         class="btn px-0 text-primary border-0"
                         :class="{ 'disabled text-secondary': item.qty === 1 }"
                         :disabled="item.id === loadingItem"
@@ -44,8 +45,8 @@
                       :disabled="item.id === loadingItem"
                       @change="() => updateCartItem(item)"
                     >
-                    <div class="input-group-append ps-1">
-                      <button class="btn px-0 text-primary border-0" :disabled="item.id === loadingItem" @click="() => plusCartQty(item)"><i class="fas fa-plus"></i></button>
+                    <div type="button" class="input-group-append ps-1">
+                      <button type="button" class="btn px-0 text-primary border-0" :disabled="item.id === loadingItem" @click="() => plusCartQty(item)"><i class="fas fa-plus"></i></button>
                     </div>
                   </div>
                   <p class="mb-0 ms-auto">NT$ {{ item.total }}</p>
@@ -78,8 +79,8 @@
           <div class="accordion py-0 px-2 pb-2">
             <h5 class="accordion-header">
               <button
-              class="accordion-button Sans-TC fs-6 collapsed"
               type="button"
+              class="accordion-button Sans-TC fs-6 collapsed"
               data-bs-toggle="collapse" data-bs-target="#collapseNotice" aria-expanded="true" aria-controls="collapseExample">
                 購物流程
               </button>
@@ -100,8 +101,8 @@
           <div class="accordion py-0 px-2 pb-2">
             <h5 class="accordion-header">
               <button
-              class="accordion-button Sans-TC fs-6 collapsed"
               type="button"
+              class="accordion-button Sans-TC fs-6 collapsed"
               data-bs-toggle="collapse" data-bs-target="#paymentMethod" aria-expanded="true" aria-controls="collapseExample">
                 付款方式
               </button>

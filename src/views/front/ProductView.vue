@@ -8,10 +8,10 @@
         </div>
         <div class="row my-4">
           <div class="col-3 text-center overflow-hidden">
-            <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover smImg" @click="() => showImg(product.imageUrl)">
+            <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover smImg" @click.prevent="() => showImg(product.imageUrl)">
           </div>
           <div class="col-3 text-center overflow-hidden" v-for="(imgItem, i) in product.imagesUrl" :key="i">
-            <img :src="imgItem" class="card-img-top rounded-0 object-cover smImg" @click="() => showImg(imgItem)">
+            <img :src="imgItem" class="card-img-top rounded-0 object-cover smImg" @click.prevent="() => showImg(imgItem)">
           </div>
         </div>
       </div>
@@ -58,6 +58,7 @@
           <div class="input-group align-items-center">
             <div class="input-group-prepend">
               <button
+                type="button"
                 class="btn btn-outline-custom p-2"
                 :class="{ 'text-secondary': tempQty === 1 }"
                 :disabled="tempQty === 1"
@@ -75,6 +76,7 @@
             >
             <div class="input-group-append">
               <button
+              type="button"
               class="btn btn-outline-custom p-2"
               @click="() => tempQty++"><i class="fas fa-plus"></i></button>
             </div>
@@ -82,10 +84,10 @@
         </div>
         <div class="row align-items-center p-0 pt-3">
           <div class="col-md-6 pb-3">
-            <button class="btn btn-outline-n500 Serif-TC letter-spacing w-100">加入收藏</button>
+            <button type="button" class="btn btn-outline-n500 Serif-TC letter-spacing w-100">加入收藏</button>
           </div>
           <div class="col-md-6 pb-3">
-            <button class="btn btn-custom Serif-TC letter-spacing w-100 text-white" @click="() => addToCart(product.id, tempQty)">加入購物車</button>
+            <button type="button" class="btn btn-custom Serif-TC letter-spacing w-100 text-white" @click="() => addToCart(product.id, tempQty)">加入購物車</button>
           </div>
         </div>
       </div>
@@ -94,8 +96,8 @@
       <div class="accordion col-12 col-md-5 py-0 px-2">
         <h2 class="accordion-header">
           <button
-          class="accordion-button Serif-TC fs-4"
           type="button"
+          class="accordion-button Serif-TC fs-4"
           data-bs-toggle="collapse" data-bs-target="#collapseDelivery" aria-expanded="false" aria-controls="collapseExample">
             送貨方式
           </button>
@@ -118,8 +120,8 @@
       <div class="accordion col-12 col-md-7 py-0 px-2">
         <h2 class="accordion-header">
           <button
-          class="accordion-button Serif-TC fs-4"
           type="button"
+          class="accordion-button Serif-TC fs-4"
           data-bs-toggle="collapse" data-bs-target="#collapseDescription" aria-expanded="false" aria-controls="collapseDescription">
             產品描述
           </button>
@@ -188,7 +190,7 @@
                 <p class="accent-color Sans-TC mb-0 px-3 pt-1 pb-2 fs-5">NT$ {{ product.price }}<small> /{{ product.unit }}</small></p>
               </div>
             </router-link>
-            <button class="btn btn-custom Serif-TC letter-spacing w-100" @click="() => addToCart(product.id)">加入購物車</button>
+            <button type="button" class="btn btn-custom Serif-TC letter-spacing w-100" @click="() => addToCart(product.id)">加入購物車</button>
           </div>
         </div>
       </div>
