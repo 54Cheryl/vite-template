@@ -72,9 +72,9 @@ export default {
           news_id: 0,
           news_hot: true,
           news_img: 'https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678648054156.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=PW4bi0hxb9ycCFLT6eQUXJCoqw0GVy8yErDD57OJV9yPRgp1aF3k5BWhAev7w7G9utoG%2FORYFFelcJ8VXfewdq2YzJC5hVq1E17b8m9nhH6HhDbx9TTjZeQ%2Bt7G1N7mzhFHAP64aAetngbLBBuFq4wsHbJF2M2gbpJ8IVeVk%2BmRxSqfmXdpKoGZOHNs7b092TtZG1%2FeM5%2B3aspWJ5SwBfhPAPpks8m1NAdx4o27%2F2c%2F1CfH0CDD0jkkp8ft4uonK%2Bh2nY%2FoEnn4OWMAv2gipkZpwXKNe10p%2Bz9U8fTs%2FyqnozWxEgfOWAHdHjt791JwNexVI8fNVkk%2BiG%2BWHdhpTsA%3D%3D',
-          news_title: '梨山翠峰',
+          news_title: '凍頂烏龍',
           news_date: '2022年11月30日',
-          news_content: '我們很榮幸向您介紹我們最新的茶葉產品 - 梨山翠峰！這款茶葉來自台灣高山茶區，以其清新香氣和淡雅口感而聞名。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐梨山翠峰，您會感受到茶葉的清新和柔和，並且留下持久的甘甜口感。無論您是茶葉愛好者還是想要嚐試新口味的人，梨山翠峰都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於梨山翠峰的詳細資訊，並在家中享受最好的品質和味道。'
+          news_content: '我們很榮幸向您介紹我們最新的茶葉產品 - 凍頂烏龍！這款茶葉來自台灣南投縣鹿谷鄉，以其湯味醇厚甘潤、耐泡。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐凍頂烏龍，滋味上重視喉韻，圓滑順口、甘甜醇厚，您會感受到在喉嚨有著清爽的餘韻。無論您是茶葉愛好者還是想要嚐試新口味的人，我們的凍頂烏龍都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於凍頂烏龍的詳細資訊，並在家中享受最好的品質和味道。'
         },
         {
           news_id: 1,

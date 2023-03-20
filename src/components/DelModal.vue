@@ -11,7 +11,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-n500" data-bs-dismiss="modal">取消</button>
-          <button type="button" class="btn btn-outline-accent" @click="() => $emit('del-data')">確認刪除</button>
+          <button type="button" class="btn btn-accent" @click="() => $emit('del-data')">確認刪除</button>
         </div>
       </div>
     </div>
