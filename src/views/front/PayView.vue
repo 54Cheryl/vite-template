@@ -33,11 +33,13 @@
               <tbody>
                 <tr>
                   <th scope="row" class="border-0 px-0 font-weight-normal">小計</th>
-                  <td class="text-end border-0 px-0">NT$ {{ originTotal }}</td>
+                  <td class="text-end border-0 px-0" v-if="originTotal !== 0">NT$ {{ originTotal }}</td>
+                  <td class="text-end border-0 px-0" v-else>NT$ {{ order.total }}</td>
                 </tr>
                 <tr>
                   <th scope="row" class="border-0 px-0 pt-0 font-weight-normal">折扣金額</th>
-                  <td class="text-end accent-color border-0 px-0 pt-0">{{ order.total-originTotal }}</td>
+                  <td class="text-end accent-color border-0 px-0 pt-0" v-if="originTotal === 0">-0</td>
+                  <td class="text-end accent-color border-0 px-0 pt-0" v-else>-{{ order.total-originTotal }}</td>
                 </tr>
               </tbody>
             </table>
@@ -103,7 +105,7 @@
 </template>
 
 <script>
-import { Toast, Swal } from '@/methods/swalToast'
+import { Swal } from '@/methods/swalToast'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
@@ -129,7 +131,7 @@ export default {
           this.user = res.data.order.user
           const defaultProducts = res.data.order.products
           this.payProducts = Object.keys(defaultProducts).map(function (_) { return defaultProducts[_] })
-          if (this.payProducts[0].coupon.percent) {
+          if (this.payProducts[0]?.coupon?.percent !== undefined) {
             const orderPercent = this.payProducts[0].coupon.percent
             this.originTotal = this.order.total / orderPercent * 100
           }
