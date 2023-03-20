@@ -178,6 +178,7 @@ export default {
               title: res.data.message
             })
             this.payStatus = true
+            this.getOrder()
           })
           .catch((err) => {
             Swal.fire({

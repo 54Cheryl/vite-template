@@ -158,7 +158,6 @@
 <script>
 import { mapActions, mapState } from 'pinia'
 import cartStore from '@/stores/cartStore'
-// import orderStore from '@/stores/orderStore'
 import { Toast, Swal } from '@/methods/swalToast'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
@@ -225,7 +224,6 @@ export default {
           this.form.message = ''
           this.coupon_code = ''
           this.getCarts()
-          // console.log(res.data.orderId)
           this.$router.push(`/pay/${res.data.orderId}`)
         })
         .catch(() => {
