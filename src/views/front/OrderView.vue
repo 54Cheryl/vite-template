@@ -149,7 +149,6 @@
       <div class="row justify-content-between px-4 mx-lg-5" style="padding-top: 4vh;">
         <router-link to="/cart" class="btn btn-outline-n500 Serif-TC letter-spacing col-6 col-md-auto" style="padding-left: 2rem;">回到購物車</router-link>
         <router-link :to="`/pay/${orderId}`" class="btn btn-custom Serif-TC letter-spacing col-6 col-md-auto" @click.prevent="() => createOrder()">送出訂單</router-link>
-        <!-- <button type="button" @click.prevent="() => createOrder()" class="btn btn-custom Serif-TC letter-spacing col-6 col-md-auto">送出訂單</button> -->
       </div>
     </div>
   </div>
@@ -227,7 +226,6 @@ export default {
           this.form.message = ''
           this.coupon_code = ''
           this.getCarts()
-          // this.$router.push(`/pay/${res.data.orderId}`)
         })
         .catch(() => {
           if (this.cartNum === 0) {
