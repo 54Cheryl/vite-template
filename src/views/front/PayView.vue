@@ -66,7 +66,6 @@
                 <div>
                   <div class="row">
                     <div class="col-auto">
-                      <!-- <p class="Sans-TC text-success fs-5 m-0" v-if="payStatus">付款完成</p> -->
                       <p class="Sans-TC text-success fs-5 m-0" v-if="order.is_paid">付款完成</p>
                       <p class="Sans-TC accent-color fs-5 m-0" v-else>尚未付款</p>
                     </div>
@@ -136,8 +135,7 @@ export default {
       user: {},
       payProducts: [],
       originTotal: 0,
-      payMethod: '請選擇付款方式',
-      payStatus: false
+      payMethod: '請選擇付款方式'
     }
   },
   computed: {
@@ -177,7 +175,6 @@ export default {
               icon: 'success',
               title: res.data.message
             })
-            this.payStatus = true
             this.getOrder()
           })
           .catch((err) => {
