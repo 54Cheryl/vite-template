@@ -144,11 +144,9 @@ export default {
     openOrder (event, item) {
       if (event === 'edit') {
         this.tempOrder = { ...item }
-        // console.log(this.tempOrder.id)
         this.$refs.orderModal.showModal()
       } else if (event === 'delete') {
         this.tempOrder = { ...item }
-        // console.log(this.tempProduct)
         this.$refs.deleteModal.showModal()
       }
     },
