@@ -163,13 +163,13 @@ export default {
         })
     },
     payConfirm () {
-      if (this.payMethod !== '請選擇付款方式') {
-        if (this.order.is_paid) {
-          Swal.fire({
-            icon: 'warning',
-            title: '您已付款完成'
-          })
-        } else {
+      if (this.order.is_paid) {
+        Swal.fire({
+          icon: 'warning',
+          title: '您已付款完成'
+        })
+      } else {
+        if (this.payMethod !== '請選擇付款方式') {
           this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/pay/${this.orderId}`)
             .then((res) => {
               Toast.fire({
@@ -184,12 +184,12 @@ export default {
                 title: err.response.data.message
               })
             })
+        } else {
+          Swal.fire({
+            icon: 'warning',
+            title: '請先選擇付款方式'
+          })
         }
-      } else {
-        Swal.fire({
-          icon: 'warning',
-          title: '請先選擇付款方式'
-        })
       }
     }
   },
