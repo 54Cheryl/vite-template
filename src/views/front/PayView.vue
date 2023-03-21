@@ -163,26 +163,33 @@ export default {
         })
     },
     payConfirm () {
-      if (this.order.is_paid) {
+      if (this.payMethod !== '請選擇付款方式') {
+        if (this.order.is_paid) {
+          Swal.fire({
+            icon: 'warning',
+            title: '您已付款完成'
+          })
+        } else {
+          this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/pay/${this.orderId}`)
+            .then((res) => {
+              Toast.fire({
+                icon: 'success',
+                title: res.data.message
+              })
+              this.getOrder()
+            })
+            .catch((err) => {
+              Swal.fire({
+                icon: 'error',
+                title: err.response.data.message
+              })
+            })
+        }
+      } else {
         Swal.fire({
           icon: 'warning',
-          title: '您已付款完成'
+          title: '請先選擇付款方式'
         })
-      } else {
-        this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/pay/${this.orderId}`)
-          .then((res) => {
-            Toast.fire({
-              icon: 'success',
-              title: res.data.message
-            })
-            this.getOrder()
-          })
-          .catch((err) => {
-            Swal.fire({
-              icon: 'error',
-              title: err.response.data.message
-            })
-          })
       }
     }
   },
