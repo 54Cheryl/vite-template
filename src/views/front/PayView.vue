@@ -63,24 +63,23 @@
               </div>
               <div class="mb-3">
                 <p class="Serif-TC mb-1">付款狀態：</p>
-                <div>
-                  <div class="row">
-                    <div class="col-auto">
-                      <p class="Sans-TC text-success fs-5 m-0" v-if="order.is_paid">付款完成</p>
-                      <p class="Sans-TC accent-color fs-5 m-0" v-else>尚未付款</p>
-                    </div>
-                    <form class="col">
-                      <select name="" id="" class="form-select" v-model="payMethod" style="border-radius: 0;">
-                        <option selected disabled>請選擇付款方式</option>
-                        <option value="貨到付款">貨到付款</option>
-                        <option value="銀行轉帳/ATM">銀行轉帳/ATM</option>
-                        <option value="信用卡">信用卡</option>
-                        <option value="LINE_Pay">LINE Pay</option>
-                      </select>
-                    </form>
-                    <div class="col-auto">
-                      <button type="button" class="btn btn-sm btn-custom Sans-TC" style="padding-left: 1.5rem;" @click="payConfirm">確認付款</button>
-                    </div>
+                <p class="Sans-TC text-success fs-5 m-0" v-if="order.is_paid">付款完成</p>
+                <p class="Sans-TC accent-color fs-5 m-0" v-else>尚未付款</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">付款方式：</p>
+                <div class="row">
+                  <form class="col col-lg-5">
+                    <select name="" id="" class="form-select" v-model="payMethod" style="border-radius: 0;">
+                      <option selected disabled>請選擇</option>
+                      <option value="貨到付款">貨到付款</option>
+                      <option value="銀行轉帳/ATM">銀行轉帳/ATM</option>
+                      <option value="信用卡">信用卡</option>
+                      <option value="LINE_Pay">LINE Pay</option>
+                    </select>
+                  </form>
+                  <div class="col-auto">
+                    <button type="button" class="btn btn-sm btn-custom Sans-TC" style="padding-left: 1.5rem;" @click="payConfirm">確認付款</button>
                   </div>
                 </div>
               </div>
@@ -135,7 +134,7 @@ export default {
       user: {},
       payProducts: [],
       originTotal: 0,
-      payMethod: '請選擇付款方式'
+      payMethod: '請選擇'
     }
   },
   computed: {
@@ -169,7 +168,7 @@ export default {
           title: '您已付款完成'
         })
       } else {
-        if (this.payMethod !== '請選擇付款方式') {
+        if (this.payMethod !== '請選擇') {
           this.$http.post(`${VITE_APP_URL}api/${VITE_APP_PATH}/pay/${this.orderId}`)
             .then((res) => {
               Toast.fire({
