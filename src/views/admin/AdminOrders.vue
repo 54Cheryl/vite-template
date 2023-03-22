@@ -36,13 +36,13 @@
               $ {{ item.total }}
             </td>
             <td>
-              <div class="form-check form-switch">
+              <div class="form-check form-switch d-flex justify-content-center p-0">
                 <input
                   class="form-check-input"
                   type="checkbox"
                   :id="`paidSwitch${item.id}`"
                   v-model="item.is_paid"
-                  @change="updatePaid(item)"
+                  @change="() => updatePaid(item)"
                 />
                 <label class="form-check-label" :for="`paidSwitch${item.id}`">
                   <span v-if="item.is_paid">已付款</span>
@@ -210,9 +210,6 @@ export default {
 }
 </script>
 <style>
-.backend-use{
-
-}
 @media screen and (max-width: 575px) {
   .backend-use{
     display: none;

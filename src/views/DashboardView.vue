@@ -22,7 +22,7 @@
             <router-link to="/" class="nav-link Serif-TC">回到前台</router-link>
           </li>
         </ul>
-        <form class="d-flex py-3">
+        <form class="d-flex pt-2">
           <a href="#" @click.prevent="logout" class="text-decoration-none Serif-TC p-md-2 logout">登出</a>
         </form>
       </div>
