@@ -30,7 +30,7 @@
           <button type="submit" class="btn btn-lg btn-primary btn-block text-white w-100 rounded-0 Serif-TC mb-2" style="padding-left: 1.5rem;">
             登入
           </button>
-          <router-link to="/" class="btn btn-outline-n500 rounded-0 Serif-TC w-100">回首頁</router-link>
+          <router-link to="/" class="btn btn-outline-n500 rounded-0 Serif-TC w-100 fs-5">回首頁</router-link>
         </div>
       </div>
     </form>
