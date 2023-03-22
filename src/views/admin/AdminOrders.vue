@@ -1,5 +1,7 @@
 <template>
-  <Loading v-model:active="isLoading" :can-cancel="true" :is-full-page="fullPage"></Loading>
+  <Loading v-model:active="isLoading" :can-cancel="true" :is-full-page="fullPage">
+    <div class="loadingio-spinner-spin-ekq2gap1645"><div class="ldio-kyayy0fncmo"><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div></div>
+  </Loading>
   <div class="container" style="margin-top: 7vh;">
     <div class="pt-5">
       <p class="mb-0 px-2 d-flex align-items-center">本頁有 <span>{{ orders.length }}</span> 張訂單</p>

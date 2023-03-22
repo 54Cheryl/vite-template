@@ -1,5 +1,7 @@
 <template>
-  <Loading v-model:active="isLoading" :can-cancel="true" :is-full-page="fullPage"></Loading>
+  <Loading v-model:active="isLoading" :can-cancel="true" :is-full-page="fullPage">
+    <div class="loadingio-spinner-spin-ekq2gap1645"><div class="ldio-kyayy0fncmo"><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div></div>
+  </Loading>
   <NavBar></NavBar>
   <div class="bg-all" style="padding-top: 90px; padding-bottom: 6vh;">
     <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
