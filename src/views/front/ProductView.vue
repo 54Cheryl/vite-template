@@ -149,7 +149,7 @@
         </div>
       </div>
       <div class="col-md-auto other-use px-0">
-        <div class="d-flex" style="max-height: 40vh;" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <div class="d-flex" style="max-height: 40vh;" data-aos="fade-up" data-aos-duration="1000">
           <div class="ms-4">
             <div class="d-flex position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="" class="position-absolute" style="right: 0.5rem; top: 0.3rem;">
@@ -161,7 +161,7 @@
           </div>
         </div>
       </div>
-      <div class="row col-md-10 d-flex justify-content-left m-auto pt-5" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <div class="row col-md-10 d-flex justify-content-left m-auto pt-5" data-aos="fade-up" data-aos-duration="1000">
         <div class="col-md-5 col-lg-3 mb-5 d-flex align-items-stretch justify-content-center" v-for="product in otherProducts" :key="product.id">
           <div class="card border-0 rounded-0 position-relative" style="width: 18rem;">
             <a href="#" class="text-danger">
