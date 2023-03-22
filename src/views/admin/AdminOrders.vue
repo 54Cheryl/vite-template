@@ -2,7 +2,7 @@
   <Loading v-model:active="isLoading" :can-cancel="true" :is-full-page="fullPage"></Loading>
   <div class="container" style="margin-top: 7vh;">
     <div class="pt-5">
-      <p class="mb-0 px-2">本頁有 <span>{{ orders.length }}</span> 張訂單</p>
+      <p class="mb-0 px-2 d-flex align-items-center">本頁有 <span>{{ orders.length }}</span> 張訂單</p>
       <table class="table table-hover mt-2">
         <thead>
           <tr>

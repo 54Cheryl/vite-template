@@ -3,7 +3,7 @@
   <div class="container" style="margin-top: 7vh;">
     <div class="pt-5">
       <div class="d-flex justify-content-between">
-        <p class="mb-0 px-2">本頁有 <span>{{ products.length }}</span> 項產品</p>
+        <p class="mb-0 px-2 d-flex align-items-center">本頁有 <span>{{ products.length }}</span> 項產品</p>
         <div class="text-end">
           <button type="button" class="btn btn-custom text-light" @click="() => openProduct('new', item)" style="padding-left: 1.5rem;">新增產品</button>
         </div>
