@@ -46,7 +46,9 @@
                   <p class="fs-sm neutral-300 Sans-TC">{{ item.news_date }}</p>
                   <p class="card-text Serif-TC multiline-ellipsis neutral-500">{{ item.news_content }}</p>
                 </div>
-                <a href="/vite-template/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
+                <div>
+                  <a href="/vite-template/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
+                </div>
               </div>
             </div>
           </div>
