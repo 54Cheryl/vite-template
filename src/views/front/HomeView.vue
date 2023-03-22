@@ -2,7 +2,7 @@
   <HomeNav></HomeNav>
   <!-- 第一屏 -->
   <div class="pt-5" style="background-image: url(https://images.unsplash.com/photo-1531970227416-f0cddeb1f748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1; height: 100vh;">
-    <div class="text-center">
+    <div class="text-center" data-aos="flip-left" data-aos-duration="2000">
       <div class="p-2 d-inline-block" style="border: 4px solid rgb(255, 255, 255, 0.8); margin-top: 20vh; box-sizing: border-box; writing-mode: vertical-lr;">
         <div class="text-white fs-1 Serif-TC bg-opacity-20 pt-5" style="letter-spacing: 1rem; border: 1px solid rgb(255, 255, 255, 0.8);vertical-align: middle; box-sizing: border-box;">
           <p class="">坐酌泠泠水，</p>
@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="position-relative text-center" style="top: -3rem;">
+    <div class="position-relative text-center" style="top: -3rem;" data-aos="fade-down" data-aos-duration="1600">
       <p class="bg-white mx-auto" style="width: 1px; height: 90px;"></p>
       <span class="text-white letter-spacing Serif-TC ps-2">滾動觀看更多</span>
       <i class="bi bi-chevron-down text-white d-block downFrames"></i>
@@ -22,11 +22,11 @@
   <div class="bg-sec tel-use">
     <div class="container py-5">
       <div class="row">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-md-5" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="200" data-aos-offset="0">
           <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678386479583.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=BgjYYRaG8DhhUI78tq8bmjolmvX4CB%2B8bpWCrZXW5x4Xc59Pd%2Ffn%2B%2BOA6MA3Z%2FouJLmBQfbkdRPeTIhsQ01QlRbHmbszQMDxTj08xp35CW3LRg5iYGPXvDANAl4ElEAfZNI98QGmtFJIM3XbXHx86S3AA2DLXJJ%2Bbpjd6%2FMV%2BhJYu7LOX966w2Z5%2BxWpDw5JbbNC95O3pnJoGZVKDcNiS998PgHG1ii7a6swGBi7HhzqQ63ipTWJFy8c8jNK4HT8Kq2duI%2Fcq%2FgIWynloH%2BDsCONAUf5xYkQuRfPtdd%2FApwwqi33ZgvaBIXHlyhRyznTdl5WxVCznkjaVptbsE8eig%3D%3D" alt="" class="img-fluid">
         </div>
         <div class="tel-use mt-2">
-          <div class="d-flex my-4 col-md-2">
+          <div class="d-flex my-4 col-md-2" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="600" data-aos-offset="0">
             <div class="col-auto ps-3 position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657190077.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KlWtrqmPixbMSIZMgexLakY33rh8Np7Ltcbo79AMG2%2FWgSprUf9%2BmfPpSRYYkhtMQp%2BJDTZaUPzN%2FhqTuuvU2dT8Yir0eJzJ9RFPV7cYJoJ4tzXlwZUXq%2BeTBA3sMox9pw5jGngU6Y8DM%2BTo8cFK%2BTJFzbUm2GULC%2FpheeRdRX6TVSd5g4O5tlITEJ4o%2BVHerWlptyUPASQufdWdZlZQs3mq3ea%2FbthMUDcJpFyRXllC3EIIod3juzbrVPY2GVlSIo2PX%2FW8Rx6QjqpHR9FnZaKLbQnUvBWEgrDi%2FwMC%2BNM9amzSX9x%2Bjap2h7fHzd6pjdRL79n9YpUjRfUrx9PJUw%3D%3D" alt="" class="position-absolute" style="left: -0.1rem; top: -1rem;">
               <h3 class="letter-spacing Serif-TC mb-0 neutral-900">品牌理念</h3>
@@ -36,7 +36,7 @@
               <p class="bg-n500 m-auto" style="height: 1px;"></p>
             </div>
           </div>
-          <div class="col-12 col-md-auto my-auto p-0">
+          <div class="col-12 col-md-auto my-auto p-0" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="800" data-aos-offset="0">
             <div class="bg-opacity-80 px-4">
               <p class="Sans-TC pt-4 m-0 neutral-700 fs-5 writing-lr">別茶寄與愛茶人</p>
               <p class="Sans-TC py-4 m-0 neutral-300 writing-lr">品牌名稱取自於《謝李六郎中寄新蜀茶》詩中的尾句「別茶人」，即專業的茶葉品評師。我們像白居易一樣，熱愛茶文化，將最好的茶葉帶給每位愛茶人。別茶二字象徵著我們對茶葉的鑑賞、了解和熱愛。我們期待與您分享這份熱情，為您帶來最美好的品茶體驗。無論您是在家中享用或與好友分享，我們的使命就是為您提供最好的茶葉。讓我們一起品嚐這份美好，享受別具風味的茶葉文化。</p>
@@ -50,11 +50,11 @@
   <div class="bg-sec other-use">
     <div class="container py-5">
       <div class="row flex-row-reverse justify-content-evenly my-5 position-relative">
-        <div class="col-lg-6 col-md-10 my-auto p-0 position-relative appeal-img">
+        <div class="col-lg-6 col-md-10 my-auto p-0 position-relative appeal-img" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
           <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678386479583.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=BgjYYRaG8DhhUI78tq8bmjolmvX4CB%2B8bpWCrZXW5x4Xc59Pd%2Ffn%2B%2BOA6MA3Z%2FouJLmBQfbkdRPeTIhsQ01QlRbHmbszQMDxTj08xp35CW3LRg5iYGPXvDANAl4ElEAfZNI98QGmtFJIM3XbXHx86S3AA2DLXJJ%2Bbpjd6%2FMV%2BhJYu7LOX966w2Z5%2BxWpDw5JbbNC95O3pnJoGZVKDcNiS998PgHG1ii7a6swGBi7HhzqQ63ipTWJFy8c8jNK4HT8Kq2duI%2Fcq%2FgIWynloH%2BDsCONAUf5xYkQuRfPtdd%2FApwwqi33ZgvaBIXHlyhRyznTdl5WxVCznkjaVptbsE8eig%3D%3D" alt="" class="img-fluid card-img">
         </div>
         <div class="col-lg-6 col-md-10 p-0 d-flex justify-content-md-start justify-content-lg-center position-relative appeal-top" style="max-height: 450px; height: 55vh; z-index: 2;">
-          <div class="col-md-auto pe-md-4 pe-lg-0 mx-5">
+          <div class="col-md-auto pe-md-4 pe-lg-0 mx-5" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-offset="0">
             <div class="d-flex position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="" class="position-absolute" style="right: 0.5rem; top: -0.2rem;">
               <h3 class="letter-spacing Serif-TC mt-3 mx-0 writing-lr neutral-900">品牌理念
@@ -63,9 +63,9 @@
             </div>
             <p class="bg-n500 m-auto" style="width: 1px; height: 15vh;"></p>
           </div>
-          <div class="col-md-auto bg-opacity-80 writing-lr my-4">
-            <p class="letter-spacing Sans-TC neutral-700 fs-5 mt-4">別茶寄與愛茶人</p>
-            <p class="letter-spacing Sans-TC neutral-300 mb-0 mt-4">品牌名稱取自於《謝李六郎中寄新蜀茶》詩中的尾句「別茶人」，即專業的茶葉品評師。我們像白居易一樣，熱愛茶文化，將最好的茶葉帶給每位愛茶人。別茶二字象徵著我們對茶葉的鑑賞、了解和熱愛。我們期待與您分享這份熱情，為您帶來最美好的品茶體驗。無論您是在家中享用或與好友分享，我們的使命就是為您提供最好的茶葉。讓我們一起品嚐這份美好，享受別具風味的茶葉文化。</p>
+          <div class="col-md-auto bg-opacity-80 writing-lr my-4" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="200" data-aos-offset="0">
+            <p class="letter-spacing Sans-TC neutral-700 fs-5 mt-4" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="400" data-aos-offset="0">別茶寄與愛茶人</p>
+            <p class="letter-spacing Sans-TC neutral-300 mb-0 mt-4" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="500" data-aos-offset="0">品牌名稱取自於《謝李六郎中寄新蜀茶》詩中的尾句「別茶人」，即專業的茶葉品評師。我們像白居易一樣，熱愛茶文化，將最好的茶葉帶給每位愛茶人。別茶二字象徵著我們對茶葉的鑑賞、了解和熱愛。我們期待與您分享這份熱情，為您帶來最美好的品茶體驗。無論您是在家中享用或與好友分享，我們的使命就是為您提供最好的茶葉。讓我們一起品嚐這份美好，享受別具風味的茶葉文化。</p>
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@
   <!-- 第三屏 -->
   <div class="container">
     <div class="row pb-4 pt-5 px-0 justify-content-evenly">
-      <div class="tel-use">
+      <div class="tel-use" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="600" data-aos-offset="0">
         <div class="d-flex col-md-2">
           <div class="col-auto ps-3 position-relative">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657190077.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KlWtrqmPixbMSIZMgexLakY33rh8Np7Ltcbo79AMG2%2FWgSprUf9%2BmfPpSRYYkhtMQp%2BJDTZaUPzN%2FhqTuuvU2dT8Yir0eJzJ9RFPV7cYJoJ4tzXlwZUXq%2BeTBA3sMox9pw5jGngU6Y8DM%2BTo8cFK%2BTJFzbUm2GULC%2FpheeRdRX6TVSd5g4O5tlITEJ4o%2BVHerWlptyUPASQufdWdZlZQs3mq3ea%2FbthMUDcJpFyRXllC3EIIod3juzbrVPY2GVlSIo2PX%2FW8Rx6QjqpHR9FnZaKLbQnUvBWEgrDi%2FwMC%2BNM9amzSX9x%2Bjap2h7fHzd6pjdRL79n9YpUjRfUrx9PJUw%3D%3D" alt="" class="position-absolute" style="left: -0.1rem; top: -1rem;">
@@ -87,7 +87,7 @@
         </div>
       </div>
       <div class="row col-md-10 pt-5 m-auto">
-        <div class="col-12 col-md-6 col-lg-4 position-relative d-flex align-items-stretch">
+        <div class="col-12 col-md-6 col-lg-4 position-relative d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
           <div class="position-absolute bg-opacity-100" style="writing-mode: vertical-lr; z-index: 2; left: 2rem; top: -1rem; border: 1px solid #BB0000;">
             <p class="text-white Serif-TC letter-spacing px-1 pt-3 pb-2 m-1" style="background: #E52E2E;">
               新品上架
@@ -105,7 +105,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           <div class="card mb-4 mx-auto" style="max-width: 22rem;">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678648579838.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KzyYtLglR69iKpV6EYcng16Wc5g6eoGZhQy5iGKDwxJjhCh4gM%2FktPIolpxYG9SZAxzcZaqM0xFbjhkEp7HWUvsly%2FKK6rgoF47%2F8azRm%2BP4wInR%2Bu%2FKRvXnOA9HqY6TWrc%2Fyj5XaAHdd%2BQAKkwLc69FNLXJMnKodRa97she7Hwt5pC6CIZM0UQxtIFYFehZc5EWS%2ByadlhMwPVQ5jQqi%2Bx8LkRQqWxOZq4G1Rm%2B8b%2BmAh%2FO9lxHvMw0NdYAsyBYYtgUhYdPsRpdz6Zzh7zUgXswk54dO025B3biZUkMwzE31E9QawxofAPnrWn6zuTjG4hRjFy51cRaDGjom%2FDvcQ%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 200px;">
             <div class="card-body d-flex flex-column justify-content-between">
@@ -118,7 +118,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
           <div class="card mb-4 mx-auto" style="max-width: 22rem;">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678649830585.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Df4NIesJG1a2lfCuUQ%2F44I1mx7%2FsQgzo6XvudjtIp132XCJRzwtfW8EW4r7NZiDsQa70apDDYZ9f3GzBS7K75UtCQHMAd0KHh%2Bqrchy4UecstdfBk77vJC0PyNPF2rGjaEYXTPYxT2iN3sBoS2F4oqMvuyAkeaOKyRHZ%2BUZdoQcMdZ%2BX91J%2F7h9O7oxZL3ii%2BM6J8F74aqpgwfR6y4nX%2FU5hh9IVntNG7hbit6iFu%2BL7iKJimpeqWKWV774uZ6NYtSb9nlOvwVIbPyyYLi48JxpkkP5Ae0Af1oyKoliHMvLfnufKr4prBG9NXOrwca7DT4swZbx8%2BqN0lW6jXuiamA%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 200px;">
             <div class="card-body d-flex flex-column justify-content-between">
@@ -134,7 +134,7 @@
       </div>
       <div class="col-md-auto px-0 other-use">
         <div class="d-flex" style="max-height: 40vh;">
-          <div class="me-4 pe-lg-5">
+          <div class="me-4 pe-lg-5" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-offset="0" data-aos-delay="100">
             <div class="d-flex position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="" class="position-absolute" style="right: 0.5rem; top: 0.3rem;">
               <h3 class="letter-spacing Serif-TC mt-4 mx-0 writing-lr neutral-900">別茶消息
@@ -146,14 +146,14 @@
         </div>
       </div>
     </div>
-    <div class="pb-4 mb-4 text-center">
+    <div class="pb-4 mb-4 text-center" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine"  data-aos-offset="0">
       <a href="/vite-template/#/news" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">更多消息</a>
     </div>
   </div>
   <!-- 第四屏 -->
   <div class="container">
     <div class="row pb-4 pt-4 px-0">
-      <div class="tel-use">
+      <div class="tel-use" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="600" data-aos-offset="0">
         <div class="d-flex col-md-2">
           <div class="col-auto ps-3 position-relative">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657190077.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KlWtrqmPixbMSIZMgexLakY33rh8Np7Ltcbo79AMG2%2FWgSprUf9%2BmfPpSRYYkhtMQp%2BJDTZaUPzN%2FhqTuuvU2dT8Yir0eJzJ9RFPV7cYJoJ4tzXlwZUXq%2BeTBA3sMox9pw5jGngU6Y8DM%2BTo8cFK%2BTJFzbUm2GULC%2FpheeRdRX6TVSd5g4O5tlITEJ4o%2BVHerWlptyUPASQufdWdZlZQs3mq3ea%2FbthMUDcJpFyRXllC3EIIod3juzbrVPY2GVlSIo2PX%2FW8Rx6QjqpHR9FnZaKLbQnUvBWEgrDi%2FwMC%2BNM9amzSX9x%2Bjap2h7fHzd6pjdRL79n9YpUjRfUrx9PJUw%3D%3D" alt="" class="position-absolute" style="left: -0.1rem; top: -1rem;">
@@ -165,7 +165,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-auto other-use px-0">
+      <div class="col-md-auto other-use px-0" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-offset="0" data-aos-delay="100">
         <div class="d-flex" style="max-height: 40vh;">
           <div class="ms-4 ps-lg-5">
             <div class="d-flex position-relative">
@@ -179,7 +179,7 @@
         </div>
       </div>
       <div class="row col-md-10 d-flex justify-content-left pt-5 m-auto">
-        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678654028165.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=LC47Shpv7K0%2FUpSJj72%2FsN9PAazDh6lruK68PZAkTxZhw6YJb0rJybX1990%2FsoCdFdh9GcYehIqXyGvMSReYqdEuYtTvnJasnz6ED9E%2FPjquJ8N%2BhLtNsRIcqbdHbr8jvccHdsQTsLMlbtzmzJjf283PvoJWo2ZDHoj0L6wa%2FdkgLZ4SAq5lsqKLivUik%2F8%2B3f5Wq%2FXD0T2K9%2Fe2oi%2Fg4xwqSXat4frAJ%2FiK7mSal7vdm6df9WDT%2BPQyrrtIusdw1l4IOIHjczB0LNHS9mkBmDYNak9PawHpUc8iW49ZmVWc%2BRKKEDheCjp64gc4a4tmM6NTj0sQIRJt7nPfMN0SaA%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
@@ -195,7 +195,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678650979468.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=fAjYNK5UZjaErisWaxDZ460vHOyR6P6Ul5mOjDKFDM7WM5gH%2B88SlxbrZOxiVmaPdi598CcskFMbNc04%2BVJ8LCylzMlXy8naQjLdiR2yPaWPF3Ib4eZCvv8cw8qD0cItPMmnFKTlVdNPuS6HMV6%2Bp1eB%2BLIxoPLUMvXhJ%2FHSu5qGHk%2FSytgUnGatTlT%2B8ODy4pCqtgL0JkWpbGoj94Tws4CAD3Oi8cRhA5BiuxS%2B3LeBKjPO1OpzvD%2BXZjZuUuQFVKtqEJ7gBRB7veAiUiF6%2BHFJaLThLSsrwkh4csDdG%2FlRj5xMSTtDUgJu6z7KKBvZfg1o19gY79i2iCZT0JUWfQ%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
@@ -211,7 +211,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678650992588.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=NkkQix5293%2B0%2BWvMgu9qRuspvSeMQ0hI43EJp%2BO%2BN7dybDdclMXgI53spyqi7oi2mUDT8USlrYE1rYs2Z%2FC1BIftZDpy8E3BH7RS97fhE9bHnHtJNpRRRhKc7SGcFgL08O7sDNKKPnTJqDbeRBUBq16J03401YPftRkIC4QdALrl%2FWwMh%2BabCfswpfbODGRf7YBMWKq8diyFY2m%2F%2BzlCPSA%2BoeTqwxiCkey3snbEV9AJEPfI7hSB%2Ba8NeBahBuxVCLWBUkccfJxINCBcVfGM%2FaZVn5M8j1qXV1ljGu9%2BjmqGmchJ99yfxQLVESyAXvxXUbvk88wKEzStqxWXdex%2BAw%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
@@ -227,7 +227,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
           <div class="card mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678651005190.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=jCRrwj3Drnr6MdBDaIqkPsGUVI45F9bYjMgffYUzQyLVzYb8w0CANrNGMfOurvatlPU6kS6E1QbOJP1WKSIPmpDHtb6qEbUdZLQRk1BG6b7GUhpK8yX3S%2F4Hp0FewVnDwmdDxvVwP3ielBFJMws3WV%2FuQijktcb%2Fu6tTMUdMrZs6hI%2FF5oz6E7gPUUtwZgFfUG2tER9rJfZI9wfsTc3haCS753LrCzeX7ML%2BYT1HJij0oJbita4cCsqzqNFt9Ur%2BF9z%2Fmypc75F3WOwDX6CaYxLJrm1Lz4YCJIRV8TW3XoC6nxEQwxN%2Fpg%2BCqVrhXpBICvInXJpVwa%2FD0cK54Fc72Q%3D%3D" class="card-img-top rounded-0 object-cover" alt="" style="height: 180px;">
@@ -245,7 +245,7 @@
         </div>
       </div>
     </div>
-    <div class=" pb-5 mb-5 text-center">
+    <div class=" pb-5 mb-5 text-center" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-offset="0">
       <a href="/vite-template/#/products" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">產品總覽</a>
     </div>
   </div>
