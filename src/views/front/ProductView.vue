@@ -265,7 +265,7 @@ export default {
 }
 @media screen and (max-width: 991px) {
   .mainImg{
-    height: 45vh;
+    height: 49vh;
   }
   .smImg{
     height: 12vh;
@@ -273,7 +273,7 @@ export default {
 }
 @media screen and (max-width: 575px) {
   .mainImg{
-    height: 32vh;
+    height: 39vh;
   }
   .smImg{
     height: 7vh;
