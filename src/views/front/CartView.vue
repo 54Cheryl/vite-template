@@ -54,12 +54,15 @@
               </div>
             </div>
           </div>
-          <template v-if="!cartNum">
-            <div class="px-3 mt-4 Sans-TC">
-              您目前尚未選購產品
+          <template v-if="cartNum === 0">
+            <div class="text-center">
+              <p class="px-3 mt-4 Sans-TC fs-5 accent-color">
+                您目前尚未選購產品
+              </p>
+              <router-link to="/products" class="btn btn-outline-n500 Serif-TC col-6 col-md-auto">立即前往選購</router-link>
             </div>
           </template>
-          <div class="px-3">
+          <div class="px-3" v-if="cartNum !== 0">
             <div class="d-flex justify-content-between mt-4 mb-4 Sans-TC">
               <p class="mb-0 h4 fw-bold">總計</p>
               <p class="mb-0 h4 fw-bold">NT$ {{ getCart.total }}</p>
@@ -121,9 +124,9 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-between px-4 mx-lg-5" style="padding-top: 4vh;">
+      <div class="row justify-content-between px-4 mx-lg-5" style="padding-top: 4vh;" v-if="cartNum !== 0">
         <router-link to="/products" class="btn btn-outline-n500 Serif-TC col-6 col-md-auto">繼續購物</router-link>
-        <button type="button" class="btn btn-custom Serif-TC col-6 col-md-auto" v-if="cartNum !== 0" style="padding-left: 1.5rem;" @click="checkCartNum">確認訂單</button>
+        <button type="button" class="btn btn-custom Serif-TC col-6 col-md-auto" style="padding-left: 1.5rem;" @click="checkCartNum">確認訂單</button>
       </div>
     </div>
   </div>
