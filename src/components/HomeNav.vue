@@ -44,7 +44,7 @@
               <div class="d-flex">
                 <div class="col-10 endflex">
                   <span class="position-relative">
-                    <span class="position-absolute topNegative start-50 translate-middle badge rounded-pill bg-danger fs-sm">
+                    <span class="position-absolute topNegative start-50 translate-middle badge rounded-pill bg-danger fs-sm" v-if="cartNum !== 0">
                       {{ cartNum }}
                     </span>
                     <span class="d-block writing-nav letter-spacing" :class="{'hb-navColor': isOpen}">
@@ -54,7 +54,7 @@
                   <span class="d-block writing-nav" :class="{'hb-navColor': isOpen}">Cart</span>
                 </div>
                 <div class="col-auto m-auto endNegative">
-                  <span class="badge rounded bg-danger">
+                  <span class="badge rounded bg-danger" v-if="cartNum !== 0">
                     {{ cartNum }}
                   </span>
                 </div>

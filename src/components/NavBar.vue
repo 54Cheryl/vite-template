@@ -39,14 +39,14 @@
                 <div class="col">
                   <div class="d-flex align-items-center justify-content-between">
                     <span class="d-block letter-spacing">購物車</span>
-                    <span class="badge rounded-pill bg-danger fs-sm firstNegative">
+                    <span class="badge rounded-pill bg-danger fs-sm firstNegative" v-if="cartNum !== 0">
                       {{ cartNum }}
                     </span>
                   </div>
                   <span class="d-block">Cart</span>
                 </div>
                 <div class="col-auto m-auto">
-                  <span class="badge rounded bg-danger secNegative">
+                  <span class="badge rounded bg-danger secNegative" v-if="cartNum !== 0">
                     {{ cartNum }}
                   </span>
                 </div>

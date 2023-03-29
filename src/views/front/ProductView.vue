@@ -60,7 +60,7 @@
               <button
                 type="button"
                 class="btn btn-outline-custom p-2"
-                :class="{ 'text-secondary': tempQty === 1 }"
+                :class="{ 'neutral-900': tempQty === 1 }"
                 :disabled="tempQty === 1"
                 @click="() => tempQty--"
               ><i class="fas fa-minus"></i></button>
