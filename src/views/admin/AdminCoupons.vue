@@ -112,7 +112,14 @@ export default {
       }
     },
     updateCoupon () {
-      if (this.tempCoupon.percent > 100 || this.tempCoupon.percent < 0) {
+      const today = Math.floor(new Date() / 1000)
+      if (this.tempCoupon.due_date < today) {
+        Swal.fire({
+          icon: 'error',
+          title: '輸入錯誤',
+          text: '不可輸入過去日期'
+        })
+      } else if (this.tempCoupon.percent > 100 || this.tempCoupon.percent < 0) {
         Swal.fire({
           icon: 'error',
           title: '輸入錯誤',

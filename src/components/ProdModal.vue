@@ -13,19 +13,19 @@
           <form action="" class="row">
             <div class="col-4">
               <div class="col">
-                <label class="form-label mt-2" for="">主要圖片</label>
-                <input type="text" class="form-control mb-2" id="" placeholder="請輸入圖片連結" v-model="tempProduct.imageUrl">
-                <img :src="tempProduct.imageUrl" alt="" class="img-fluid">
+                <label class="form-label mt-2" for="prodMainImg">主要圖片</label>
+                <input type="text" class="form-control mb-2" id="prodMainImg" placeholder="請輸入圖片連結" v-model="tempProduct.imageUrl">
+                <img :src="tempProduct.imageUrl" alt="產品主要圖片" class="img-fluid">
               </div>
               <p class="fs-4 mt-2">多圖新增</p>
               <template v-if="Array.isArray(tempProduct.imagesUrl)">
                 <div class="mb-1" v-for="(image, key) in tempProduct.imagesUrl" :key="key">
                   <div class="mb-3">
-                    <label for="" class="form-label">圖片網址</label>
-                    <input v-model="tempProduct.imagesUrl[key]" type="text" class="form-control"
+                    <label for="prodOtherImg" class="form-label">圖片網址</label>
+                    <input v-model="tempProduct.imagesUrl[key]" type="text" class="form-control" id="prodOtherImg"
                       placeholder="請輸入圖片連結">
                   </div>
-                  <img class="img-fluid" :src="image">
+                  <img class="img-fluid" :src="image" alt="產品相關圖片">
                 </div>
                 <div v-if="!tempProduct.imagesUrl.length || tempProduct.imagesUrl[tempProduct.imagesUrl.length - 1]">
                   <button type="button" class="btn btn-outline-main btn-sm d-block w-100"
@@ -67,61 +67,61 @@
             <div class="col-8">
               <div class="row">
                 <div class="col-6">
-                  <label class="form-label mt-2" for="">品名</label>
-                  <input type="text" class="form-control" id="" placeholder="請輸入品名" v-model="tempProduct.title">
+                  <label class="form-label mt-2" for="prodTitle">品名</label>
+                  <input type="text" class="form-control" id="prodTitle" placeholder="請輸入品名" v-model="tempProduct.title">
                 </div>
                 <div class="col-6">
-                  <label class="form-label mt-2" for="">類別</label>
-                  <input type="text" class="form-control" id="" placeholder="請輸入類別" v-model="tempProduct.category">
+                  <label class="form-label mt-2" for="prodCategory">類別</label>
+                  <input type="text" class="form-control" id="prodCategory" placeholder="請輸入類別" v-model="tempProduct.category">
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <label class="form-label mt-2" for="">產地</label>
-                  <input type="text" class="form-control" id="" placeholder="請輸入產地" v-model="tempProduct.origin_place">
+                  <label class="form-label mt-2" for="prodPlace">產地</label>
+                  <input type="text" class="form-control" id="prodPlace" placeholder="請輸入產地" v-model="tempProduct.origin_place">
                 </div>
                 <div class="col-6">
-                  <label class="form-label mt-2" for="">品種</label>
-                  <input type="text" class="form-control" id="" placeholder="請輸入品種" v-model="tempProduct.variety">
+                  <label class="form-label mt-2" for="prodVariety">品種</label>
+                  <input type="text" class="form-control" id="prodVariety" placeholder="請輸入品種" v-model="tempProduct.variety">
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <label class="form-label mt-2" for="">香氣</label>
-                  <input type="text" class="form-control" id="" placeholder="請輸入香氣" v-model="tempProduct.aroma">
+                  <label class="form-label mt-2" for="prodAroma">香氣</label>
+                  <input type="text" class="form-control" id="prodAroma" placeholder="請輸入香氣" v-model="tempProduct.aroma">
                 </div>
                 <div class="col-6">
-                  <label class="form-label mt-2" for="">滋味</label>
-                  <input type="text" class="form-control" id="" placeholder="請輸入滋味" v-model="tempProduct.taste">
+                  <label class="form-label mt-2" for="prodTaste">滋味</label>
+                  <input type="text" class="form-control" id="prodTaste" placeholder="請輸入滋味" v-model="tempProduct.taste">
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <label class="form-label mt-2" for="">茶乾</label>
-                  <input type="text" class="form-control" id="" placeholder="請輸入茶乾" v-model="tempProduct.tea_dried">
+                  <label class="form-label mt-2" for="prodDried">茶乾</label>
+                  <input type="text" class="form-control" id="prodDried" placeholder="請輸入茶乾" v-model="tempProduct.tea_dried">
                 </div>
                 <div class="col-6">
-                  <label class="form-label mt-2" for="">單位</label>
-                  <input type="text" class="form-control" id="" placeholder="請輸入單位" v-model="tempProduct.unit">
+                  <label class="form-label mt-2" for="prodUnit">單位</label>
+                  <input type="text" class="form-control" id="prodUnit" placeholder="請輸入單位" v-model="tempProduct.unit">
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <label class="form-label mt-2" for="">原價</label>
-                  <input type="number" min="0" class="form-control" id="" placeholder="請輸入原價" v-model.number="tempProduct.origin_price">
+                  <label class="form-label mt-2" for="prodOrigin">原價</label>
+                  <input type="number" min="0" class="form-control" id="prodOrigin" placeholder="請輸入原價" v-model.number="tempProduct.origin_price">
                 </div>
                 <div class="col-6">
-                  <label class="form-label mt-2" for="">售價</label>
-                  <input type="number" min="0" class="form-control" id="" placeholder="請輸入售價" v-model.number="tempProduct.price">
+                  <label class="form-label mt-2" for="prodPrice">售價</label>
+                  <input type="number" min="0" class="form-control" id="prodPrice" placeholder="請輸入售價" v-model.number="tempProduct.price">
                 </div>
               </div>
-              <label class="form-label mt-2" for="">產品描述</label>
-              <textarea class="form-control" id="" cols="30" rows="2" placeholder="請輸入產品描述" v-model="tempProduct.description"></textarea>
-              <label class="form-label mt-2" for="">說明內容</label>
-              <textarea class="form-control" id="" cols="30" rows="2" placeholder="請輸入說明內容" v-model="tempProduct.content"></textarea>
+              <label class="form-label mt-2" for="prodDescription">產品描述</label>
+              <textarea class="form-control" id="prodDescription" cols="30" rows="2" placeholder="請輸入產品描述" v-model="tempProduct.description"></textarea>
+              <label class="form-label mt-2" for="prodContent">說明內容</label>
+              <textarea class="form-control" id="prodContent" cols="30" rows="2" placeholder="請輸入說明內容" v-model="tempProduct.content"></textarea>
               <div class="col mt-2">
-                <input type="checkbox" class="form-check-input" id="" v-model="tempProduct.is_enabled" :true-value="1" :false-value="0">
-                <label class="form-label ms-2" for="">是否啟用</label>
+                <input type="checkbox" class="form-check-input" id="prodEnabled" v-model="tempProduct.is_enabled" :true-value="1" :false-value="0">
+                <label class="form-label ms-2" for="prodEnabled">是否啟用</label>
               </div>
             </div>
           </form>

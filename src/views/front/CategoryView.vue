@@ -2,7 +2,7 @@
   <Loading v-model:active="isLoading" :can-cancel="true" :is-full-page="fullPage">
     <div class="loadingio-spinner-spin-ekq2gap1645"><div class="ldio-kyayy0fncmo"><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div></div>
   </Loading>
-  <NavBar></NavBar>
+  <NavBar />
   <div class="bg-all" style="padding-top: 90px; padding-bottom: 6vh;">
     <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
       <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
@@ -32,7 +32,7 @@
               <!-- <i class="far fa-heart position-absolute" style="right: 16px; top: 16px"></i> -->
             </a>
             <router-link :to="`/product/${product.id}`" class="card-body d-flex flex-column text-decoration-none p-0">
-              <img :src="product.imageUrl" class="card-img-top object-cover productsImg" alt="Card Image">
+              <img :src="product.imageUrl" class="card-img-top object-cover productsImg" :alt="product.title">
               <h5 class="mb-0 neutral-900 Serif-TC text-center pb-2 pt-1">
                 {{ product.title }}
               </h5>
@@ -61,10 +61,11 @@
       <Pagination :pages="pagination" @change-page="getProducts"></Pagination>
     </div>
   </div>
-  <FrontFooter></FrontFooter>
+  <FrontFooter />
 </template>
 
 <script>
+import { Swal } from '@/methods/swalToast'
 import { RouterLink } from 'vue-router'
 import Loading from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/css/index.css'
@@ -101,6 +102,12 @@ export default {
           this.isLoading = false
           this.products = res.data.products
           this.pagination = res.data.pagination
+        })
+        .catch((err) => {
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     },
     ...mapActions(cartStore, ['addToCart'])

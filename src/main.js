@@ -10,7 +10,7 @@ import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json'
 
 import App from './App.vue'
 import router from './router'
-import './assets/all.scss'
+import './assets/SCSS/all.scss'
 import { date, currency } from './methods/filters'
 
 Object.keys(AllRules).forEach((rule) => {

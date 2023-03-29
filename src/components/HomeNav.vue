@@ -8,7 +8,7 @@
     }">
     <div class="container">
       <a class="navbar-brand pb-0" href="#">
-        <img src="/src/assets/logo.svg" alt="">
+        <img src="/src/assets/img/logo.svg" alt="BIECHA-logo">
       </a>
       <button type="button" class="navbar-toggler btn text-white border-0 rounded-0 position-relative" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" @click="openHb">
         <i class="bi bi-list fs-1" :class="{'d-none': isOpen, 'neutral-900': isScrolled}"></i>

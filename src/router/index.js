@@ -64,6 +64,10 @@ const routes = [
     component: () => import('../views/DashboardView.vue'),
     children: [
       {
+        path: '',
+        component: () => import('../views/admin/AdminHome.vue')
+      },
+      {
         path: 'products',
         component: () => import('../views/admin/AdminProducts.vue')
       },

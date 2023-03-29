@@ -1,5 +1,5 @@
 <template>
-  <NavBar></NavBar>
+  <NavBar />
   <div class="" style="padding-top: 90px; padding-bottom: 6vh;">
     <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
       <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
@@ -13,7 +13,7 @@
           <h2 class="text-center Serif-TC my-4">訂單明細</h2>
           <div class="pe-2" style="max-height: 60vh; overflow-x: hidden;">
             <div class="d-flex mt-4 bg-white" v-for="(product, i) in order.products" :key="i">
-              <img class="object-cover" :src="product.product.imageUrl" alt="" style="width: 120px; height: 120px;">
+              <img class="object-cover" :src="product.product.imageUrl" :alt="product.product.title" style="width: 120px; height: 120px;">
               <div class="w-100 p-3 position-relative Sans-TC">
                 <p class="mb-0 fw-bold">{{ product.product.title }}</p>
                 <p class="mb-0 mt-1 neutral-500" style="font-size: 14px;">
@@ -116,9 +116,13 @@
           </div>
         </div>
       </div>
+      <div class="row justify-content-between px-4 mx-lg-5" style="padding-top: 4vh;">
+        <router-link to="/products" class="btn btn-outline-n500 Serif-TC col-6 col-md-auto">繼續購物</router-link>
+        <router-link to="/" class="btn btn-custom Serif-TC col-6 col-md-auto text-decoration-none" style="padding-left: 1.5rem;">回到首頁</router-link>
+      </div>
     </div>
   </div>
-  <FrontFooter></FrontFooter>
+  <FrontFooter />
 </template>
 
 <script>
@@ -136,8 +140,6 @@ export default {
       originTotal: 0,
       payMethod: '請選擇'
     }
-  },
-  computed: {
   },
   methods: {
     getOrder () {

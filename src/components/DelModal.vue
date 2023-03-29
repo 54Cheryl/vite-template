@@ -3,7 +3,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header bg-danger text-white">
-          <h5 class="modal-title" id="exampleModalLabel">刪除商品</h5>
+          <h5 class="modal-title" id="exampleModalLabel" v-if="tempData.title">刪除{{ tempData.title }}</h5>
+          <h5 class="modal-title" id="exampleModalLabel" v-else>刪除訂單</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">

@@ -1,17 +1,17 @@
 <template>
-  <NavBar></NavBar>
+  <NavBar />
   <div class="container mt-md-5" style="padding-top: 90px;">
     <div class="row mx-4">
       <div class="col-lg-5">
         <div class="text-center overflow-hidden">
-          <img :src="mainImg" class="card-img-top rounded-0 object-cover mainImg">
+          <img :src="mainImg" :alt="product.title" class="card-img-top rounded-0 object-cover mainImg">
         </div>
         <div class="row my-4">
           <div class="col-3 text-center overflow-hidden">
-            <img :src="product.imageUrl" class="card-img-top rounded-0 object-cover smImg" @click.prevent="() => showImg(product.imageUrl)">
+            <img :src="product.imageUrl" :alt="product.title" class="card-img-top rounded-0 object-cover smImg" @click.prevent="() => showImg(product.imageUrl)">
           </div>
           <div class="col-3 text-center overflow-hidden" v-for="(imgItem, i) in product.imagesUrl" :key="i">
-            <img :src="imgItem" class="card-img-top rounded-0 object-cover smImg" @click.prevent="() => showImg(imgItem)">
+            <img :src="imgItem" :alt="product.title" class="card-img-top rounded-0 object-cover smImg" @click.prevent="() => showImg(imgItem)">
           </div>
         </div>
       </div>
@@ -139,7 +139,7 @@
       <div class="tel-use">
         <div class="d-flex col-md-2">
           <div class="col-auto ps-3 position-relative">
-            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657190077.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KlWtrqmPixbMSIZMgexLakY33rh8Np7Ltcbo79AMG2%2FWgSprUf9%2BmfPpSRYYkhtMQp%2BJDTZaUPzN%2FhqTuuvU2dT8Yir0eJzJ9RFPV7cYJoJ4tzXlwZUXq%2BeTBA3sMox9pw5jGngU6Y8DM%2BTo8cFK%2BTJFzbUm2GULC%2FpheeRdRX6TVSd5g4O5tlITEJ4o%2BVHerWlptyUPASQufdWdZlZQs3mq3ea%2FbthMUDcJpFyRXllC3EIIod3juzbrVPY2GVlSIo2PX%2FW8Rx6QjqpHR9FnZaKLbQnUvBWEgrDi%2FwMC%2BNM9amzSX9x%2Bjap2h7fHzd6pjdRL79n9YpUjRfUrx9PJUw%3D%3D" alt="" class="position-absolute" style="left: -0.1rem; top: -1rem;">
+            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657190077.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KlWtrqmPixbMSIZMgexLakY33rh8Np7Ltcbo79AMG2%2FWgSprUf9%2BmfPpSRYYkhtMQp%2BJDTZaUPzN%2FhqTuuvU2dT8Yir0eJzJ9RFPV7cYJoJ4tzXlwZUXq%2BeTBA3sMox9pw5jGngU6Y8DM%2BTo8cFK%2BTJFzbUm2GULC%2FpheeRdRX6TVSd5g4O5tlITEJ4o%2BVHerWlptyUPASQufdWdZlZQs3mq3ea%2FbthMUDcJpFyRXllC3EIIod3juzbrVPY2GVlSIo2PX%2FW8Rx6QjqpHR9FnZaKLbQnUvBWEgrDi%2FwMC%2BNM9amzSX9x%2Bjap2h7fHzd6pjdRL79n9YpUjRfUrx9PJUw%3D%3D" alt="title-icon-img" class="position-absolute" style="left: -0.1rem; top: -1rem;">
             <h3 class="letter-spacing Serif-TC mb-0 neutral-900">相關產品</h3>
             <span class="text-center fs-7 Serif-TC mt-4 neutral-900">Related Products</span>
           </div>
@@ -152,7 +152,7 @@
         <div class="d-flex" style="max-height: 40vh;" data-aos="fade-up" data-aos-duration="1000">
           <div class="ms-4">
             <div class="d-flex position-relative">
-              <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="" class="position-absolute" style="right: 0.5rem; top: 0.3rem;">
+              <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678657173971.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=MHd4mGdFGGnSsP3GSFLQgsEvfMKifxctn3GQ1CEIU0aYouK%2FDr3MraqmFSb8Kfgf6kVLn9R%2BIpITyDkjrM%2FcoTtyhCvARZDUOEcG3MSnHESIp%2FtH6Iutscaa1UKCtMLg9XyVtAgqUv08h%2FjYlRiSdbr8mzWrlFuTbPth3J8NJaRa51BlW5WiIGFwgzuDr2DqtbhcAuJyYmm5N642IXaALlXAhvoGBhSX0MB5xp4ITp2fI%2BZE0wxP9ANdTCp%2BbrQz2zStXlNu71VJTLfAGn4eL28yl8qriMAJZKi1mRxsXcTdjKLiK%2BZjKpb9HXaiaKBME0oAi7JzB3oDyJGMB9qC3A%3D%3D" alt="title-icon-img" class="position-absolute" style="right: 0.5rem; top: 0.3rem;">
               <h3 class="letter-spacing Serif-TC mt-4 mx-0 writing-lr neutral-900">相關產品
               </h3>
               <span class="text-left fs-7 Serif-TC writing-lr mt-4 pt-4 neutral-900">Related Products</span>
@@ -168,7 +168,7 @@
               <!-- <i class="far fa-heart position-absolute" style="right: 16px; top: 16px"></i> -->
             </a>
             <router-link :to="`/product/${product.id}`" class="card-body d-flex flex-column text-decoration-none p-0">
-              <img :src="product.imageUrl" class="card-img-top object-cover productsImg" alt="Card Image">
+              <img :src="product.imageUrl" class="card-img-top object-cover productsImg" :alt="product.title">
               <h5 class="mb-0 neutral-900 Serif-TC text-center pb-2 pt-1">
                 {{ product.title }}
               </h5>
@@ -196,10 +196,11 @@
       </div>
     </div>
   </div>
-  <FrontFooter></FrontFooter>
+  <FrontFooter />
 </template>
 
 <script>
+import { Swal } from '@/methods/swalToast'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
 import { mapActions } from 'pinia'
@@ -224,7 +225,11 @@ export default {
           this.mainImg = res.data.product.imageUrl
           this.getOtherProduct()
         })
-        .catch(() => {
+        .catch((err) => {
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     },
     getOtherProduct () {
@@ -235,7 +240,11 @@ export default {
           const randomProducts = getRandomProductsByCategory(category, this.product.id)
           this.otherProducts = randomProducts
         })
-        .catch(() => {
+        .catch((err) => {
+          Swal.fire({
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     },
     ...mapActions(cartStore, ['addToCart']),

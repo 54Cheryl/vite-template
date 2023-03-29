@@ -1,6 +1,6 @@
 <template>
-  <NavBar></NavBar>
-  <div class="" style="padding-top: 90px; padding-bottom: 6vh;">
+  <NavBar />
+  <div style="padding-top: 90px; padding-bottom: 6vh;">
     <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
       <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
     </div>
@@ -10,7 +10,7 @@
           <h2 class="text-center Serif-TC my-4">訂單內容</h2>
           <div v-if="getCart.carts" class="pe-2" style="max-height: 40vh; overflow-x: hidden;">
             <div class="d-flex mt-4 bg-white" v-for="item in getCart.carts" :key="item.id">
-              <img class="object-cover" :src="item.product.imageUrl" alt="" style="width: 120px; height: 120px;">
+              <img class="object-cover" :src="item.product.imageUrl" :alt="item.product.title" style="width: 120px; height: 120px;">
               <div class="w-100 p-3 position-relative Sans-TC">
                 <p class="mb-0 fw-bold">{{ item.product.title }}</p>
                 <p class="mb-0 mt-1 neutral-500" style="font-size: 14px;">
@@ -86,7 +86,6 @@
                 ></VField>
                 <ErrorMessage name="email" class="invalid-feedback"></ErrorMessage>
               </div>
-
               <div class="mb-3">
                 <label for="name" class=" form-label Serif-TC">收件人姓名</label>
                 <VField
@@ -101,13 +100,12 @@
                 ></VField>
                 <ErrorMessage name="姓名" class="invalid-feedback"></ErrorMessage>
               </div>
-
               <div class="mb-3">
                 <label for="tel" class=" form-label Serif-TC">收件人電話</label>
                 <VField
                   id="tel"
                   name="電話"
-                  type="number"
+                  type="tel"
                   class="form-control Sans-TC"
                   :class="{ 'is-invalid': errors['電話'] }"
                   placeholder="請輸入手機號碼"
@@ -116,7 +114,6 @@
                 ></VField>
                 <ErrorMessage name="電話" class="invalid-feedback"></ErrorMessage>
               </div>
-
               <div class="mb-3">
                 <label for="address" class=" form-label Serif-TC">收件人地址</label>
                 <VField
@@ -131,7 +128,6 @@
                 ></VField>
                 <ErrorMessage name="地址" class="invalid-feedback"></ErrorMessage>
               </div>
-
               <div class="mb-3">
                 <label for="message" class=" form-label Serif-TC">備註</label>
                 <textarea
@@ -152,7 +148,7 @@
       </div>
     </div>
   </div>
-  <FrontFooter></FrontFooter>
+  <FrontFooter />
 </template>
 
 <script>

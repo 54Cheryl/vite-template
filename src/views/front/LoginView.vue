@@ -55,7 +55,7 @@ export default {
         .then((res) => {
           const { token, expired } = res.data
           document.cookie = `cherylToken=${token}; expires=${new Date(expired)}`
-          this.$router.push('/admin/products')
+          this.$router.push('/admin')
         })
         .catch((err) => {
           Swal.fire({

@@ -21,7 +21,7 @@
             </div>
             <div class="col">
               <label class="form-label mt-2" for="due_date">到期日</label>
-              <input type="date" class="form-control" id="due_date" v-model="due_date">
+              <input type="date" class="form-control" id="due_date" v-model="due_date" :min="due_date">
             </div>
             <div class="col">
               <label class="form-label mt-2" for="percent">折扣百分比</label>
