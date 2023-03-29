@@ -59,7 +59,7 @@
               <p class="px-3 mt-4 Sans-TC fs-5 accent-color">
                 您目前尚未選購產品
               </p>
-              <router-link to="/products" class="btn btn-outline-n500 Serif-TC col-6 col-md-auto">立即前往選購</router-link>
+              <router-link to="/products" class="btn btn-outline-custom Serif-TC col-6 col-md-auto">立即前往選購</router-link>
             </div>
           </template>
           <div class="px-3" v-if="cartNum !== 0">
