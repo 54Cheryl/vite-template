@@ -87,52 +87,22 @@
         </div>
       </div>
       <div class="row col-md-10 pt-5 m-auto">
-        <div class="col-12 col-md-6 col-lg-4 position-relative d-flex align-items-stretch" data-aos="fade-up" data-aos-duration="1000">
-          <div class="position-absolute bg-opacity-100" style="writing-mode: vertical-lr; z-index: 2; left: 2rem; top: -1rem; border: 1px solid #BB0000;">
+        <div class="col-12 col-md-6 col-lg-4 position-relative d-flex align-items-stretch" v-for="item in news" :key="item.news_id" data-aos="fade-up" data-aos-duration="1000">
+          <div v-if="item.new_arrivals" class="position-absolute bg-opacity-100" style="writing-mode: vertical-lr; z-index: 2; left: 2rem; top: -1rem; border: 1px solid #BB0000;">
             <p class="text-white Serif-TC letter-spacing px-1 pt-3 pb-2 m-1" style="background: #E52E2E;">
               新品上架
             </p>
           </div>
           <div class="card mb-4 mx-auto" style="max-width: 22rem;">
-            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678648054156.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=PW4bi0hxb9ycCFLT6eQUXJCoqw0GVy8yErDD57OJV9yPRgp1aF3k5BWhAev7w7G9utoG%2FORYFFelcJ8VXfewdq2YzJC5hVq1E17b8m9nhH6HhDbx9TTjZeQ%2Bt7G1N7mzhFHAP64aAetngbLBBuFq4wsHbJF2M2gbpJ8IVeVk%2BmRxSqfmXdpKoGZOHNs7b092TtZG1%2FeM5%2B3aspWJ5SwBfhPAPpks8m1NAdx4o27%2F2c%2F1CfH0CDD0jkkp8ft4uonK%2Bh2nY%2FoEnn4OWMAv2gipkZpwXKNe10p%2Bz9U8fTs%2FyqnozWxEgfOWAHdHjt791JwNexVI8fNVkk%2BiG%2BWHdhpTsA%3D%3D" class="card-img-top rounded-0 object-cover" alt="別茶消息" style="height: 200px;">
+            <img :src="item.news_img" class="card-img-top rounded-0 object-cover" alt="別茶消息" style="height: 200px;">
             <div class="card-body d-flex flex-column justify-content-between">
               <div class="mb-3">
-                <h5 class="card-title Serif-TC neutral-900">凍頂烏龍</h5>
-                <p class="fs-sm neutral-300 Sans-TC">2022年11月30日</p>
-                <p class="card-text Serif-TC multiline-ellipsis neutral-500">我們很榮幸向您介紹我們最新的茶葉產品 - 凍頂烏龍！這款茶葉來自台灣南投縣鹿谷鄉，以其湯味醇厚甘潤、耐泡。這種茶葉是由精選的嫩芽和葉製成，具有淡綠色的外觀和優雅的香氣。品嚐凍頂烏龍，滋味上重視喉韻，圓滑順口、甘甜醇厚，您會感受到在喉嚨有著清爽的餘韻。無論您是茶葉愛好者還是想要嚐試新口味的人，我們的凍頂烏龍都是您不可錯過的茶葉之一。立即瀏覽我們的網站，了解更多關於凍頂烏龍的詳細資訊，並在家中享受最好的品質和味道。</p>
+                <h5 class="card-title Serif-TC neutral-900">{{ item.news_title }}</h5>
+                <p class="fs-sm neutral-300 Sans-TC">{{ item.news_date }}</p>
+                <p class="card-text Serif-TC multiline-ellipsis neutral-500">{{ item.news_content }}</p>
               </div>
               <div>
-                <a href="/vite-template/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-          <div class="card mb-4 mx-auto" style="max-width: 22rem;">
-            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678648579838.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=KzyYtLglR69iKpV6EYcng16Wc5g6eoGZhQy5iGKDwxJjhCh4gM%2FktPIolpxYG9SZAxzcZaqM0xFbjhkEp7HWUvsly%2FKK6rgoF47%2F8azRm%2BP4wInR%2Bu%2FKRvXnOA9HqY6TWrc%2Fyj5XaAHdd%2BQAKkwLc69FNLXJMnKodRa97she7Hwt5pC6CIZM0UQxtIFYFehZc5EWS%2ByadlhMwPVQ5jQqi%2Bx8LkRQqWxOZq4G1Rm%2B8b%2BmAh%2FO9lxHvMw0NdYAsyBYYtgUhYdPsRpdz6Zzh7zUgXswk54dO025B3biZUkMwzE31E9QawxofAPnrWn6zuTjG4hRjFy51cRaDGjom%2FDvcQ%3D%3D" class="card-img-top rounded-0 object-cover" alt="別茶消息" style="height: 200px;">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div class="mb-3">
-                <h5 class="card-title Serif-TC neutral-900">2022年最受歡迎的商品</h5>
-                <p class="fs-sm neutral-300 Sans-TC">2022年12月12日</p>
-                <p class="card-text Serif-TC multiline-ellipsis neutral-500">「品味絕佳，享受舌尖饗宴」。阿里山烏龍茶將帶你走進一場味覺盛宴。我們獨家挑選高山茶園最優質的茶葉，以傳統烘焙技法製成，帶有獨特的花香和果香，入口柔和順滑，回甘悠長。適合搭配各式美食，讓你的餐桌增添無限美味。現在購買，還可享受限時優惠！趕快選購，開啟美味之旅！</p>
-              </div>
-              <div>
-                <a href="/vite-template/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-          <div class="card mb-4 mx-auto" style="max-width: 22rem;">
-            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678649830585.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Df4NIesJG1a2lfCuUQ%2F44I1mx7%2FsQgzo6XvudjtIp132XCJRzwtfW8EW4r7NZiDsQa70apDDYZ9f3GzBS7K75UtCQHMAd0KHh%2Bqrchy4UecstdfBk77vJC0PyNPF2rGjaEYXTPYxT2iN3sBoS2F4oqMvuyAkeaOKyRHZ%2BUZdoQcMdZ%2BX91J%2F7h9O7oxZL3ii%2BM6J8F74aqpgwfR6y4nX%2FU5hh9IVntNG7hbit6iFu%2BL7iKJimpeqWKWV774uZ6NYtSb9nlOvwVIbPyyYLi48JxpkkP5Ae0Af1oyKoliHMvLfnufKr4prBG9NXOrwca7DT4swZbx8%2BqN0lW6jXuiamA%3D%3D" class="card-img-top rounded-0 object-cover" alt="別茶消息" style="height: 200px;">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div class="mb-3">
-                <h5 class="card-title Serif-TC neutral-900">癸卯新春禮盒上市</h5>
-                <p class="fs-sm neutral-300 Sans-TC">2023年01月16日</p>
-                <p class="card-text Serif-TC multiline-ellipsis neutral-500">「祝福新年，品味好茶」。癸卯新春禮盒上市啦！我們精選高山茶、烏龍茶、普洱茶等多種茶葉，以精美包裝送至你手中。每一口，都是對新年美好祝福的傳遞。無論是與摯愛分享，還是獨自品味，都能感受茶香濃郁，韻味無窮。趕快選購，與親朋好友一起開啟幸福新年！</p>
-              </div>
-              <div>
-                <a href="/vite-template/#/news" class="link-primary text-decoration-none Serif-TC">瞭解更多</a>
+                <router-link :to="`/news/${item.news_id}`" class="link-primary text-decoration-none Serif-TC stretched-link">瞭解更多</router-link>
               </div>
             </div>
           </div>
@@ -153,7 +123,7 @@
       </div>
     </div>
     <div class="pb-4 mb-4 text-center" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine"  data-aos-offset="0">
-      <a href="/vite-template/#/news" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">更多消息</a>
+      <a href="/vite-template/#/news" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">消息總覽</a>
     </div>
   </div>
   <!-- 第四屏 -->
@@ -196,7 +166,7 @@
             <div class="card-body d-flex flex-column">
               <p class="card-text Serif-TC neutral-500">紅茶在六大茶系當中是屬於近全發酵的茶款，其製茶流程從採茶後進行萎凋，後續進行發酵工藝至全發酵狀態。常見的阿薩姆紅茶、錫蘭紅茶、紅玉等皆紅茶系茶款。</p>
               <div class="align-self-start mt-auto mx-auto">
-                <router-link to="/category/紅茶" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
+                <router-link to="/category/紅茶" class="link-primary text-decoration-none Serif-TC stretched-link">前往選購</router-link>
               </div>
             </div>
           </div>
@@ -212,7 +182,7 @@
             <div class="card-body d-flex flex-column">
               <p class="card-text Serif-TC neutral-500">綠茶在六大茶系當中是屬於不發酵的茶款，其製茶流程採茶後立刻進行殺青破壞酵素。台灣經典的綠茶款如三峽碧螺春、龍井即為綠茶系茶款。</p>
               <div class="align-self-start mt-auto mx-auto">
-                <router-link to="/category/綠茶" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
+                <router-link to="/category/綠茶" class="link-primary text-decoration-none Serif-TC stretched-link">前往選購</router-link>
               </div>
             </div>
           </div>
@@ -228,7 +198,7 @@
             <div class="card-body d-flex flex-column">
               <p class="card-text Serif-TC neutral-500">青茶又被廣稱作烏龍茶，青茶在六大茶系當中是屬於部分發酵的茶款，發酵程度是介於綠茶與紅茶之間。台灣常見如：凍頂烏龍、阿里山烏龍、梨山烏龍等皆青茶系茶款。</p>
               <div class="align-self-start mt-auto mx-auto">
-                <router-link to="/category/青茶" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
+                <router-link to="/category/青茶" class="link-primary text-decoration-none Serif-TC stretched-link">前往選購</router-link>
               </div>
             </div>
           </div>
@@ -244,7 +214,7 @@
             <div class="card-body d-flex flex-column">
               <p class="card-text Serif-TC neutral-500">黑茶在六大茶系中，屬於100%發酵的茶款，在茶葉進行加工後堆積發酵的時間較長，讓茶葉呈現為暗褐色的樣態。常見茶款如：普洱茶。</p>
               <div class="align-self-start mt-auto mx-auto">
-                <router-link to="/category/黑茶" class="link-primary text-decoration-none Serif-TC">前往選購</router-link>
+                <router-link to="/category/黑茶" class="link-primary text-decoration-none Serif-TC stretched-link">前往選購</router-link>
               </div>
             </div>
           </div>
@@ -259,12 +229,17 @@
 </template>
 
 <script>
+import { mapState } from 'pinia'
+import newsStore from '@/stores/newsStore'
 import HomeNav from '@/components/HomeNav.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
 export default {
   components: {
     HomeNav,
     FrontFooter
+  },
+  computed: {
+    ...mapState(newsStore, ['news'])
   }
 }
 </script>
