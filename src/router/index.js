@@ -20,6 +20,11 @@ const routes = [
         component: () => import('../views/front/NewsView.vue')
       },
       {
+        path: 'news/:news_id',
+        name: 'New',
+        component: () => import('../views/front/FullNews.vue')
+      },
+      {
         path: 'about',
         name: 'About',
         component: () => import('../views/front/AboutView.vue')
