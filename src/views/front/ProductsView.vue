@@ -28,7 +28,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-4 mb-5 d-flex align-items-stretch justify-content-center" v-for="product in products" :key="product.id" data-aos="fade-up" data-aos-duration="400">
           <div class="card border-0 rounded-0 position-relative" style="width: 18rem;">
-            <a href="#" class="text-danger">
+            <a class="text-danger" style="cursor: pointer;">
               <i class="bi bi-heart fs-4 position-absolute" style="right: 16px; top: 16px"></i>
               <!-- <i class="bi bi-heart-fill fs-4 position-absolute" style="right: 16px; top: 16px"></i> -->
             </a>
