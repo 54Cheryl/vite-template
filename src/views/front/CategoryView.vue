@@ -28,8 +28,9 @@
       <div class="row">
         <div class="col-lg-3 col-md-4 mb-5 d-flex align-items-stretch justify-content-center" v-for="product in products" :key="product.id" data-aos="fade-up" data-aos-duration="400">
           <div class="card border-0 rounded-0 position-relative" style="width: 18rem;">
-            <a href="#" class="text-danger">
-              <!-- <i class="far fa-heart position-absolute" style="right: 16px; top: 16px"></i> -->
+            <a class="text-danger">
+              <i v-if="isFavorite(product)" @click="() => toggleFavorite(product)" class="bi bi-heart-fill fs-4 position-absolute" style="right: 16px; top: 16px"></i>
+              <i v-else @click="() => toggleFavorite(product)" class="bi bi-heart fs-4 position-absolute" style="right: 16px; top: 16px"></i>
             </a>
             <router-link :to="`/product/${product.id}`" class="card-body d-flex flex-column text-decoration-none p-0">
               <img :src="product.imageUrl" class="card-img-top object-cover productsImg" :alt="product.title">
@@ -72,8 +73,9 @@ import 'vue-loading-overlay/dist/css/index.css'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
 import Pagination from '@/components/PaginationView.vue'
-import { mapActions } from 'pinia'
+import { mapState, mapActions } from 'pinia'
 import cartStore from '@/stores/cartStore'
+import favoritesStore from '@/stores/favoritesStore'
 const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env
 export default {
   data () {
@@ -91,6 +93,17 @@ export default {
     NavBar,
     FrontFooter,
     Pagination
+  },
+  computed: {
+    ...mapState(favoritesStore, ['favoritesList'])
+  },
+  watch: {
+    favoritesList: {
+      handler () {
+        localStorage.setItem('favoritesList', JSON.stringify(this.favoritesList))
+      },
+      deep: true
+    }
   },
   methods: {
     getProducts (page = 1) {
@@ -111,7 +124,8 @@ export default {
           })
         })
     },
-    ...mapActions(cartStore, ['addToCart'])
+    ...mapActions(cartStore, ['addToCart']),
+    ...mapActions(favoritesStore, ['isFavorite', 'toggleFavorite', 'removeFavorite'])
   },
   mounted () {
     this.getProducts()
