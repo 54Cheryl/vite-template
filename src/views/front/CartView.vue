@@ -149,7 +149,8 @@ export default {
       if (this.cartNum === 0) {
         Swal.fire({
           icon: 'error',
-          title: '您目前尚未選購產品'
+          title: '您目前尚未選購產品',
+          confirmButtonColor: '#ab7e52'
         })
       } else {
         this.$router.push('/order')

@@ -34,6 +34,12 @@
             </router-link>
           </li>
           <li class="nav-item px-3 hb">
+            <router-link to="/favorites" class="nav-link">
+              <span class="d-block letter-spacing">收藏列表</span>
+              <span class="d-block">Favorites</span>
+            </router-link>
+          </li>
+          <li class="nav-item px-3 hb">
             <router-link to="/cart" class="nav-link">
               <div class="d-flex">
                 <div class="col">

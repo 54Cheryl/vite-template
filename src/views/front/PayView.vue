@@ -159,7 +159,8 @@ export default {
         .catch((err) => {
           Swal.fire({
             icon: 'error',
-            title: err.response.data.message
+            title: err.response.data.message,
+            confirmButtonColor: '#ab7e52'
           })
         })
     },
@@ -167,7 +168,8 @@ export default {
       if (this.order.is_paid) {
         Swal.fire({
           icon: 'warning',
-          title: '您已付款完成'
+          title: '您已付款完成',
+          confirmButtonColor: '#ab7e52'
         })
       } else {
         if (this.payMethod !== '請選擇') {
@@ -182,13 +184,15 @@ export default {
             .catch((err) => {
               Swal.fire({
                 icon: 'error',
-                title: err.response.data.message
+                title: err.response.data.message,
+                confirmButtonColor: '#ab7e52'
               })
             })
         } else {
           Swal.fire({
             icon: 'warning',
-            title: '請先選擇付款方式'
+            title: '請先選擇付款方式',
+            confirmButtonColor: '#ab7e52'
           })
         }
       }

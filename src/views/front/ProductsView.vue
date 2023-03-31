@@ -29,8 +29,8 @@
         <div class="col-lg-3 col-md-4 mb-5 d-flex align-items-stretch justify-content-center" v-for="product in products" :key="product.id" data-aos="fade-up" data-aos-duration="400">
           <div class="card border-0 rounded-0 position-relative" style="width: 18rem;">
             <a class="text-danger" style="cursor: pointer;">
-              <i class="bi bi-heart fs-4 position-absolute" style="right: 16px; top: 16px"></i>
-              <!-- <i class="bi bi-heart-fill fs-4 position-absolute" style="right: 16px; top: 16px"></i> -->
+              <i v-if="isFavorite(product)" @click="() => toggleFavorite(product)" class="bi bi-heart-fill fs-4 position-absolute" style="right: 16px; top: 16px"></i>
+              <i v-else @click="() => toggleFavorite(product)" class="bi bi-heart fs-4 position-absolute" style="right: 16px; top: 16px"></i>
             </a>
             <router-link :to="`/product/${product.id}`" class="card-body d-flex flex-column text-decoration-none p-0">
               <img :src="product.imageUrl" class="card-img-top object-cover productsImg" :alt="product.title">
@@ -70,8 +70,9 @@ import { RouterLink } from 'vue-router'
 import Loading from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/css/index.css'
 import { Swal } from '@/methods/swalToast'
-import { mapActions } from 'pinia'
+import { mapState, mapActions } from 'pinia'
 import cartStore from '@/stores/cartStore'
+import favoritesStore from '@/stores/favoritesStore'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
 import Pagination from '@/components/PaginationView.vue'
@@ -92,6 +93,17 @@ export default {
     FrontFooter,
     Pagination
   },
+  computed: {
+    ...mapState(favoritesStore, ['favoritesList'])
+  },
+  watch: {
+    favoritesList: {
+      handler () {
+        localStorage.setItem('favoritesList', JSON.stringify(this.favoritesList))
+      },
+      deep: true
+    }
+  },
   methods: {
     getProducts (page = 1) {
       this.isLoading = true
@@ -104,11 +116,13 @@ export default {
         .catch((err) => {
           Swal.fire({
             icon: 'error',
-            title: err.response.data.message
+            title: err.response.data.message,
+            confirmButtonColor: '#ab7e52'
           })
         })
     },
-    ...mapActions(cartStore, ['addToCart'])
+    ...mapActions(cartStore, ['addToCart']),
+    ...mapActions(favoritesStore, ['isFavorite', 'toggleFavorite', 'removeFavorite'])
   },
   mounted () {
     this.getProducts()

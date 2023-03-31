@@ -20,7 +20,8 @@ const cartStore = defineStore('cart', {
         .catch(err => {
           Swal.fire({
             icon: 'error',
-            title: err.response.data.message
+            title: err.response.data.message,
+            confirmButtonColor: '#ab7e52'
           })
         })
     },
@@ -41,7 +42,8 @@ const cartStore = defineStore('cart', {
           .catch(err => {
             Swal.fire({
               icon: 'error',
-              title: err.response.data.message
+              title: err.response.data.message,
+              confirmButtonColor: '#ab7e52'
             })
           })
       } else {
@@ -60,7 +62,8 @@ const cartStore = defineStore('cart', {
           .catch(err => {
             Swal.fire({
               icon: 'error',
-              title: err.response.data.message
+              title: err.response.data.message,
+              confirmButtonColor: '#ab7e52'
             })
           })
       }
@@ -93,7 +96,8 @@ const cartStore = defineStore('cart', {
         .catch(err => {
           Swal.fire({
             icon: 'error',
-            title: err.response.data.message
+            title: err.response.data.message,
+            confirmButtonColor: '#ab7e52'
           })
         })
     },
@@ -111,7 +115,8 @@ const cartStore = defineStore('cart', {
         .catch(err => {
           Swal.fire({
             icon: 'error',
-            title: err.response.data.message
+            title: err.response.data.message,
+            confirmButtonColor: '#ab7e52'
           })
         })
     },
@@ -128,7 +133,8 @@ const cartStore = defineStore('cart', {
           .catch(err => {
             Swal.fire({
               icon: 'error',
-              title: err.response.data.message
+              title: err.response.data.message,
+              confirmButtonColor: '#ab7e52'
             })
           })
       } else {

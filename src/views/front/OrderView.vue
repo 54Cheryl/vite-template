@@ -194,7 +194,8 @@ export default {
           .catch((err) => {
             Swal.fire({
               icon: 'error',
-              title: err.response.data.message
+              title: err.response.data.message,
+              confirmButtonColor: '#ab7e52'
             })
           })
       } else {
@@ -227,13 +228,15 @@ export default {
             Swal.fire({
               icon: 'error',
               title: '您尚未選購產品',
-              text: '請您將產品加入購物車後，再次送出訂單，謝謝!'
+              text: '請您將產品加入購物車後，再次送出訂單，謝謝!',
+              confirmButtonColor: '#ab7e52'
             })
           } else {
             Swal.fire({
               icon: 'error',
               title: '客戶資訊漏填',
-              text: '請將客戶資訊填寫完整後，再次送出訂單，謝謝!'
+              text: '請將客戶資訊填寫完整後，再次送出訂單，謝謝!',
+              confirmButtonColor: '#ab7e52'
             })
           }
         })

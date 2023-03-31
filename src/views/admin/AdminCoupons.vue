@@ -91,7 +91,8 @@ export default {
         .catch((err) => {
           Swal.fire({
             icon: 'error',
-            title: err.response.data.message
+            title: err.response.data.message,
+            confirmButtonColor: '#ab7e52'
           })
         })
     },
@@ -118,13 +119,15 @@ export default {
         Swal.fire({
           icon: 'error',
           title: '輸入錯誤',
-          text: '不可輸入過去日期'
+          text: '不可輸入過去日期',
+          confirmButtonColor: '#ab7e52'
         })
       } else if (this.tempCoupon.percent > 100 || this.tempCoupon.percent < 0) {
         Swal.fire({
           icon: 'error',
           title: '輸入錯誤',
-          text: '折扣百分比只能為0~100'
+          text: '折扣百分比只能為0~100',
+          confirmButtonColor: '#ab7e52'
         })
       } else {
         let api = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/coupon`
@@ -146,7 +149,8 @@ export default {
           .catch((err) => {
             Swal.fire({
               icon: 'error',
-              title: err.response.data.message
+              title: err.response.data.message,
+              confirmButtonColor: '#ab7e52'
             })
           })
       }
@@ -165,7 +169,8 @@ export default {
         .catch((err) => {
           Swal.fire({
             icon: 'error',
-            title: err.response.data.message
+            title: err.response.data.message,
+            confirmButtonColor: '#ab7e52'
           })
         })
     }

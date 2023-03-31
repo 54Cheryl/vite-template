@@ -108,7 +108,8 @@ export default {
         .catch((err) => {
           Swal.fire({
             icon: 'error',
-            title: err.response.data.message
+            title: err.response.data.message,
+            confirmButtonColor: '#ab7e52'
           })
         })
     },
@@ -157,7 +158,8 @@ export default {
         .catch((err) => {
           Swal.fire({
             icon: 'error',
-            title: err.response.data.message
+            title: err.response.data.message,
+            confirmButtonColor: '#ab7e52'
           })
         })
     },
@@ -178,7 +180,8 @@ export default {
         .catch((err) => {
           Swal.fire({
             icon: 'error',
-            title: err.response.data.message
+            title: err.response.data.message,
+            confirmButtonColor: '#ab7e52'
           })
         })
     }
