@@ -35,7 +35,7 @@
               </ul>
             </td>
             <td class="backend-use">
-              $ {{ item.total }}
+              $ {{ $filters.currency(item.total) }}
             </td>
             <td>
               <div class="form-check form-switch d-flex justify-content-center p-0">

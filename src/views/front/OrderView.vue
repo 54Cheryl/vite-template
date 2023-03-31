@@ -14,13 +14,13 @@
               <div class="w-100 p-3 position-relative Sans-TC">
                 <p class="mb-0 fw-bold">{{ item.product.title }}</p>
                 <p class="mb-0 mt-1 neutral-500" style="font-size: 14px;">
-                  <small class="text-success" v-if="item.product.price !== item.product.origin_price">促銷價：</small><small v-else>單價：</small>{{ item.product.price }} /{{ item.product.unit }}
+                  <small class="text-success" v-if="item.product.price !== item.product.origin_price">促銷價：</small><small v-else>單價：</small>{{ $filters.currency(item.product.price) }} /{{ item.product.unit }}
                 </p>
                 <div class="d-flex justify-content-between mt-1">
                   <p class="mb-0">
                     數量：{{ item.qty }}
                   </p>
-                  <p class="mb-0">NT$ {{ item.total }}</p>
+                  <p class="mb-0">NT$ {{ $filters.currency(item.total) }}</p>
                 </div>
               </div>
             </div>
@@ -35,11 +35,11 @@
               <tbody>
                 <tr>
                   <th scope="row" class="border-0 px-0 font-weight-normal">小計</th>
-                  <td class="text-end border-0 px-0">NT$ {{ getCart.total }}</td>
+                  <td class="text-end border-0 px-0">NT$ {{ $filters.currency(getCart.total) }}</td>
                 </tr>
                 <tr v-if="getCart.total !== getCart.final_total">
                   <th scope="row" class="border-0 px-0 pt-0 font-weight-normal">折扣金額</th>
-                  <td class="text-end accent-color border-0 px-0 pt-0">-{{ getCart.total - getCart.final_total }}</td>
+                  <td class="text-end accent-color border-0 px-0 pt-0">-{{ $filters.currency( getCart.total - getCart.final_total ) }}</td>
                 </tr>
               </tbody>
             </table>
@@ -64,7 +64,7 @@
             </div>
             <div class="d-flex justify-content-between mt-4 mb-4 Sans-TC">
               <p class="mb-0 h4 fw-bold">總計</p>
-              <p class="mb-0 h4 fw-bold">NT$ {{ getCart.final_total }}</p>
+              <p class="mb-0 h4 fw-bold">NT$ {{ $filters.currency(getCart.final_total) }}</p>
             </div>
           </div>
         </div>

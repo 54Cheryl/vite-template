@@ -22,7 +22,7 @@
                 <button type="button" class="btn text-primary p-0 position-absolute border-0" style="top: 16px; right: 16px;" @click="() => deleteCartItem(item)" :disabled="item.id === loadingItem"><i class="fas fa-times"></i></button>
                 <p class="mb-0 fw-bold">{{ item.product.title }}</p>
                 <p class="mb-0 mt-1 neutral-500" style="font-size: 14px;">
-                  <small class="text-success" v-if="item.product.price !== item.product.origin_price">促銷價：</small><small v-else>單價：</small>{{ item.product.price }} /{{ item.product.unit }}
+                  <small class="text-success" v-if="item.product.price !== item.product.origin_price">促銷價：</small><small v-else>單價：</small>{{ $filters.currency(item.product.price) }} /{{ item.product.unit }}
                 </p>
                 <div class="d-flex justify-content-between align-items-center w-100">
                   <div class="input-group w-50 align-items-center">
@@ -49,7 +49,7 @@
                       <button type="button" class="btn px-0 text-primary border-0" :disabled="item.id === loadingItem" @click="() => plusCartQty(item)"><i class="fas fa-plus"></i></button>
                     </div>
                   </div>
-                  <p class="mb-0 ms-auto">NT$ {{ item.total }}</p>
+                  <p class="mb-0 ms-auto">NT$ {{ $filters.currency(item.total) }}</p>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@
           <div class="px-3" v-if="cartNum !== 0">
             <div class="d-flex justify-content-between mt-4 mb-4 Sans-TC">
               <p class="mb-0 h4 fw-bold">總計</p>
-              <p class="mb-0 h4 fw-bold">NT$ {{ getCart.total }}</p>
+              <p class="mb-0 h4 fw-bold">NT$ {{  $filters.currency(getCart.total) }}</p>
             </div>
           </div>
         </div>

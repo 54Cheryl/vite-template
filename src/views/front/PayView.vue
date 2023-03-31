@@ -17,13 +17,13 @@
               <div class="w-100 p-3 position-relative Sans-TC">
                 <p class="mb-0 fw-bold">{{ product.product.title }}</p>
                 <p class="mb-0 mt-1 neutral-500" style="font-size: 14px;">
-                  <small>售價：</small>{{ product.product.price }} /{{ product.product.unit }}
+                  <small>售價：</small>{{ $filters.currency(product.product.price) }} /{{ product.product.unit }}
                 </p>
                 <div class="d-flex justify-content-between mt-1">
                   <p class="mb-0">
                     數量：{{ product.qty }}
                   </p>
-                  <p class="mb-0">NT$ {{ product.total }}</p>
+                  <p class="mb-0">NT$ {{ $filters.currency(product.total) }}</p>
                 </div>
               </div>
             </div>
@@ -33,8 +33,8 @@
               <tbody>
                 <tr>
                   <th scope="row" class="border-0 px-0 font-weight-normal">小計</th>
-                  <td class="text-end border-0 px-0" v-if="originTotal !== 0">NT$ {{ originTotal }}</td>
-                  <td class="text-end border-0 px-0" v-else>NT$ {{ order.total }}</td>
+                  <td class="text-end border-0 px-0" v-if="originTotal !== 0">NT$ {{ $filters.currency(originTotal) }}</td>
+                  <td class="text-end border-0 px-0" v-else>NT$ {{ $filters.currency(order.total) }}</td>
                 </tr>
                 <tr>
                   <th scope="row" class="border-0 px-0 pt-0 font-weight-normal">折扣金額</th>
@@ -45,7 +45,7 @@
             </table>
             <div class="d-flex justify-content-between mt-4 mb-4 Sans-TC">
               <p class="mb-0 h4 fw-bold">總計</p>
-              <p class="mb-0 h4 fw-bold">NT$ {{ order.total }}</p>
+              <p class="mb-0 h4 fw-bold">NT$ {{ $filters.currency(order.total) }}</p>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@
               </div>
               <div class="mb-3">
                 <p class="Serif-TC mb-1">訂單金額：</p>
-                <p class="Sans-TC">NT$ {{ order.total }}</p>
+                <p class="Sans-TC">NT$ {{ $filters.currency(order.total) }}</p>
               </div>
               <div class="mb-3">
                 <p class="Serif-TC mb-1">訂單備註：</p>
