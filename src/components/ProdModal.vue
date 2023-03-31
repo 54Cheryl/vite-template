@@ -14,17 +14,14 @@
             <div class="col-4">
               <div class="col">
                 <label class="form-label mt-2" for="prodMainImg">主要圖片</label>
-                <VField
+                <input
                   id="prodMainImg"
                   name="主要圖片"
                   type="text"
                   class="form-control mb-2"
                   placeholder="請輸入圖片連結"
-                  :class="{ 'is-invalid': errors['主要圖片'] }"
-                  rules="required"
                   v-model="tempProduct.imageUrl"
-                ></VField>
-                <ErrorMessage name="主要圖片" class="invalid-feedback"></ErrorMessage>
+                >
                 <img :src="tempProduct.imageUrl" alt="產品主要圖片" class="img-fluid">
               </div>
               <p class="fs-4 mt-2">多圖新增</p>
