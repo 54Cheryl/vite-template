@@ -31,13 +31,15 @@ const cartStore = defineStore('cart', {
           product_id: id,
           qty: tempQty
         }
+        this.loadingItem = id
         axios.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`, { data })
           .then(res => {
-            this.getCarts()
             Toast.fire({
               icon: 'success',
               title: res.data.message
             })
+            this.getCarts()
+            this.loadingItem = ''
           })
           .catch(err => {
             Swal.fire({
@@ -51,13 +53,15 @@ const cartStore = defineStore('cart', {
           product_id: id,
           qty: 1
         }
+        this.loadingItem = id
         axios.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`, { data })
           .then(res => {
-            this.getCarts()
             Toast.fire({
               icon: 'success',
               title: res.data.message
             })
+            this.getCarts()
+            this.loadingItem = ''
           })
           .catch(err => {
             Swal.fire({

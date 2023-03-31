@@ -62,7 +62,7 @@
                     <p class="accent-color Sans-TC mb-0 px-3 pt-1 pb-2 fs-5">NT$ {{ product.price }}<small> /{{ product.unit }}</small></p>
                   </div>
                 </router-link>
-                <button type="button" class="btn btn-custom Serif-TC letter-spacing w-100" @click="() => addToCart(product.id)">加入購物車</button>
+                <button type="button" class="btn btn-custom Serif-TC letter-spacing w-100" :disabled="product.id === loadingItem" @click="() => addToCart(product.id)"><i class="fas fa-spinner fa-pulse me-2" v-if="loadingItem === product.id"></i>加入購物車</button>
               </div>
             </div>
           </div>
@@ -77,10 +77,9 @@
 </template>
 
 <script>
-// import { RouterLink } from 'vue-router'
-// import { Swal } from '@/methods/swalToast'
 import { mapState, mapActions } from 'pinia'
 import favoritesStore from '@/stores/favoritesStore'
+import cartStore from '@/stores/cartStore'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
 export default {
@@ -89,7 +88,8 @@ export default {
     FrontFooter
   },
   computed: {
-    ...mapState(favoritesStore, ['favoritesList'])
+    ...mapState(favoritesStore, ['favoritesList']),
+    ...mapState(cartStore, ['loadingItem'])
   },
   watch: {
     favoritesList: {
@@ -100,6 +100,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(cartStore, ['addToCart']),
     ...mapActions(favoritesStore, ['isFavorite', 'toggleFavorite', 'removeFavorite'])
   }
 }
