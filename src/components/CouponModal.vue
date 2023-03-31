@@ -10,28 +10,78 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form action="">
+          <VForm v-slot="{ errors }">
             <div class="col">
               <label class="form-label mt-2" for="title">優惠券名稱</label>
-              <input type="text" class="form-control" id="title" placeholder="請輸入名稱" v-model="tempCoupon.title">
+              <VField
+                id="title"
+                name="名稱"
+                type="text"
+                class="form-control"
+                placeholder="請輸入名稱"
+                :class="{ 'is-invalid': errors['名稱'] }"
+                rules="required"
+                v-model="tempCoupon.title"
+              ></VField>
+              <ErrorMessage name="名稱" class="invalid-feedback"></ErrorMessage>
             </div>
             <div class="col">
               <label class="form-label mt-2" for="coupon_code">優惠代碼</label>
-              <input type="text" class="form-control" id="coupon_code" placeholder="請輸入代碼" v-model="tempCoupon.code">
+              <VField
+                id="coupon_code"
+                name="代碼"
+                type="text"
+                class="form-control"
+                placeholder="請輸入代碼"
+                :class="{ 'is-invalid': errors['代碼'] }"
+                rules="required"
+                v-model="tempCoupon.code"
+              ></VField>
+              <ErrorMessage name="代碼" class="invalid-feedback"></ErrorMessage>
             </div>
             <div class="col">
               <label class="form-label mt-2" for="due_date">到期日</label>
-              <input type="date" class="form-control" id="due_date" v-model="due_date" :min="due_date">
+              <VField
+                id="due_date"
+                name="到期日"
+                type="date"
+                class="form-control"
+                :class="{ 'is-invalid': errors['到期日'] }"
+                rules="required"
+                v-model="due_date"
+                :min="due_date"
+              ></VField>
+              <ErrorMessage name="到期日" class="invalid-feedback"></ErrorMessage>
             </div>
             <div class="col">
               <label class="form-label mt-2" for="percent">折扣百分比</label>
-              <input type="number" min="0" max="100" class="form-control" id="percent" placeholder="請輸入折扣百分比" v-model.number="tempCoupon.percent">
+              <VField
+                id="percent"
+                name="百分比"
+                type="number"
+                min="0"
+                max="100"
+                class="form-control"
+                placeholder="請輸入折扣百分比"
+                :class="{ 'is-invalid': errors['百分比'] }"
+                rules="required"
+                v-model.number="tempCoupon.percent"
+              ></VField>
+              <ErrorMessage name="百分比" class="invalid-feedback"></ErrorMessage>
             </div>
             <div class="col my-3">
-              <input type="checkbox" class="form-check-input" id="is_enabled" v-model="tempCoupon.is_enabled" :true-value="1" :false-value="0">
+              <input
+                id="is_enabled"
+                name="是否啟用"
+                type="checkbox"
+                class="form-check-input"
+                v-model="tempCoupon.is_enabled"
+                :true-value="1"
+                :false-value="0"
+              >
               <label class="form-label ms-2" for="is_enabled">是否啟用</label>
             </div>
-          </form>
+          </VForm>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-n500" data-bs-dismiss="modal">取消</button>

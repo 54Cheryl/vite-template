@@ -115,7 +115,10 @@ export default {
     openProduct (event, item) {
       if (event === 'new') {
         this.isNew = true
-        this.tempProduct = { imagesUrl: [] }
+        this.tempProduct = {
+          imagesUrl: [],
+          is_enabled: 0
+        }
         this.$refs.productModal.showModal()
       } else if (event === 'edit') {
         this.isNew = false

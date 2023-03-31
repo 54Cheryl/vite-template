@@ -10,11 +10,21 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form action="" class="row">
+          <VForm v-slot="{ errors }" class="row">
             <div class="col-4">
               <div class="col">
                 <label class="form-label mt-2" for="prodMainImg">主要圖片</label>
-                <input type="text" class="form-control mb-2" id="prodMainImg" placeholder="請輸入圖片連結" v-model="tempProduct.imageUrl">
+                <VField
+                  id="prodMainImg"
+                  name="主要圖片"
+                  type="text"
+                  class="form-control mb-2"
+                  placeholder="請輸入圖片連結"
+                  :class="{ 'is-invalid': errors['主要圖片'] }"
+                  rules="required"
+                  v-model="tempProduct.imageUrl"
+                ></VField>
+                <ErrorMessage name="主要圖片" class="invalid-feedback"></ErrorMessage>
                 <img :src="tempProduct.imageUrl" alt="產品主要圖片" class="img-fluid">
               </div>
               <p class="fs-4 mt-2">多圖新增</p>
@@ -68,63 +78,189 @@
               <div class="row">
                 <div class="col-6">
                   <label class="form-label mt-2" for="prodTitle">品名</label>
-                  <input type="text" class="form-control" id="prodTitle" placeholder="請輸入品名" v-model="tempProduct.title">
+                  <VField
+                  id="prodTitle"
+                  name="品名"
+                  type="text"
+                  class="form-control"
+                  placeholder="請輸入品名"
+                  :class="{ 'is-invalid': errors['品名'] }"
+                  rules="required"
+                  v-model="tempProduct.title"
+                  ></VField>
+                  <ErrorMessage name="品名" class="invalid-feedback"></ErrorMessage>
                 </div>
                 <div class="col-6">
                   <label class="form-label mt-2" for="prodCategory">類別</label>
-                  <input type="text" class="form-control" id="prodCategory" placeholder="請輸入類別" v-model="tempProduct.category">
+                  <VField
+                    id="prodCategory"
+                    name="類別"
+                    type="text"
+                    class="form-control"
+                    placeholder="請輸入類別"
+                    :class="{ 'is-invalid': errors['類別'] }"
+                    rules="required"
+                    v-model="tempProduct.category"
+                  ></VField>
+                  <ErrorMessage name="類別" class="invalid-feedback"></ErrorMessage>
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
                   <label class="form-label mt-2" for="prodPlace">產地</label>
-                  <input type="text" class="form-control" id="prodPlace" placeholder="請輸入產地" v-model="tempProduct.origin_place">
+                  <VField
+                    id="prodPlace"
+                    name="產地"
+                    type="text"
+                    class="form-control"
+                    placeholder="請輸入產地"
+                    :class="{ 'is-invalid': errors['產地'] }"
+                    rules="required"
+                    v-model="tempProduct.origin_place"
+                  ></VField>
+                  <ErrorMessage name="產地" class="invalid-feedback"></ErrorMessage>
                 </div>
                 <div class="col-6">
                   <label class="form-label mt-2" for="prodVariety">品種</label>
-                  <input type="text" class="form-control" id="prodVariety" placeholder="請輸入品種" v-model="tempProduct.variety">
+                  <VField
+                    id="prodVariety"
+                    name="品種"
+                    type="text"
+                    class="form-control"
+                    placeholder="請輸入品種"
+                    :class="{ 'is-invalid': errors['品種'] }"
+                    rules="required"
+                    v-model="tempProduct.variety"
+                  ></VField>
+                  <ErrorMessage name="品種" class="invalid-feedback"></ErrorMessage>
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
                   <label class="form-label mt-2" for="prodAroma">香氣</label>
-                  <input type="text" class="form-control" id="prodAroma" placeholder="請輸入香氣" v-model="tempProduct.aroma">
+                  <VField
+                    id="prodAroma"
+                    name="香氣"
+                    type="text"
+                    class="form-control"
+                    placeholder="請輸入香氣"
+                    :class="{ 'is-invalid': errors['香氣'] }"
+                    rules="required"
+                    v-model="tempProduct.aroma"
+                  ></VField>
+                  <ErrorMessage name="香氣" class="invalid-feedback"></ErrorMessage>
                 </div>
                 <div class="col-6">
                   <label class="form-label mt-2" for="prodTaste">滋味</label>
-                  <input type="text" class="form-control" id="prodTaste" placeholder="請輸入滋味" v-model="tempProduct.taste">
+                  <VField
+                    id="prodTaste"
+                    name="滋味"
+                    type="text"
+                    class="form-control"
+                    placeholder="請輸入滋味"
+                    :class="{ 'is-invalid': errors['滋味'] }"
+                    rules="required"
+                    v-model="tempProduct.taste"
+                  ></VField>
+                  <ErrorMessage name="滋味" class="invalid-feedback"></ErrorMessage>
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
                   <label class="form-label mt-2" for="prodDried">茶乾</label>
-                  <input type="text" class="form-control" id="prodDried" placeholder="請輸入茶乾" v-model="tempProduct.tea_dried">
+                  <VField
+                    id="prodDried"
+                    name="茶乾"
+                    type="text"
+                    class="form-control"
+                    placeholder="請輸入茶乾"
+                    :class="{ 'is-invalid': errors['滋味'] }"
+                    rules="required"
+                    v-model="tempProduct.tea_dried"
+                  ></VField>
+                  <ErrorMessage name="茶乾" class="invalid-feedback"></ErrorMessage>
                 </div>
                 <div class="col-6">
                   <label class="form-label mt-2" for="prodUnit">單位</label>
-                  <input type="text" class="form-control" id="prodUnit" placeholder="請輸入單位" v-model="tempProduct.unit">
+                  <VField
+                    id="prodUnit"
+                    name="單位"
+                    type="text"
+                    class="form-control"
+                    placeholder="請輸入單位"
+                    :class="{ 'is-invalid': errors['單位'] }"
+                    rules="required"
+                    v-model="tempProduct.unit"
+                  ></VField>
+                  <ErrorMessage name="單位" class="invalid-feedback"></ErrorMessage>
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
                   <label class="form-label mt-2" for="prodOrigin">原價</label>
-                  <input type="number" min="0" class="form-control" id="prodOrigin" placeholder="請輸入原價" v-model.number="tempProduct.origin_price">
+                  <VField
+                    id="prodOrigin"
+                    name="原價"
+                    type="number"
+                    min="0"
+                    class="form-control"
+                    placeholder="請輸入原價"
+                    :class="{ 'is-invalid': errors['原價'] }"
+                    rules="required"
+                    v-model.number="tempProduct.origin_price"
+                  ></VField>
+                  <ErrorMessage name="原價" class="invalid-feedback"></ErrorMessage>
                 </div>
                 <div class="col-6">
                   <label class="form-label mt-2" for="prodPrice">售價</label>
-                  <input type="number" min="0" class="form-control" id="prodPrice" placeholder="請輸入售價" v-model.number="tempProduct.price">
+                  <VField
+                    id="prodPrice"
+                    name="售價"
+                    type="number"
+                    min="0"
+                    class="form-control"
+                    placeholder="請輸入售價"
+                    :class="{ 'is-invalid': errors['售價'] }"
+                    rules="required"
+                    v-model.number="tempProduct.price"
+                  ></VField>
+                  <ErrorMessage name="售價" class="invalid-feedback"></ErrorMessage>
                 </div>
               </div>
               <label class="form-label mt-2" for="prodDescription">產品描述</label>
-              <textarea class="form-control" id="prodDescription" cols="30" rows="2" placeholder="請輸入產品描述" v-model="tempProduct.description"></textarea>
+              <VField
+                as="textarea"
+                id="prodDescription"
+                name="描述"
+                class="form-control"
+                cols="30"
+                rows="2"
+                placeholder="請輸入產品描述"
+                :class="{ 'is-invalid': errors['描述'] }"
+                rules="required"
+                v-model="tempProduct.description"
+              ></VField>
+              <ErrorMessage name="描述" class="invalid-feedback"></ErrorMessage>
               <label class="form-label mt-2" for="prodContent">說明內容</label>
-              <textarea class="form-control" id="prodContent" cols="30" rows="2" placeholder="請輸入說明內容" v-model="tempProduct.content"></textarea>
+              <VField
+                as="textarea"
+                id="prodContent"
+                name="說明"
+                class="form-control"
+                cols="30"
+                rows="2"
+                placeholder="請輸入說明內容"
+                :class="{ 'is-invalid': errors['說明'] }"
+                rules="required"
+                v-model="tempProduct.content"
+              ></VField>
+              <ErrorMessage name="說明" class="invalid-feedback"></ErrorMessage>
               <div class="col mt-2">
                 <input type="checkbox" class="form-check-input" id="prodEnabled" v-model="tempProduct.is_enabled" :true-value="1" :false-value="0">
                 <label class="form-label ms-2" for="prodEnabled">是否啟用</label>
               </div>
             </div>
-          </form>
+          </VForm>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-n500" data-bs-dismiss="modal" @click="() => $emit('cancel-product')">取消</button>

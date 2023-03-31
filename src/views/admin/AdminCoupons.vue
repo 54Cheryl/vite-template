@@ -99,7 +99,8 @@ export default {
       if (event === 'new') {
         this.isNew = true
         this.tempCoupon = {
-          due_date: new Date().getTime() / 1000
+          due_date: new Date().getTime() / 1000,
+          is_enabled: 0
         }
         this.$refs.couponModal.showModal()
       } else if (event === 'edit') {
