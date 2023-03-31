@@ -32,7 +32,10 @@
               <i v-if="isFavorite(product)" @click="() => toggleFavorite(product)" class="bi bi-heart-fill fs-4 position-absolute" style="right: 16px; top: 16px"></i>
               <i v-else @click="() => toggleFavorite(product)" class="bi bi-heart fs-4 position-absolute" style="right: 16px; top: 16px"></i>
             </a>
-            <router-link :to="`/product/${product.id}`" class="card-body d-flex flex-column text-decoration-none p-0">
+            <router-link :to="`/product/${product.id}`" class="card-body d-flex flex-column text-decoration-none p-0 position-relative">
+              <div class="prodHover">
+                <p class="Sans-TC fs-4 text-center px-3 py-2 neutral-300 letter-spacing bg-opacity-80">點擊查看</p>
+              </div>
               <img :src="product.imageUrl" class="card-img-top object-cover productsImg" :alt="product.title">
               <h5 class="mb-0 neutral-900 Serif-TC text-center pb-2 pt-1">
                 {{ product.title }}
