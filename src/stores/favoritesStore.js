@@ -15,23 +15,21 @@ const favoritesStore = defineStore('favoritesStore', {
           icon: 'success',
           title: '加到收藏'
         })
-        console.log('加入收藏')
       } else {
         this.favoritesList.splice(favoriteIndex, 1)
-        console.log('取消收藏')
         Toast.fire({
           icon: 'success',
           title: '取消收藏'
         })
       }
     },
-    removeFavorite (index) {
-      this.favoritesList.splice(index, 1)
-      console.log('取消收藏')
-      localStorage.setItem('favoritesList', JSON.stringify(this.favoritesList))
-    },
     isFavorite (product) {
       return this.favoritesList.some((item) => item.id === product.id)
+    }
+  },
+  getters: {
+    getFavoritesNum: ({ favoritesList }) => {
+      return favoritesList.length
     }
   },
   deep: ['favoritesList']

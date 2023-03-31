@@ -32,7 +32,7 @@
               </div>
             </div>
           </div>
-          <div class="row col-md-10 flex-grow-1" data-aos="fade-up" data-aos-duration="1000">
+          <div v-if="getFavoritesNum !== 0" class="row col-md-10 flex-grow-1" data-aos="fade-up" data-aos-duration="1000">
             <div class="col-lg-3 col-md-4 mb-5 d-flex align-items-stretch justify-content-center" v-for="product in favoritesList" :key="product.id" data-aos="fade-up" data-aos-duration="400">
               <div class="card border-0 rounded-0 position-relative" style="width: 18rem;">
                 <a class="text-danger" style="cursor: pointer;">
@@ -66,8 +66,18 @@
               </div>
             </div>
           </div>
+          <div v-else class="row col-md-10 flex-grow-1" data-aos="fade-up" data-aos-duration="1000">
+            <div class="d-flex justify-content-center align-items-center">
+              <p class="px-3 mt-4 Sans-TC fs-3 accent-color letter-spacing">
+                您尚未收藏任何產品
+              </p>
+            </div>
+            <div class="text-center">
+              <a href="/vite-template/#/products" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">產品總覽</a>
+            </div>
+          </div>
         </div>
-        <div class="pb-5 mb-5 text-center">
+        <div v-if="getFavoritesNum !== 0" class="pb-5 mb-5 text-center">
           <a href="/vite-template/#/products" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">產品總覽</a>
         </div>
       </div>
@@ -88,7 +98,7 @@ export default {
     FrontFooter
   },
   computed: {
-    ...mapState(favoritesStore, ['favoritesList']),
+    ...mapState(favoritesStore, ['favoritesList', 'getFavoritesNum']),
     ...mapState(cartStore, ['loadingItem'])
   },
   watch: {
