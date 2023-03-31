@@ -4,7 +4,18 @@
     <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
       <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
     </div>
-    <div class="container">
+    <div v-if="order.is_paid" class="container" style="height: 52vh;">
+      <div class="row justify-content-center px-4 mx-lg-5">
+        <h1 class="text-center Serif-TC letter-spacing m-0 py-5 neutral-900"><i class="bi bi-check2-circle text-success"></i> 已付款成功</h1>
+        <p class="text-center Sans-TC fs-3 neutral-700">感謝您的訂購！非常感激您對我們產品的信任和支持。</p>
+        <p class="text-center Sans-TC fs-3 neutral-700">您的滿意是我們最大的追求，期待為您提供更優質的服務。</p>
+        <div class="row col-md-6 justify-content-between" style="padding-top: 4vh;">
+          <router-link to="/products" class="btn btn-outline-n500 Serif-TC col-6 col-md-auto">繼續購物</router-link>
+          <router-link to="/" class="btn btn-custom Serif-TC col-6 col-md-auto text-decoration-none" style="padding-left: 1.5rem;">回到首頁</router-link>
+        </div>
+      </div>
+    </div>
+    <div v-else class="container">
       <div class="row justify-content-between px-4 pt-5 mx-lg-5">
         <h1 class="text-center Serif-TC letter-spacing m-0"><i class="bi bi-check2-circle text-success"></i> 訂單已成立</h1>
       </div>
