@@ -4,7 +4,7 @@
     <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
       <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
     </div>
-    <!-- 第一屏-手機 -->
+    <!-- 手機 -->
     <div class="bg-sec tel-use">
       <div class="container py-5">
         <div class="row">
@@ -25,14 +25,15 @@
             <div class="col-12 col-md-auto my-auto p-0" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="400" data-aos-offset="0">
               <div class="bg-opacity-80 px-4">
                 <p class="Sans-TC pt-4 m-0 neutral-700 fs-5 writing-lr">{{fullNews.content_title}}</p>
-                <p class="Sans-TC py-4 m-0 neutral-500 writing-lr">{{ fullNews.news_content }}</p>
+                <p class="Sans-TC py-2 m-0 fs-sm neutral-300 writing-lr">{{ fullNews.news_date }}</p>
+                <p class="Sans-TC pb-4 m-0 neutral-500 writing-lr">{{ fullNews.news_content }}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- 第一屏 -->
+    <!-- 其他 -->
     <div class="bg-sec other-use">
       <div class="container pt-5">
         <div class="row flex-row-reverse justify-content-evenly my-5 position-relative">
@@ -50,8 +51,9 @@
               <p class="bg-n500 m-auto" style="width: 1px; height: 15vh;" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-offset="0" data-aos-delay="100"></p>
             </div>
             <div class="col-md-auto bg-opacity-80 writing-lr my-4" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100" data-aos-offset="0">
-              <p class="letter-spacing Sans-TC neutral-700 fs-5 mt-4" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="300" data-aos-offset="0">{{fullNews.content_title}}</p>
-              <p class="lh-lg Sans-TC neutral-500 mb-4 mt-4" style="letter-spacing: 0.3rem;" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="400" data-aos-offset="0">{{fullNews.news_content}}</p>
+              <p class="letter-spacing Sans-TC neutral-700 fs-5 mt-4 ms-3 me-0" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="300" data-aos-offset="0">{{fullNews.content_title}}</p>
+              <p class="lh-lg Sans-TC fs-sm neutral-300 mb-4 mt-4 ms-2 me-0" style="letter-spacing: 0.3rem;" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="400" data-aos-offset="0">{{ fullNews.news_date }}</p>
+              <p class="lh-lg Sans-TC neutral-500 mb-4 mt-4 ms-2 me-3" style="letter-spacing: 0.3rem;" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="400" data-aos-offset="0">{{fullNews.news_content}}</p>
             </div>
           </div>
         </div>
