@@ -73,7 +73,7 @@
           <div class="pb-3">
             <VForm ref="form" class="px-3 m-auto" v-slot="{ errors }">
               <div class="mb-3">
-                <label for="email" class=" form-label Serif-TC">Email</label>
+                <label for="email" class=" form-label Serif-TC">Email<small class="accent-color ps-1">*</small></label>
                 <VField
                   id="email"
                   name="email"
@@ -87,7 +87,7 @@
                 <ErrorMessage name="email" class="invalid-feedback"></ErrorMessage>
               </div>
               <div class="mb-3">
-                <label for="name" class=" form-label Serif-TC">收件人姓名</label>
+                <label for="name" class=" form-label Serif-TC">收件人姓名<small class="accent-color ps-1">*</small></label>
                 <VField
                   id="name"
                   name="姓名"
@@ -101,7 +101,7 @@
                 <ErrorMessage name="姓名" class="invalid-feedback"></ErrorMessage>
               </div>
               <div class="mb-3">
-                <label for="tel" class=" form-label Serif-TC">收件人電話</label>
+                <label for="tel" class=" form-label Serif-TC">收件人電話<small class="accent-color ps-1">*</small></label>
                 <VField
                   id="tel"
                   name="電話"
@@ -115,7 +115,7 @@
                 <ErrorMessage name="電話" class="invalid-feedback"></ErrorMessage>
               </div>
               <div class="mb-3">
-                <label for="address" class=" form-label Serif-TC">收件人地址</label>
+                <label for="address" class=" form-label Serif-TC">收件人地址<small class="accent-color ps-1">*</small></label>
                 <VField
                   id="address"
                   name="地址"

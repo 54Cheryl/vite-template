@@ -6,8 +6,9 @@
     </div>
     <div v-if="order.is_paid" class="container" style="height: 52vh;">
       <div class="row justify-content-center px-4 mx-lg-5">
-        <h1 class="text-center Serif-TC letter-spacing m-0 py-5 neutral-900"><i class="bi bi-check2-circle text-success"></i> 已付款成功</h1>
-        <p class="text-center Sans-TC fs-3 neutral-700">感謝您的訂購！非常感激您對我們產品的信任和支持。</p>
+        <h1 class="text-center Serif-TC letter-spacing m-0 py-5 neutral-900"><i class="bi bi-check2-circle text-success"></i> 付款成功，訂單已成立!</h1>
+        <p class="text-center Sans-TC fs-3 neutral-700">訂單編號：<span class="accent-color">{{ order.id }}</span></p>
+        <p class="text-center Sans-TC fs-3 neutral-700"><i class="bi bi-stars pe-2"></i>感謝您的訂購！非常感激您對我們產品的信任和支持。</p>
         <p class="text-center Sans-TC fs-3 neutral-700">您的滿意是我們最大的追求，期待為您提供更優質的服務。</p>
         <div class="row col-md-6 justify-content-between" style="padding-top: 4vh;">
           <router-link to="/products" class="btn btn-outline-n500 Serif-TC col-6 col-md-auto">繼續購物</router-link>
@@ -17,12 +18,13 @@
     </div>
     <div v-else class="container">
       <div class="row justify-content-between px-4 pt-5 mx-lg-5">
-        <h1 class="text-center Serif-TC letter-spacing m-0"><i class="bi bi-check2-circle text-success"></i> 訂單已成立</h1>
+        <h1 class="text-center Serif-TC letter-spacing m-0 accent-color"><i class="bi bi-exclamation-circle"></i> 提醒您!訂單尚未完成</h1>
+        <p class="text-center Sans-TC letter-spacing m-0 pt-3 fs-4">請於下方選譯付款方式後，按下<span class="text-primary fw-bolder">確認付款</span>，即可完成訂購!</p>
       </div>
       <div class="row justify-content-center pt-5 px-4 mx-lg-5">
         <div class="col-md-6 bg-all">
           <h2 class="text-center Serif-TC my-4">訂單明細</h2>
-          <div class="pe-2" style="max-height: 60vh; overflow-x: hidden;">
+          <div class="pe-2" style="max-height: 84vh; overflow-x: hidden;">
             <div class="d-flex mt-4 bg-white" v-for="(product, i) in order.products" :key="i">
               <img class="object-cover" :src="product.product.imageUrl" :alt="product.product.title" style="width: 120px; height: 120px;">
               <div class="w-100 p-3 position-relative Sans-TC">
@@ -47,10 +49,9 @@
                   <td class="text-end border-0 px-0" v-if="originTotal !== 0">NT$ {{ $filters.currency(originTotal) }}</td>
                   <td class="text-end border-0 px-0" v-else>NT$ {{ $filters.currency(order.total) }}</td>
                 </tr>
-                <tr>
+                <tr v-if="originTotal !== 0">
                   <th scope="row" class="border-0 px-0 pt-0 font-weight-normal">折扣金額</th>
-                  <td class="text-end accent-color border-0 px-0 pt-0" v-if="originTotal === 0">-0</td>
-                  <td class="text-end accent-color border-0 px-0 pt-0" v-else>{{ order.total-originTotal }}</td>
+                  <td class="text-end accent-color border-0 px-0 pt-0">{{ order.total-originTotal }}</td>
                 </tr>
               </tbody>
             </table>
@@ -61,49 +62,6 @@
           </div>
         </div>
         <div class="col-12 col-md-6 bg-sec">
-          <h2 class="text-center Serif-TC my-4">訂單資訊</h2>
-          <div class="pb-3">
-            <div class="px-3 m-auto">
-              <div class="mb-3">
-                <p class="Serif-TC mb-1">訂單日期：</p>
-                <p class="Sans-TC">{{ $filters.date(order.create_at) }}</p>
-              </div>
-              <div class="mb-3">
-                <p class="Serif-TC mb-1">訂單編號：</p>
-                <p class="Sans-TC">{{ order.id }}</p>
-              </div>
-              <div class="mb-3">
-                <p class="Serif-TC mb-1">付款狀態：</p>
-                <p class="Sans-TC text-success fs-5 m-0" v-if="order.is_paid">付款完成</p>
-                <p class="Sans-TC accent-color fs-5 m-0" v-else>尚未付款</p>
-              </div>
-              <div class="mb-3">
-                <p class="Serif-TC mb-1">付款方式：</p>
-                <div class="row">
-                  <form class="col col-lg-5">
-                    <select name="" id="" class="form-select" v-model="payMethod" style="border-radius: 0;">
-                      <option selected disabled>請選擇</option>
-                      <option value="貨到付款">貨到付款</option>
-                      <option value="銀行轉帳/ATM">銀行轉帳/ATM</option>
-                      <option value="信用卡">信用卡</option>
-                      <option value="LINE_Pay">LINE Pay</option>
-                    </select>
-                  </form>
-                  <div class="col-auto">
-                    <button type="button" class="btn btn-sm btn-custom Sans-TC" style="padding-left: 1.5rem;" @click="payConfirm">確認付款</button>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-3">
-                <p class="Serif-TC mb-1">訂單金額：</p>
-                <p class="Sans-TC">NT$ {{ $filters.currency(order.total) }}</p>
-              </div>
-              <div class="mb-3">
-                <p class="Serif-TC mb-1">訂單備註：</p>
-                <p class="Sans-TC">{{ order.message }}</p>
-              </div>
-            </div>
-          </div>
           <h2 class="text-center Serif-TC my-4">客戶資訊</h2>
           <div class="pb-3">
             <div class="px-3 m-auto">
@@ -125,9 +83,50 @@
               </div>
             </div>
           </div>
+          <h2 class="text-center Serif-TC my-4">訂單資訊</h2>
+          <div class="pb-3">
+            <div class="px-3 m-auto">
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">訂單日期：</p>
+                <p class="Sans-TC">{{ $filters.date(order.create_at) }}</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">訂單編號：</p>
+                <p class="Sans-TC">{{ order.id }}</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">訂單金額：</p>
+                <p class="Sans-TC">NT$ {{ $filters.currency(order.total) }}</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">付款狀態：</p>
+                <p class="Sans-TC text-success fs-5 m-0" v-if="order.is_paid">付款完成</p>
+                <p class="Sans-TC accent-color fs-5 m-0" v-else>尚未付款</p>
+              </div>
+              <div class="mb-3">
+                <p class="Serif-TC mb-1">付款方式：</p>
+                <form class="col col-12">
+                  <select name="" id="" class="form-select Sans-TC" v-model="payMethod" style="border-radius: 0;">
+                    <option selected disabled>請選擇</option>
+                    <option value="貨到付款">貨到付款</option>
+                    <option value="銀行轉帳/ATM">銀行轉帳/ATM</option>
+                    <option value="信用卡">信用卡</option>
+                    <option value="LINE_Pay">LINE Pay</option>
+                  </select>
+                </form>
+              </div>
+              <div class="mb-3" v-if="order.message">
+                <p class="Serif-TC mb-1">訂單備註：</p>
+                <p class="Sans-TC">{{ order.message }}</p>
+              </div>
+              <div class="mb-3">
+                <button type="button" class="btn btn-custom Sans-TC w-100" style="padding-left: 1.5rem;" @click="payConfirm">確認付款</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row justify-content-between px-4 mx-lg-5" style="padding-top: 4vh;">
+      <div v-if="order.is_paid" class="row justify-content-between px-4 mx-lg-5" style="padding-top: 4vh;">
         <router-link to="/products" class="btn btn-outline-n500 Serif-TC col-6 col-md-auto">繼續購物</router-link>
         <router-link to="/" class="btn btn-custom Serif-TC col-6 col-md-auto text-decoration-none" style="padding-left: 1.5rem;">回到首頁</router-link>
       </div>
