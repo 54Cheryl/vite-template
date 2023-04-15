@@ -92,7 +92,7 @@
             <button type="button" class="btn btn-outline-accent Serif-TC letter-spacing w-100" v-else @click="() => toggleFavorite(product)">加入收藏</button>
           </div>
           <div class="col-md-6 pb-3">
-            <button type="button" class="btn btn-custom Serif-TC letter-spacing w-100" :disabled="product.id === loadingItem" @click="() => addToCart(product.id)"><i class="fas fa-spinner fa-pulse me-2" v-if="loadingItem === product.id"></i>加入購物車</button>
+            <button type="button" class="btn btn-custom Serif-TC letter-spacing w-100" :disabled="product.id === loadingItem" @click="() => addToCart(product.id, tempQty)"><i class="fas fa-spinner fa-pulse me-2" v-if="loadingItem === product.id"></i>加入購物車</button>
           </div>
         </div>
       </div>
