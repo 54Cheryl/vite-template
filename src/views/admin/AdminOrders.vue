@@ -119,7 +119,7 @@ export default {
     },
     updatePaid (item) {
       if (item.is_paid) {
-        const paidDate = new Date().toLocaleDateString()
+        const paidDate = Math.floor(new Date() / 1000)
         item.paid_date = paidDate
       } else {
         item.paid_date = ''
@@ -156,12 +156,12 @@ export default {
     },
     cancelOrder () {
       this.tempOrder = {}
-      this.$refs.OrderModal.hideModal()
+      this.$refs.orderModal.hideModal()
     },
     updateOrder () {
       const api = `${VITE_APP_URL}api/${VITE_APP_PATH}/admin/order/${this.tempOrder.id}`
       if (this.tempOrder.is_paid) {
-        const paidDate = new Date().toLocaleDateString()
+        const paidDate = Math.floor(new Date() / 1000)
         this.tempOrder.paid_date = paidDate
       } else {
         this.tempOrder.paid_date = ''
