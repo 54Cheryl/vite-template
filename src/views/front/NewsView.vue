@@ -38,7 +38,7 @@
                 新品上架
               </p>
             </div>
-            <div class="card mb-4 mx-auto" style="max-width: 22rem;">
+            <div class="card rounded-0 border-0 shadow-custom mb-4 mx-auto" style="max-width: 22rem;">
               <img :src="item.news_img" class="card-img-top rounded-0 object-cover" alt="別茶消息" style="height: 200px;">
               <div class="card-body d-flex flex-column justify-content-between">
                 <div class="mb-3">

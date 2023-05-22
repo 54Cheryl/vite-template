@@ -242,7 +242,7 @@ input::-webkit-inner-spin-button {
     color: #292524;
   }
 }
-//card hover
+//card
 .prodHover{
   position: absolute;
   height: 100%;
@@ -256,4 +256,7 @@ input::-webkit-inner-spin-button {
   background: rgba(71, 63, 57, 0.15);
   opacity: 1;
   transition: all .3s ease-in-out;
+}
+.shadow-custom{
+  box-shadow: rgba(69, 35, 0, 0.12) 0px 0px 16px;  
 }

@@ -93,7 +93,7 @@
               新品上架
             </p>
           </div>
-          <div class="card mb-4 mx-auto" style="max-width: 22rem;">
+          <div class="card rounded-0 border-0 shadow-custom mb-4 mx-auto" style="max-width: 22rem;">
             <img :src="item.news_img" class="card-img-top rounded-0 object-cover" alt="別茶消息" style="height: 200px;">
             <div class="card-body d-flex flex-column justify-content-between">
               <div class="mb-3">
@@ -156,7 +156,7 @@
       </div>
       <div class="row col-md-10 d-flex justify-content-left pt-5 m-auto">
         <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-duration="800">
-          <div class="card mb-4 mx-auto" style="max-width: 20rem;">
+          <div class="card rounded-0 border-0 shadow-custom mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678654028165.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=LC47Shpv7K0%2FUpSJj72%2FsN9PAazDh6lruK68PZAkTxZhw6YJb0rJybX1990%2FsoCdFdh9GcYehIqXyGvMSReYqdEuYtTvnJasnz6ED9E%2FPjquJ8N%2BhLtNsRIcqbdHbr8jvccHdsQTsLMlbtzmzJjf283PvoJWo2ZDHoj0L6wa%2FdkgLZ4SAq5lsqKLivUik%2F8%2B3f5Wq%2FXD0T2K9%2Fe2oi%2Fg4xwqSXat4frAJ%2FiK7mSal7vdm6df9WDT%2BPQyrrtIusdw1l4IOIHjczB0LNHS9mkBmDYNak9PawHpUc8iW49ZmVWc%2BRKKEDheCjp64gc4a4tmM6NTj0sQIRJt7nPfMN0SaA%3D%3D" class="card-img-top rounded-0 object-cover" alt="紅茶" style="height: 220px;">
               <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%; writing-mode: vertical-lr;">
@@ -172,7 +172,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-          <div class="card mb-4 mx-auto" style="max-width: 20rem;">
+          <div class="card rounded-0 border-0 shadow-custom mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678650979468.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=fAjYNK5UZjaErisWaxDZ460vHOyR6P6Ul5mOjDKFDM7WM5gH%2B88SlxbrZOxiVmaPdi598CcskFMbNc04%2BVJ8LCylzMlXy8naQjLdiR2yPaWPF3Ib4eZCvv8cw8qD0cItPMmnFKTlVdNPuS6HMV6%2Bp1eB%2BLIxoPLUMvXhJ%2FHSu5qGHk%2FSytgUnGatTlT%2B8ODy4pCqtgL0JkWpbGoj94Tws4CAD3Oi8cRhA5BiuxS%2B3LeBKjPO1OpzvD%2BXZjZuUuQFVKtqEJ7gBRB7veAiUiF6%2BHFJaLThLSsrwkh4csDdG%2FlRj5xMSTtDUgJu6z7KKBvZfg1o19gY79i2iCZT0JUWfQ%3D%3D" class="card-img-top rounded-0 object-cover" alt="綠茶" style="height: 220px;">
               <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%; writing-mode: vertical-lr;">
@@ -188,7 +188,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-          <div class="card mb-4 mx-auto" style="max-width: 20rem;">
+          <div class="card rounded-0 border-0 shadow-custom mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678650992588.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=NkkQix5293%2B0%2BWvMgu9qRuspvSeMQ0hI43EJp%2BO%2BN7dybDdclMXgI53spyqi7oi2mUDT8USlrYE1rYs2Z%2FC1BIftZDpy8E3BH7RS97fhE9bHnHtJNpRRRhKc7SGcFgL08O7sDNKKPnTJqDbeRBUBq16J03401YPftRkIC4QdALrl%2FWwMh%2BabCfswpfbODGRf7YBMWKq8diyFY2m%2F%2BzlCPSA%2BoeTqwxiCkey3snbEV9AJEPfI7hSB%2Ba8NeBahBuxVCLWBUkccfJxINCBcVfGM%2FaZVn5M8j1qXV1ljGu9%2BjmqGmchJ99yfxQLVESyAXvxXUbvk88wKEzStqxWXdex%2BAw%3D%3D" class="card-img-top rounded-0 object-cover" alt="青茶" style="height: 220px;">
               <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%; writing-mode: vertical-lr;">
@@ -204,7 +204,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
-          <div class="card mb-4 mx-auto" style="max-width: 20rem;">
+          <div class="card rounded-0 border-0 shadow-custom mb-4 mx-auto" style="max-width: 20rem;">
             <div class="position-relative">
               <img src="https://storage.googleapis.com/vue-course-api.appspot.com/cheryl-hexschool/1678651005190.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=jCRrwj3Drnr6MdBDaIqkPsGUVI45F9bYjMgffYUzQyLVzYb8w0CANrNGMfOurvatlPU6kS6E1QbOJP1WKSIPmpDHtb6qEbUdZLQRk1BG6b7GUhpK8yX3S%2F4Hp0FewVnDwmdDxvVwP3ielBFJMws3WV%2FuQijktcb%2Fu6tTMUdMrZs6hI%2FF5oz6E7gPUUtwZgFfUG2tER9rJfZI9wfsTc3haCS753LrCzeX7ML%2BYT1HJij0oJbita4cCsqzqNFt9Ur%2BF9z%2Fmypc75F3WOwDX6CaYxLJrm1Lz4YCJIRV8TW3XoC6nxEQwxN%2Fpg%2BCqVrhXpBICvInXJpVwa%2FD0cK54Fc72Q%3D%3D" class="card-img-top rounded-0 object-cover" alt="黑茶" style="height: 220px;">
               <div class="position-absolute border border-white translate-middle top-50" style="z-index: 2; left: 50%; writing-mode: vertical-lr;">

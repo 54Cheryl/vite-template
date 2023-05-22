@@ -34,7 +34,7 @@
           </div>
           <div v-if="getFavoritesNum !== 0" class="row col-md-10 flex-grow-1" data-aos="fade-up" data-aos-duration="1000">
             <div class="col-lg-3 col-md-4 mb-5 d-flex align-items-stretch justify-content-center" v-for="product in favoritesList" :key="product.id" data-aos="fade-up" data-aos-duration="400">
-              <div class="card border-0 rounded-0 position-relative" style="width: 18rem;">
+              <div class="card shadow-custom border-0 rounded-0 position-relative" style="width: 18rem;">
                 <a class="text-danger" style="cursor: pointer;">
                   <i v-if="isFavorite(product)" @click="() => toggleFavorite(product)" class="bi bi-heart-fill fs-4 position-absolute" style="right: 16px; top: 16px"></i>
                   <i v-else @click="() => toggleFavorite(product)" class="bi bi-heart fs-4 position-absolute" style="right: 16px; top: 16px"></i>
