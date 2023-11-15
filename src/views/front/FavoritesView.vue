@@ -1,12 +1,12 @@
 <template>
-  <NavBar />
-  <div class="bg-all" style="padding-top: 90px; padding-bottom: 6vh;">
-    <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
-      <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
-    </div>
-    <div class="container mt-4">
-      <div class="container pb-5 pt-3">
-        <div class="row py-4 px-0 justify-content-center">
+  <div class="d-flex flex-column" style="height: 100vh;">
+    <NavBar />
+    <div class="bg-all flex-grow-1 d-flex flex-column justify-content-between" style="padding-top: 90px;">
+      <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 180px;">
+        <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550450339-e7a4787a2074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1;"></div>
+      </div>
+      <div class="container flex-grow-1 pb-5 pt-3">
+        <div class="row py-4 px-0 justify-content-center h-100">
           <div class="tel-use" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100" data-aos-offset="0">
             <div class="d-flex col-md-2">
               <div class="col-auto ps-3 position-relative">
@@ -81,9 +81,9 @@
           <a href="/vite-template/#/products" class="Serif-TC letter-spacing text-center btn btn-outline-custom m-auto" style="padding-left: 2rem;">產品總覽</a>
         </div>
       </div>
+      <FrontFooter />
     </div>
   </div>
-  <FrontFooter />
 </template>
 
 <script>
