@@ -124,10 +124,10 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row justify-content-between px-4 mx-lg-5" style="padding-top: 4vh;" v-if="cartNum !== 0">
-          <router-link to="/products" class="btn btn-outline-n500 Serif-TC col-6 col-md-auto">繼續購物</router-link>
-          <button type="button" class="btn btn-custom Serif-TC col-6 col-md-auto" style="padding-left: 1.5rem;" @click="checkCartNum">確認訂單</button>
+          <div class="row justify-content-between px-0 m-0" style="padding-top: 4vh;" v-if="cartNum !== 0">
+            <router-link to="/products" class="btn btn-outline-n500 Serif-TC col-5 col-md-auto">繼續購物</router-link>
+            <button type="button" class="btn btn-custom Serif-TC col-5 col-md-auto" style="padding-left: 1.5rem;" @click="checkCartNum">確認訂單</button>
+          </div>
         </div>
       </div>
       <FrontFooter />
