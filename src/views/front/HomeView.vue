@@ -1,9 +1,9 @@
 <template>
   <HomeNav />
   <!-- 第一屏 -->
-  <div class="pt-5" style="background-image: url(https://images.unsplash.com/photo-1531970227416-f0cddeb1f748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1; height: 100vh;">
+  <div class="pt-5" style="background-image: url(https://images.unsplash.com/photo-1531970227416-f0cddeb1f748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80); background-position: center center; opacity: 1; height: 100vh; background-size: cover; background-repeat: no-repeat;">
     <div class="text-center" data-aos="flip-left" data-aos-duration="2000">
-      <div class="p-2 d-inline-block" style="border: 4px solid rgb(255, 255, 255, 0.8); margin-top: 18vh; box-sizing: border-box; writing-mode: vertical-lr;">
+      <div class="p-2 d-inline-block" style="border: 4px solid rgb(255, 255, 255, 0.8); margin-top: 17vh; box-sizing: border-box; writing-mode: vertical-lr;">
         <div class="text-white fs-1 Serif-TC bg-opacity-20 pt-5" style="letter-spacing: 1rem; border: 1px solid rgb(255, 255, 255, 0.8);vertical-align: middle; box-sizing: border-box;">
           <p class="">坐酌泠泠水，</p>
           <p class="">看煎瑟瑟塵。</p>
