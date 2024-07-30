@@ -22,31 +22,31 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto pt-3 Serif-TC endHeight">
           <li class="nav-item px-3 hb">
-            <router-link to="/tea-intro" class="nav-link writing-nav">
+            <router-link to="/tea-intro" class="nav-link writing-nav" :class="{'nav-textshadow': !isScrolled}">
               <span class="d-block letter-spacing" :class="{'hb-navColor': isOpen}">茶品介紹</span>
               <span class="d-block" :class="{'hb-navColor': isOpen}">Tea Intro</span>
             </router-link>
           </li>
           <li class="nav-item px-3 hb">
-            <router-link to="/news" class="nav-link writing-nav">
+            <router-link to="/news" class="nav-link writing-nav" :class="{'nav-textshadow': !isScrolled}">
               <span class="d-block letter-spacing" :class="{'hb-navColor': isOpen}">別茶消息</span>
               <span class="d-block" :class="{'hb-navColor': isOpen}">News</span>
             </router-link>
           </li>
           <li class="nav-item px-3 hb">
-            <router-link to="/about" class="nav-link writing-nav">
+            <router-link to="/about" class="nav-link writing-nav" :class="{'nav-textshadow': !isScrolled}">
               <span class="d-block letter-spacing" :class="{'hb-navColor': isOpen}">關於別茶</span>
               <span class="d-block" :class="{'hb-navColor': isOpen}">About</span>
             </router-link>
           </li>
           <li class="nav-item px-3 hb">
-            <router-link to="/favorites" class="nav-link writing-nav">
+            <router-link to="/favorites" class="nav-link writing-nav" :class="{'nav-textshadow': !isScrolled}">
               <span class="d-block letter-spacing" :class="{'hb-navColor': isOpen}">收藏列表</span>
               <span class="d-block" :class="{'hb-navColor': isOpen}">Favorites</span>
             </router-link>
           </li>
           <li class="nav-item px-3 hb">
-            <router-link to="/cart" class="nav-link">
+            <router-link to="/cart" class="nav-link" :class="{'nav-textshadow': !isScrolled}">
               <div class="d-flex">
                 <div class="col-10 endflex">
                   <span class="position-relative">
@@ -114,6 +114,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+::v-deep #navbarNav .navbar-nav .nav-textshadow:hover {
+  text-shadow: -1px -1px 0 #4c3a27, 1px -1px 0 #4c3a27, -1px  1px 0 #4c3a27, 1px  1px 0 #4c3a27;
+}
 </style>
