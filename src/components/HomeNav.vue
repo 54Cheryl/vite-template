@@ -115,7 +115,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-::v-deep #navbarNav .navbar-nav .nav-textshadow:hover {
-  text-shadow: -1px -1px 0 #4c3a27, 1px -1px 0 #4c3a27, -1px  1px 0 #4c3a27, 1px  1px 0 #4c3a27;
+@media screen and (min-width:992px){
+  ::v-deep #navbarNav .navbar-nav .nav-textshadow:hover {
+    text-shadow: -1px -1px 0 #4c3a27, 1px -1px 0 #4c3a27, -1px  1px 0 #4c3a27, 1px  1px 0 #4c3a27;
+  }
 }
 </style>
