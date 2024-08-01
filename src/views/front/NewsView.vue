@@ -43,7 +43,7 @@
               <div class="card-body d-flex flex-column justify-content-between">
                 <div class="mb-3">
                   <h5 class="card-title Serif-TC neutral-900">{{ item.news_title }}</h5>
-                  <p class="fs-sm neutral-300 Sans-TC">{{ item.news_date }}</p>
+                  <p class="neutral-300 Sans-TC" style="font-size: 0.8rem;">{{ item.news_date }} {{ deviceType }}</p>
                   <p class="card-text Serif-TC multiline-ellipsis neutral-500">{{ item.news_content }}</p>
                 </div>
                 <div>
@@ -60,17 +60,26 @@
 </template>
 
 <script>
+import { detectDevice } from '@/mixins/deviceDetection.js'
 import { mapState } from 'pinia'
 import newsStore from '@/stores/newsStore'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
 export default {
+  data () {
+    return {
+      deviceType: 'unknown'
+    }
+  },
   components: {
     NavBar,
     FrontFooter
   },
   computed: {
     ...mapState(newsStore, ['news'])
+  },
+  mounted () {
+    this.deviceType = detectDevice()
   }
 }
 </script>
