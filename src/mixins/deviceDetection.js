@@ -22,7 +22,7 @@ function detectDevice () {
   }
 
   // 其他情況默認為電腦
-  return 'desktop'
+  return 'desktop' + '。userAgent：' + navigator.userAgent + '。platform：' + navigator.platform + '。maxTouchPoints：' + navigator.maxTouchPoints
 }
 
 export { detectDevice }

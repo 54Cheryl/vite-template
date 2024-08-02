@@ -43,8 +43,9 @@
               <div class="card-body d-flex flex-column justify-content-between">
                 <div class="mb-3">
                   <h5 class="card-title Serif-TC neutral-900">{{ item.news_title }}</h5>
-                  <p class="neutral-300 Sans-TC" style="font-size: 0.8rem;">{{ item.news_date }} {{ deviceType }}</p>
-                  <p class="card-text Serif-TC multiline-ellipsis neutral-500">{{ item.news_content }}</p>
+                  <p class="neutral-300 Sans-TC" style="font-size: 0.8rem;">{{ item.news_date }}</p>
+                  <!-- <p class="card-text Serif-TC multiline-ellipsis neutral-500">{{ item.news_content }}</p> -->
+                  <p class="card-text Serif-TC neutral-500"> {{ deviceType }}</p>
                 </div>
                 <div>
                   <router-link :to="`/news/${item.news_id}`" class="stretched-link link-primary text-decoration-none Serif-TC">瞭解更多</router-link>
