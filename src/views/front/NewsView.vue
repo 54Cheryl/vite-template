@@ -46,9 +46,6 @@
                   <p class="neutral-300 Sans-TC" style="font-size: 0.8rem;">{{ item.news_date }}</p>
                   <!-- <p class="card-text Serif-TC multiline-ellipsis neutral-500">{{ item.news_content }}</p> -->
                   <p class="card-text Serif-TC neutral-500">deviceType。 {{ deviceType }}</p>
-                  <p class="card-text Serif-TC neutral-500">deviceType1。 {{ deviceType[1] }}</p>
-                  <p class="card-text Serif-TC neutral-500">deviceType00。 {{ deviceType[0].platform }}</p>
-                  <p class="card-text Serif-TC neutral-500">deviceType01。 {{ deviceType[0].userAgent }}</p>
                 </div>
                 <div>
                   <router-link :to="`/news/${item.news_id}`" class="stretched-link link-primary text-decoration-none Serif-TC">瞭解更多</router-link>
