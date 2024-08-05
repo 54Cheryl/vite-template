@@ -32,7 +32,11 @@ function detectDevice () {
   }
 
   // 其他情況默認為 Android 平板
-  return 'tablet'
+  if (navigator.maxTouchPoints > 1) {
+    return 'tablet'
+  }
+  
+  return 'desktop'
 }
 
 export { detectDevice }
