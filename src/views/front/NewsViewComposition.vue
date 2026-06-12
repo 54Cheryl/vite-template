@@ -59,27 +59,26 @@
   <FrontFooter />
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted } from 'vue'
 import { detectDevice } from '@/mixins/deviceDetection.js'
-import { mapState } from 'pinia'
 import newsStore from '@/stores/newsStore'
 import NavBar from '@/components/NavBar.vue'
 import FrontFooter from '@/components/FrontFooter.vue'
-export default {
-  data () {
-    return {
-      deviceType: 'unknown'
-    }
-  },
-  components: {
-    NavBar,
-    FrontFooter
-  },
-  computed: {
-    ...mapState(newsStore, ['news'])
-  },
-  mounted () {
-    this.deviceType = detectDevice()
-  }
+
+// Pinia store
+const store = newsStore()
+
+// 狀態
+const deviceType = ref('unknown')
+
+// 方法
+const initializeDevice = () => {
+  deviceType.value = detectDevice()
 }
+
+// 生命週期
+onMounted(() => {
+  initializeDevice()
+})
 </script>

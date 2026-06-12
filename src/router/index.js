@@ -17,7 +17,7 @@ const routes = [
       {
         path: 'news',
         name: 'News',
-        component: () => import('../views/front/NewsView.vue')
+        component: () => import('../views/front/NewsViewComposition.vue')
       },
       {
         path: 'news/:news_id',
