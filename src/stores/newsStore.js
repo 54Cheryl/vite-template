@@ -6,7 +6,7 @@ const newsStore = defineStore('new', {
         {
           news_id: 202211300,
           new_arrivals: true,
-          news_img: '/src/assets/img/new-tea-1.svg',
+          news_img: new URL('../assets/img/new-tea-1.svg', import.meta.url).href,
           news_title: '新品正式開賣',
           en_title: 'New products on sale',
           news_date: '2022年11月30日',
@@ -16,7 +16,7 @@ const newsStore = defineStore('new', {
         {
           news_id: 202212121,
           new_arrivals: false,
-          news_img: '/src/assets/img/new-tea-2.svg',
+          news_img: new URL('../assets/img/new-tea-2.svg', import.meta.url).href,
           news_title: '年度暢銷產品',
           en_title: 'Best seller of the year',
           news_date: '2022年12月12日',
@@ -26,7 +26,7 @@ const newsStore = defineStore('new', {
         {
           news_id: 202301162,
           new_arrivals: false,
-          news_img: '/src/assets/img/new-tea-3.svg',
+          news_img: new URL('../assets/img/new-tea-3.svg', import.meta.url).href,
           news_title: '新春禮盒上市',
           en_title: 'New Year’s gifts listed',
           news_date: '2023年01月16日',
