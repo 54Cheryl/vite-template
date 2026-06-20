@@ -11,5 +11,11 @@ export default {
   },
   mounted () {
     this.modal = new Modal(this.$refs.modal, { backdrop: 'static', keyboard: false })
+    this.$refs.modal.addEventListener('hide.bs.modal', () => {
+      const activeElement = document.activeElement
+      if (activeElement instanceof HTMLElement && this.$refs.modal.contains(activeElement)) {
+        activeElement.blur()
+      }
+    })
   }
 }

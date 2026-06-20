@@ -53,7 +53,7 @@ export default {
       const token = document.cookie.replace(/(?:(?:^|.*;\s*)cherylToken\s*=\s*([^;]*).*$)|^.*$/, '$1')
       if (token) {
         this.$http.defaults.headers.common.Authorization = `${token}`
-        this.$http.post(`${VITE_APP_URL}api/user/check`, { api_token: this.token })
+        this.$http.post(`${VITE_APP_URL}api/user/check`, { api_token: token })
           .then((res) => {
             this.checkSuccess = true
             if (!res.data.success) {
